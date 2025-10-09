@@ -1,0 +1,141 @@
+{
+  "settings" : [ {
+    "key" : "ColorTheme",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "ColorThemeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "MatrixGreen",
+      "value" : 0
+    }, {
+      "display" : "RetroCyan",
+      "value" : 1
+    }, {
+      "display" : "RetroAmber",
+      "value" : 2
+    }, {
+      "display" : "RetroPurple",
+      "value" : 3
+    }, {
+      "display" : "RetroRed",
+      "value" : 4
+    }, {
+      "display" : "RetroBlue",
+      "value" : 5
+    }, {
+      "display" : "RetroOrange",
+      "value" : 6
+    }, {
+      "display" : "RetroPink",
+      "value" : 7
+    }, {
+      "display" : "RetroYellow",
+      "value" : 8
+    }, {
+      "display" : "RetroWhite",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "WindSpeedUnit",
+    "valueType" : "number",
+    "defaultValue" : 3,
+    "configTitle" : "WindSpeedUnitTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "WindUnit_ms",
+      "value" : 1
+    }, {
+      "display" : "WindUnit_mph",
+      "value" : 2
+    }, {
+      "display" : "WindUnit_kmh",
+      "value" : 3
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "TemperatureUnit",
+    "valueType" : "number",
+    "defaultValue" : 2,
+    "configTitle" : "TemperatureUnitTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "TempUnit_C",
+      "value" : 1
+    }, {
+      "display" : "TempUnit_F",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ShowDataStrip",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "ShowDataStripTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Off",
+      "value" : 0
+    }, {
+      "display" : "On",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "RetroAmber" : "Retro Amber",
+      "WindUnit_ms" : "m/s",
+      "RetroBlue" : "Retro Blue",
+      "TempUnit_F" : "°F",
+      "TempUnit_C" : "°C",
+      "RetroYellow" : "Retro Yellow",
+      "RetroPink" : "Retro Pink",
+      "Off" : "Off",
+      "AppName" : "Abstract Weather",
+      "RetroRed" : "Retro Red",
+      "RetroWhite" : "Retro White",
+      "MatrixGreen" : "Matrix Green",
+      "RetroOrange" : "Retro Orange",
+      "WindUnit_mph" : "mph",
+      "WindUnit_kmh" : "km/h",
+      "ColorThemeTitle" : "Color Theme",
+      "TemperatureUnitTitle" : "Temperature Units",
+      "RetroPurple" : "Retro Purple",
+      "RetroCyan" : "Retro Cyan",
+      "WindSpeedUnitTitle" : "Wind Speed Units",
+      "ShowDataStripTitle" : "Show Data Strip Below Time",
+      "On" : "On"
+    }
+  }
+}

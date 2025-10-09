@@ -1,0 +1,41 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as ResourceId;
+    } // Drawables
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_BLUE, :locX=>(240 * 0.5), :locY=>((240 - dc.getFontHeight(Graphics.FONT_LARGE)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            return [rez_cmp_local_text_TimeLabel] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Strings {
+        (:initialized) var RetroAmber as ResourceId;
+        (:initialized) var WindUnit_ms as ResourceId;
+        (:initialized) var RetroBlue as ResourceId;
+        (:initialized) var TempUnit_F as ResourceId;
+        (:initialized) var TempUnit_C as ResourceId;
+        (:initialized) var RetroYellow as ResourceId;
+        (:initialized) var RetroPink as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var RetroRed as ResourceId;
+        (:initialized) var RetroWhite as ResourceId;
+        (:initialized) var MatrixGreen as ResourceId;
+        (:initialized) var RetroOrange as ResourceId;
+        (:initialized) var WindUnit_mph as ResourceId;
+        (:initialized) var WindUnit_kmh as ResourceId;
+        (:initialized) var ColorThemeTitle as ResourceId;
+        (:initialized) var TemperatureUnitTitle as ResourceId;
+        (:initialized) var RetroPurple as ResourceId;
+        (:initialized) var RetroCyan as ResourceId;
+        (:initialized) var WindSpeedUnitTitle as ResourceId;
+    } // Strings
+} // Rez

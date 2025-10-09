@@ -1,0 +1,2292 @@
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Position,4,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Weather,5,14,21]; ]
+import Toybox.Weather;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Application,6,13,24]; @symbol_usingdef<2> = [Properties,6,25,35]; ]
+using Toybox.Application.Properties;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Math,7,14,18]; ]
+import Toybox.Math;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [Time,8,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 9; @symbol_importdef<0> = [Toybox,9,7,13]; @symbol_importdef<1> = [Position,9,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 12; @symbol_classdef = [WeatherControl,12,6,20]; ]
+class WeatherControl {
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 12; ]
+    <init> {
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 14 8 ]
+        symbol [ Weather %tmp.1 14 21 28 ];
+        %tmp.1 = getm $.Toybox.Weather;
+        symbol [ getCurrentConditions %tmp.2 14 29 49 ];
+        %tmp.2 = getv function %tmp.1 :getCurrentConditions;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :conditions %tmp.3;
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 12; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 14; @position = 8; @symbol_vardef = [conditions,14,8,18]; ]
+    var conditions;
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 15; @position = 8; @symbol_vardef = [lastUpdateTime,15,8,22]; ]
+    var lastUpdateTime = 0;
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 21; @symbol_functiondef = [WeatherControl,21,10,24]; ]
+    function WeatherControl() {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_21_27_26_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 24 8 ]
+        %tmp.1 = self;
+        symbol [ refreshConditions %tmp.2 24 8 25 ];
+        %tmp.2 = getv function %tmp.1 :refreshConditions;
+        invoke %tmp.1 %tmp.2();
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_21_27_26_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 28; @symbol_functiondef = [refreshConditions,28,14,31]; ]
+    function refreshConditions() as Void {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_28_42_36_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 29 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_28_42_36_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_28_42_36_4_stop" ]
+        %currentTime.1 = local;
+        symbol [ currentTime %currentTime.1 29 12 23 ];
+        symbol [ Time %tmp.1 29 26 30 ];
+        %tmp.1 = getm $.Toybox.Time;
+        symbol [ now %tmp.2 29 31 34 ];
+        %tmp.2 = getv function %tmp.1 :now;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ value %tmp.4 29 37 42 ];
+        %tmp.4 = getv function %tmp.3 :value;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %currentTime.1 %tmp.5;
+        symbol [ currentTime %currentTime.1 29 12 23 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 32 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_8_35_8_if_stmt:
+        %tmp.6 = lgetv %currentTime.1;
+        symbol [ currentTime %tmp.6 32 12 23 ];
+        symbol [ lastUpdateTime %tmp.8 32 26 40 ];
+        %tmp.8 = getv ? :lastUpdateTime;
+        %tmp.9 = sub %tmp.6 %tmp.8;
+        %tmp.10 = 300;
+        %tmp.11 = gt %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_8_35_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_8_35_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_48_35_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 33 12 ]
+        symbol [ Weather %tmp.12 33 25 32 ];
+        %tmp.12 = getm $.Toybox.Weather;
+        symbol [ getCurrentConditions %tmp.13 33 33 53 ];
+        %tmp.13 = getv function %tmp.12 :getCurrentConditions;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        symbol [ conditions ? 33 12 22 ];
+        putv self :conditions %tmp.14;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 34 12 ]
+        %tmp.15 = lgetv %currentTime.1;
+        symbol [ currentTime %tmp.15 34 29 40 ];
+        symbol [ lastUpdateTime ? 34 12 26 ];
+        putv self :lastUpdateTime %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_48_35_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_8_35_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_32_8_35_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_28_42_36_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 39; @symbol_functiondef = [_getProperty,39,13,25]; @symbol_param<0> = [key,39,26,29]; @symbol_param<0>_type<0> = [String,39,33,39]; @symbol_param<1> = [defaultVal,39,41,51]; @symbol_return<0> = [Object,39,56,62]; ]
+    function _getProperty(key as String, defaultVal) as Object {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_39_63_55_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 40 8 ]
+        try @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_beginTry @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_endTry @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_catch @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_beginTry:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_12_52_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 41 12 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_12_52_8_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_12_52_8_stop" ]
+        %v.1 = local;
+        symbol [ v %v.1 41 16 17 ];
+        symbol [ Properties %tmp.1 41 20 30 ];
+        %tmp.1 = getm $.Toybox.Application.Properties;
+        symbol [ getValue %tmp.2 41 31 39 ];
+        %tmp.2 = getv function %tmp.1 :getValue;
+        %tmp.3 = lgetv %key;
+        symbol [ key %tmp.3 41 40 43 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        lputv %v.1 %tmp.4;
+        symbol [ v %v.1 41 16 17 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 42 12 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_12_44_12_if_stmt:
+        %tmp.5 = lgetv %v.1;
+        symbol [ v %tmp.5 42 16 17 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_12_44_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_12_44_12_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_27_44_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 43 16 ]
+        %tmp.8 = lgetv %defaultVal;
+        symbol [ defaultVal %tmp.8 43 23 33 ];
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        ret %tmp.8;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_27_44_12_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_12_44_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_42_12_44_12_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 46 12 ]
+        try @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_beginTry @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_endTry @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_catch @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_beginTry:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_16_48_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 47 16 ]
+        %tmp.9 = lgetv %v.1;
+        symbol [ v %tmp.9 47 20 21 ];
+        symbol [ toNumber %tmp.10 47 22 30 ];
+        %tmp.10 = getv function %tmp.9 :toNumber;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %v.1 %tmp.11;
+        symbol [ v %v.1 47 16 17 ];
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_16_48_12_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_endTry:
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally;
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_catch:
+        %tmp.12 = exception;
+        push %tmp.12;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 48 14 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_catch" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_48_14_50_12_end" ]
+        %ex.2 = local;
+        symbol [ ex %ex.2 48 21 23 ];
+        %tmp.13 = dup %tmp.12;
+        lputv %ex.2 %tmp.13;
+        symbol [ ex %ex.2 48 21 23 ];
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally;
+        pop;
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_48_14_50_12_end:
+        try @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_catch @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_48_14_50_12_end @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_48_14_50_12_end @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally;
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally;
+        throw %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_finally:
+        jsrret;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_46_12_50_12_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 51 12 ]
+        %tmp.14 = lgetv %v.1;
+        symbol [ v %tmp.14 51 19 20 ];
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        ret %tmp.14;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_12_52_8_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_endTry:
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_catch:
+        %tmp.15 = exception;
+        push %tmp.15;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 52 10 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_catch" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_10_54_8_end" ]
+        %ex.3 = local;
+        symbol [ ex %ex.3 52 17 19 ];
+        %tmp.16 = dup %tmp.15;
+        lputv %ex.3 %tmp.16;
+        symbol [ ex %ex.3 52 17 19 ];
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_21_54_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 53 12 ]
+        pop;
+        %tmp.17 = lgetv %defaultVal;
+        symbol [ defaultVal %tmp.17 53 19 29 ];
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        ret %tmp.17;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_21_54_8_stop:
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        pop;
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_10_54_8_end:
+        try @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_catch @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_10_54_8_end @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_52_10_54_8_end @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        jsr @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally;
+        throw %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_finally:
+        jsrret;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_40_8_54_8_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_39_63_55_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 59; @symbol_functiondef = [getTemperature,59,13,27]; @symbol_return<0> = [Number,59,33,39]; ]
+    function getTemperature() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_59_48_70_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 60 6 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_6_67_4_if_stmt:
+        symbol [ conditions %tmp.2 60 10 20 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_6_67_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_6_67_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_30_67_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 61 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_30_67_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_30_67_4_stop" ]
+        %unit.1 = local;
+        symbol [ unit %unit.1 61 8 12 ];
+        %tmp.5 = self;
+        symbol [ _getProperty %tmp.6 61 15 27 ];
+        %tmp.6 = getv function %tmp.5 :_getProperty;
+        %tmp.7 = "TemperatureUnit";
+        %tmp.8 = 1;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8);
+        lputv %unit.1 %tmp.9;
+        symbol [ unit %unit.1 61 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 62 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_stmt:
+        %tmp.10 = lgetv %unit.1;
+        symbol [ unit %tmp.10 62 8 12 ];
+        %tmp.11 = 2;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_19_64_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 63 12 ]
+        symbol [ conditions %tmp.14 63 19 29 ];
+        %tmp.14 = getv ? :conditions;
+        symbol [ temperature %tmp.15 63 30 41 ];
+        %tmp.15 = getv %tmp.14 :temperature;
+        %tmp.16 = 9;
+        %tmp.17 = mul %tmp.15 %tmp.16;
+        %tmp.18 = 5;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        %tmp.20 = 32;
+        %tmp.21 = add %tmp.19 %tmp.20;
+        ret %tmp.21;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_19_64_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_64_15_66_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 65 12 ]
+        symbol [ conditions %tmp.23 65 19 29 ];
+        %tmp.23 = getv ? :conditions;
+        symbol [ temperature %tmp.24 65 30 41 ];
+        %tmp.24 = getv %tmp.23 :temperature;
+        ret %tmp.24;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_64_15_66_8_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_62_4_66_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_30_67_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_6_67_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_60_6_67_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 68 8 ]
+        %tmp.25 = null;
+        ret %tmp.25;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_59_48_70_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 72; @symbol_functiondef = [getSunEventTime,72,9,24]; @symbol_return<0> = [Time,72,30,34]; @symbol_return<1> = [Moment,72,35,41]; ]
+    function getSunEventTime() as Time.Moment or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_72_50_97_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 73 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_72_50_97_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_72_50_97_0_stop" ]
+        %positionInfo.1 = local;
+        symbol [ positionInfo %positionInfo.1 73 8 20 ];
+        symbol [ Position %tmp.1 73 23 31 ];
+        %tmp.1 = getm $.Toybox.Position;
+        symbol [ getInfo %tmp.2 73 32 39 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %positionInfo.1 %tmp.3;
+        symbol [ positionInfo %positionInfo.1 73 8 20 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 75 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_8_75_90_begin:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_8_75_57_begin:
+        %tmp.4 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.4 75 8 20 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_32_75_57_true:
+        %tmp.7 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.7 75 32 44 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ accuracy %tmp.9 75 45 53 ];
+        %tmp.9 = getv %tmp.8 :accuracy;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        push %tmp.11;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_32_75_57_end:
+        %tmp.12 = phi [%tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_8_75_57_begin] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_32_75_57_true] [%tmp.12 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_32_75_57_end];
+        bf %tmp.12 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_65_75_90_true:
+        %tmp.13 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.13 75 65 77 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ position %tmp.15 75 78 86 ];
+        %tmp.15 = getv %tmp.14 :position;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        push %tmp.17;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_65_75_90_end:
+        %tmp.18 = phi [%tmp.12 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_8_75_90_begin] [%tmp.17 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_65_75_90_true] [%tmp.18 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_65_75_90_end];
+        bf %tmp.18 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 76 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_stop" ]
+        %now.2 = local;
+        symbol [ now %now.2 76 12 15 ];
+        symbol [ Time %tmp.19 76 18 22 ];
+        %tmp.19 = getm $.Toybox.Time;
+        symbol [ now %tmp.20 76 23 26 ];
+        %tmp.20 = getv function %tmp.19 :now;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        lputv %now.2 %tmp.21;
+        symbol [ now %now.2 76 12 15 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 77 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_stop" ]
+        %sunriseMoment.3 = local;
+        symbol [ sunriseMoment %sunriseMoment.3 77 12 25 ];
+        symbol [ Weather %tmp.22 77 28 35 ];
+        %tmp.22 = getm $.Toybox.Weather;
+        symbol [ getSunrise %tmp.23 77 36 46 ];
+        %tmp.23 = getv function %tmp.22 :getSunrise;
+        %tmp.24 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.24 77 47 59 ];
+        %tmp.25 = as %tmp.24 { (!Null) };
+        symbol [ position %tmp.26 77 60 68 ];
+        %tmp.26 = getv %tmp.25 :position;
+        %tmp.27 = lgetv %now.2;
+        symbol [ now %tmp.27 77 70 73 ];
+        %tmp.28 = invoke %tmp.22 %tmp.23(%tmp.26, %tmp.27);
+        lputv %sunriseMoment.3 %tmp.28;
+        symbol [ sunriseMoment %sunriseMoment.3 77 12 25 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 78 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_stop" ]
+        %sunsetMoment.4 = local;
+        symbol [ sunsetMoment %sunsetMoment.4 78 12 24 ];
+        symbol [ Weather %tmp.29 78 28 35 ];
+        %tmp.29 = getm $.Toybox.Weather;
+        symbol [ getSunset %tmp.30 78 36 45 ];
+        %tmp.30 = getv function %tmp.29 :getSunset;
+        %tmp.31 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.31 78 46 58 ];
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ position %tmp.33 78 59 67 ];
+        %tmp.33 = getv %tmp.32 :position;
+        %tmp.34 = lgetv %now.2;
+        symbol [ now %tmp.34 78 69 72 ];
+        %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.33, %tmp.34);
+        lputv %sunsetMoment.4 %tmp.35;
+        symbol [ sunsetMoment %sunsetMoment.4 78 12 24 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 80 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_12_80_53_begin:
+        %tmp.36 = lgetv %sunriseMoment.3;
+        symbol [ sunriseMoment %tmp.36 80 12 25 ];
+        %tmp.37 = null;
+        %tmp.38 = ne %tmp.36 %tmp.37;
+        bf %tmp.38 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_37_80_53_true:
+        %tmp.39 = lgetv %sunsetMoment.4;
+        symbol [ sunsetMoment %tmp.39 80 37 49 ];
+        %tmp.40 = null;
+        %tmp.41 = ne %tmp.39 %tmp.40;
+        push %tmp.41;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_37_80_53_end:
+        %tmp.42 = phi [%tmp.38 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_12_80_53_begin] [%tmp.41 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_37_80_53_true] [%tmp.42 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_37_80_53_end];
+        bf %tmp.42 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_59_94_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 81 12 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_stmt:
+        %tmp.43 = lgetv %now.2;
+        symbol [ now %tmp.43 81 16 19 ];
+        symbol [ compare %tmp.44 81 20 27 ];
+        %tmp.44 = getv function %tmp.43 :compare;
+        %tmp.45 = lgetv %sunriseMoment.3;
+        symbol [ sunriseMoment %tmp.45 81 28 41 ];
+        %tmp.46 = as %tmp.45 { (!Null) };
+        %tmp.47 = invoke %tmp.43 %tmp.44(%tmp.46);
+        %tmp.48 = 0;
+        %tmp.49 = lt %tmp.47 %tmp.48;
+        bf %tmp.49 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_48_84_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 83 16 ]
+        %tmp.50 = lgetv %sunriseMoment.3;
+        symbol [ sunriseMoment %tmp.50 83 23 36 ];
+        %tmp.51 = as %tmp.50 { (!Null) };
+        ret %tmp.51;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_48_84_12_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_false:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 84 19 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_23_84_86_begin:
+        %tmp.52 = lgetv %now.2;
+        symbol [ now %tmp.52 84 23 26 ];
+        symbol [ compare %tmp.53 84 27 34 ];
+        %tmp.53 = getv function %tmp.52 :compare;
+        %tmp.54 = lgetv %sunsetMoment.4;
+        symbol [ sunsetMoment %tmp.54 84 35 47 ];
+        %tmp.55 = as %tmp.54 { (!Null) };
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.55);
+        %tmp.57 = 0;
+        %tmp.58 = lt %tmp.56 %tmp.57;
+        bf %tmp.58 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_56_84_86_true:
+        %tmp.59 = lgetv %now.2;
+        symbol [ now %tmp.59 84 56 59 ];
+        symbol [ compare %tmp.60 84 60 67 ];
+        %tmp.60 = getv function %tmp.59 :compare;
+        %tmp.61 = lgetv %sunriseMoment.3;
+        symbol [ sunriseMoment %tmp.61 84 68 81 ];
+        %tmp.62 = as %tmp.61 { (!Null) };
+        %tmp.63 = invoke %tmp.59 %tmp.60(%tmp.62);
+        %tmp.64 = 0;
+        %tmp.65 = gte %tmp.63 %tmp.64;
+        push %tmp.65;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_56_84_86_end:
+        %tmp.66 = phi [%tmp.58 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_23_84_86_begin] [%tmp.65 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_56_84_86_true] [%tmp.66 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_56_84_86_end];
+        bf %tmp.66 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_89_87_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 86 16 ]
+        %tmp.67 = lgetv %sunsetMoment.4;
+        symbol [ sunsetMoment %tmp.67 86 23 35 ];
+        %tmp.68 = as %tmp.67 { (!Null) };
+        ret %tmp.68;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_89_87_12_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 89 16 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_stop" ]
+        %oneDay.5 = local;
+        symbol [ oneDay %oneDay.5 89 20 26 ];
+        symbol [ Time %tmp.71 89 33 37 ];
+        %tmp.71 = getm $.Toybox.Time;
+        symbol [ Duration %tmp.72 89 38 46 ];
+        %tmp.72 = getv function ? %tmp.71 :Duration;
+        symbol [ Time %tmp.73 89 47 51 ];
+        %tmp.73 = getm $.Toybox.Time;
+        symbol [ Gregorian %tmp.74 89 52 61 ];
+        %tmp.74 = getv %tmp.73 :Gregorian;
+        symbol [ SECONDS_PER_DAY %tmp.75 89 62 77 ];
+        %tmp.75 = getv %tmp.74 :SECONDS_PER_DAY;
+        %tmp.69 = newc %tmp.72 (%tmp.75);
+        lputv %oneDay.5 %tmp.69;
+        symbol [ oneDay %oneDay.5 89 20 26 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 90 16 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_stop" ]
+        %tomorrow.6 = local;
+        symbol [ tomorrow %tomorrow.6 90 20 28 ];
+        %tmp.76 = lgetv %now.2;
+        symbol [ now %tmp.76 90 31 34 ];
+        symbol [ add %tmp.77 90 35 38 ];
+        %tmp.77 = getv function %tmp.76 :add;
+        %tmp.78 = lgetv %oneDay.5;
+        symbol [ oneDay %tmp.78 90 39 45 ];
+        %tmp.79 = invoke %tmp.76 %tmp.77(%tmp.78);
+        lputv %tomorrow.6 %tmp.79;
+        symbol [ tomorrow %tomorrow.6 90 20 28 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 91 16 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_stop" ]
+        %nextSunrise.7 = local;
+        symbol [ nextSunrise %nextSunrise.7 91 20 31 ];
+        symbol [ Weather %tmp.80 91 34 41 ];
+        %tmp.80 = getm $.Toybox.Weather;
+        symbol [ getSunrise %tmp.81 91 42 52 ];
+        %tmp.81 = getv function %tmp.80 :getSunrise;
+        %tmp.82 = lgetv %positionInfo.1;
+        symbol [ positionInfo %tmp.82 91 53 65 ];
+        %tmp.83 = as %tmp.82 { (!Null) };
+        symbol [ position %tmp.84 91 66 74 ];
+        %tmp.84 = getv %tmp.83 :position;
+        %tmp.85 = lgetv %tomorrow.6;
+        symbol [ tomorrow %tmp.85 91 76 84 ];
+        %tmp.86 = invoke %tmp.80 %tmp.81(%tmp.84, %tmp.85);
+        lputv %nextSunrise.7 %tmp.86;
+        symbol [ nextSunrise %nextSunrise.7 91 20 31 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 92 16 ]
+        %tmp.87 = lgetv %nextSunrise.7;
+        symbol [ nextSunrise %tmp.87 92 23 34 ];
+        ret %tmp.87;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_87_19_93_12_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_84_19_93_12_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_81_12_93_12_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_59_94_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_80_8_94_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_96_95_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_75_4_95_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 96 4 ]
+        %tmp.88 = null;
+        ret %tmp.88;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_72_50_97_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 99; @symbol_functiondef = [getHumidity,99,9,20]; @symbol_return<0> = [Number,99,26,32]; ]
+    function getHumidity() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_99_41_104_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 100 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_8_100_61_begin:
+        symbol [ conditions %tmp.2 100 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_30_100_61_true:
+        symbol [ conditions %tmp.6 100 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ relativeHumidity %tmp.8 100 41 57 ];
+        %tmp.8 = getv %tmp.7 :relativeHumidity;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_30_100_61_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_8_100_61_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_30_100_61_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_30_100_61_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_67_102_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 101 8 ]
+        symbol [ conditions %tmp.13 101 15 25 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ relativeHumidity %tmp.15 101 26 42 ];
+        %tmp.15 = getv %tmp.14 :relativeHumidity;
+        ret %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_67_102_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_100_4_102_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 103 4 ]
+        %tmp.16 = null;
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_99_41_104_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 107; @symbol_functiondef = [getVisibility,107,9,22]; @symbol_return<0> = [Number,107,28,34]; ]
+    function getVisibility() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_107_43_112_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 108 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_8_108_55_begin:
+        symbol [ conditions %tmp.2 108 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_30_108_55_true:
+        symbol [ conditions %tmp.6 108 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ visibility %tmp.8 108 41 51 ];
+        %tmp.8 = getv %tmp.7 :visibility;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_30_108_55_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_8_108_55_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_30_108_55_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_30_108_55_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_61_110_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 109 8 ]
+        symbol [ conditions %tmp.13 109 15 25 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ visibility %tmp.15 109 26 36 ];
+        %tmp.15 = getv %tmp.14 :visibility;
+        ret %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_61_110_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_108_4_110_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 111 4 ]
+        %tmp.16 = null;
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_107_43_112_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 114; @symbol_functiondef = [getUpdateTime,114,9,22]; @symbol_return<0> = [Lang,114,28,32]; @symbol_return<1> = [DateTime,114,33,41]; ]
+    function getUpdateTime() as Lang.DateTime or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_114_50_119_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 115 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_8_115_54_begin:
+        symbol [ conditions %tmp.2 115 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_30_115_54_true:
+        symbol [ conditions %tmp.6 115 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ timestamp %tmp.8 115 41 50 ];
+        %tmp.8 = getv %tmp.7 :timestamp;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_30_115_54_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_8_115_54_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_30_115_54_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_30_115_54_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_60_117_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 116 8 ]
+        symbol [ conditions %tmp.13 116 15 25 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ timestamp %tmp.15 116 26 35 ];
+        %tmp.15 = getv %tmp.14 :timestamp;
+        ret %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_60_117_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_115_4_117_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 118 4 ]
+        %tmp.16 = null;
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_114_50_119_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 123; @symbol_functiondef = [getUvIndex,123,9,19]; @symbol_return<0> = [Number,123,25,31]; ]
+    function getUvIndex() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_123_40_128_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 124 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_8_124_52_begin:
+        symbol [ conditions %tmp.2 124 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_30_124_52_true:
+        symbol [ conditions %tmp.6 124 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ uvIndex %tmp.8 124 41 48 ];
+        %tmp.8 = getv %tmp.7 :uvIndex;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_30_124_52_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_8_124_52_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_30_124_52_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_30_124_52_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_58_126_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 125 8 ]
+        symbol [ conditions %tmp.13 125 15 25 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ uvIndex %tmp.15 125 26 33 ];
+        %tmp.15 = getv %tmp.14 :uvIndex;
+        ret %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_58_126_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_124_4_126_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 127 4 ]
+        %tmp.16 = null;
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_123_40_128_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 130; @symbol_functiondef = [getFeelsLikeTemperature,130,9,32]; @symbol_return<0> = [Number,130,38,44]; ]
+    function getFeelsLikeTemperature() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_130_53_140_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 131 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_8_131_65_begin:
+        symbol [ conditions %tmp.2 131 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_30_131_65_true:
+        symbol [ conditions %tmp.6 131 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ feelsLikeTemperature %tmp.8 131 41 61 ];
+        %tmp.8 = getv %tmp.7 :feelsLikeTemperature;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_30_131_65_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_8_131_65_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_30_131_65_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_30_131_65_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_71_138_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 132 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_71_138_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_71_138_4_stop" ]
+        %unit.1 = local;
+        symbol [ unit %unit.1 132 8 12 ];
+        %tmp.12 = self;
+        symbol [ _getProperty %tmp.13 132 15 27 ];
+        %tmp.13 = getv function %tmp.12 :_getProperty;
+        %tmp.14 = "TemperatureUnit";
+        %tmp.15 = 1;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15);
+        lputv %unit.1 %tmp.16;
+        symbol [ unit %unit.1 132 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 133 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_stmt:
+        %tmp.17 = lgetv %unit.1;
+        symbol [ unit %tmp.17 133 8 12 ];
+        %tmp.18 = 2;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_19_135_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 134 12 ]
+        symbol [ conditions %tmp.21 134 19 29 ];
+        %tmp.21 = getv ? :conditions;
+        symbol [ feelsLikeTemperature %tmp.22 134 30 50 ];
+        %tmp.22 = getv %tmp.21 :feelsLikeTemperature;
+        %tmp.23 = 9;
+        %tmp.24 = mul %tmp.22 %tmp.23;
+        %tmp.25 = 5;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.27 = 32;
+        %tmp.28 = add %tmp.26 %tmp.27;
+        ret %tmp.28;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_19_135_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_135_15_137_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 136 12 ]
+        symbol [ conditions %tmp.30 136 19 29 ];
+        %tmp.30 = getv ? :conditions;
+        symbol [ feelsLikeTemperature %tmp.31 136 30 50 ];
+        %tmp.31 = getv %tmp.30 :feelsLikeTemperature;
+        ret %tmp.31;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_135_15_137_8_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_133_4_137_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_71_138_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_131_4_138_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 139 4 ]
+        %tmp.32 = null;
+        ret %tmp.32;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_130_53_140_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 141; @symbol_functiondef = [getDewPoint,141,12,23]; @symbol_return<0> = [Number,141,29,35]; ]
+    function getDewPoint() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_141_44_147_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 142 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_8_144_8_if_stmt:
+        symbol [ conditions %tmp.2 142 12 22 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_8_144_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_8_144_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_32_144_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 143 12 ]
+        symbol [ conditions %tmp.6 143 19 29 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ dewPoint %tmp.8 143 30 38 ];
+        %tmp.8 = getv %tmp.7 :dewPoint;
+        ret %tmp.8;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_32_144_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_8_144_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_142_8_144_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 145 8 ]
+        %tmp.9 = null;
+        ret %tmp.9;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_141_44_147_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 148; @symbol_functiondef = [getConditions,148,13,26]; @symbol_return<0> = [Dictionary,148,32,42]; ]
+    function getConditions() as Dictionary or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_148_51_150_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 149 8 ]
+        symbol [ conditions %tmp.2 149 15 25 ];
+        %tmp.2 = getv ? :conditions;
+        ret %tmp.2;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_148_51_150_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 152; @symbol_functiondef = [getPressure,152,13,24]; @symbol_return<0> = [Number,152,30,36]; ]
+    function getPressure() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_152_45_157_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 153 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_8_155_8_if_stmt:
+        symbol [ conditions %tmp.2 153 12 22 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_8_155_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_8_155_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_32_155_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 154 12 ]
+        symbol [ conditions %tmp.6 154 19 29 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ pressure %tmp.8 154 30 38 ];
+        %tmp.8 = getv %tmp.7 :pressure;
+        %tmp.9 = 100;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        ret %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_32_155_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_8_155_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_153_8_155_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 156 8 ]
+        %tmp.11 = null;
+        ret %tmp.11;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_152_45_157_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 159; @symbol_functiondef = [getWindSpeed,159,13,25]; @symbol_return<0> = [Number,159,31,37]; ]
+    function getWindSpeed() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_159_46_171_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 160 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_4_169_4_if_stmt:
+        symbol [ conditions %tmp.2 160 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_4_169_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_4_169_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_28_169_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 161 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_28_169_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_28_169_4_stop" ]
+        %unit.1 = local;
+        symbol [ unit %unit.1 161 8 12 ];
+        %tmp.5 = self;
+        symbol [ _getProperty %tmp.6 161 15 27 ];
+        %tmp.6 = getv function %tmp.5 :_getProperty;
+        %tmp.7 = "WindSpeedUnit";
+        %tmp.8 = 1;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8);
+        lputv %unit.1 %tmp.9;
+        symbol [ unit %unit.1 161 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 162 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_stmt:
+        %tmp.10 = lgetv %unit.1;
+        symbol [ unit %tmp.10 162 12 16 ];
+        %tmp.11 = 2;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_23_164_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 163 12 ]
+        symbol [ conditions %tmp.14 163 19 29 ];
+        %tmp.14 = getv ? :conditions;
+        symbol [ windSpeed %tmp.15 163 30 39 ];
+        %tmp.15 = getv %tmp.14 :windSpeed;
+        %tmp.16 = 2.23694;
+        %tmp.17 = mul %tmp.15 %tmp.16;
+        ret %tmp.17;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_23_164_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_false:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 164 15 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_stmt:
+        %tmp.18 = lgetv %unit.1;
+        symbol [ unit %tmp.18 164 19 23 ];
+        %tmp.19 = 3;
+        %tmp.20 = eq %tmp.18 %tmp.19;
+        bf %tmp.20 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_30_166_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 165 12 ]
+        symbol [ conditions %tmp.22 165 19 29 ];
+        %tmp.22 = getv ? :conditions;
+        symbol [ windSpeed %tmp.23 165 30 39 ];
+        %tmp.23 = getv %tmp.22 :windSpeed;
+        %tmp.24 = 3.6;
+        %tmp.25 = mul %tmp.23 %tmp.24;
+        ret %tmp.25;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_30_166_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_166_15_168_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 167 12 ]
+        symbol [ conditions %tmp.27 167 19 29 ];
+        %tmp.27 = getv ? :conditions;
+        symbol [ windSpeed %tmp.28 167 30 39 ];
+        %tmp.28 = getv %tmp.27 :windSpeed;
+        ret %tmp.28;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_166_15_168_8_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_164_15_168_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_162_8_168_8_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_28_169_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_4_169_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_160_4_169_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 170 4 ]
+        %tmp.29 = null;
+        ret %tmp.29;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_159_46_171_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 174; @symbol_functiondef = [getWindBearingString,174,12,32]; @symbol_return<0> = [String,174,38,44]; ]
+    function getWindBearingString() as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_174_45_182_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 175 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_8_175_56_begin:
+        symbol [ conditions %tmp.2 175 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_30_175_56_true:
+        symbol [ conditions %tmp.6 175 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ windBearing %tmp.8 175 41 52 ];
+        %tmp.8 = getv %tmp.7 :windBearing;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_30_175_56_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_8_175_56_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_30_175_56_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_30_175_56_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 176 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_stop" ]
+        %bearing.1 = local;
+        symbol [ bearing %bearing.1 176 12 19 ];
+        symbol [ conditions %tmp.13 176 22 32 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ windBearing %tmp.15 176 33 44 ];
+        %tmp.15 = getv %tmp.14 :windBearing;
+        lputv %bearing.1 %tmp.15;
+        symbol [ bearing %bearing.1 176 12 19 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 177 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_stop" ]
+        %directions.2 = local;
+        symbol [ directions %directions.2 177 12 22 ];
+        %tmp.16 = newa 8;
+        %tmp.17 = "N";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 0 %tmp.17;
+        %tmp.20 = "NE";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 1 %tmp.20;
+        %tmp.23 = "E";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 2 %tmp.23;
+        %tmp.26 = "SE";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 3 %tmp.26;
+        %tmp.29 = "S";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 4 %tmp.29;
+        %tmp.32 = "SW";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 5 %tmp.32;
+        %tmp.35 = "W";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 6 %tmp.35;
+        %tmp.38 = "NW";
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 7 %tmp.38;
+        lputv %directions.2 %tmp.40;
+        symbol [ directions %directions.2 177 12 22 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 178 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_stop" ]
+        %index.3 = local;
+        symbol [ index %index.3 178 12 17 ];
+        symbol [ Math %tmp.41 178 20 24 ];
+        %tmp.41 = getm $.Toybox.Math;
+        symbol [ floor %tmp.42 178 25 30 ];
+        %tmp.42 = getv function %tmp.41 :floor;
+        %tmp.43 = lgetv %bearing.1;
+        symbol [ bearing %tmp.43 178 32 39 ];
+        %tmp.44 = 22.5;
+        %tmp.45 = add %tmp.43 %tmp.44;
+        %tmp.46 = 45;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        %tmp.48 = invoke %tmp.41 %tmp.42(%tmp.47);
+        symbol [ toNumber %tmp.49 178 54 62 ];
+        %tmp.49 = getv function %tmp.48 :toNumber;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        %tmp.51 = 8;
+        %tmp.52 = mod %tmp.50 %tmp.51;
+        lputv %index.3 %tmp.52;
+        symbol [ index %index.3 178 12 17 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 179 8 ]
+        %tmp.53 = lgetv %directions.2;
+        symbol [ directions %tmp.53 179 15 25 ];
+        %tmp.54 = lgetv %index.3;
+        symbol [ index %tmp.54 179 26 31 ];
+        %tmp.55 = agetv %tmp.53 %tmp.54;
+        ret %tmp.55;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_62_180_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_175_4_180_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 181 4 ]
+        %tmp.56 = "Unknown";
+        ret %tmp.56;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_174_45_182_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 186; @symbol_functiondef = [getCompassHeading,186,9,26]; @symbol_return<0> = [Number,186,32,38]; ]
+    function getCompassHeading() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_186_47_192_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 187 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_186_47_192_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_186_47_192_0_stop" ]
+        %heading.1 = local;
+        symbol [ heading %heading.1 187 8 15 ];
+        symbol [ Sensor %tmp.2 187 18 24 ];
+        %tmp.2 = getv ? :Sensor;
+        symbol [ getInfo %tmp.3 187 25 32 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ heading %tmp.5 187 35 42 ];
+        %tmp.5 = getv %tmp.4 :heading;
+        lputv %heading.1 %tmp.5;
+        symbol [ heading %heading.1 187 8 15 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 188 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_4_190_4_if_stmt:
+        %tmp.6 = lgetv %heading.1;
+        symbol [ heading %tmp.6 188 8 15 ];
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_4_190_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_4_190_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_25_190_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 189 8 ]
+        %tmp.9 = lgetv %heading.1;
+        symbol [ heading %tmp.9 189 15 22 ];
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ toNumber %tmp.11 189 23 31 ];
+        %tmp.11 = getv function %tmp.10 :toNumber;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        ret %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_25_190_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_4_190_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_188_4_190_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 191 4 ]
+        %tmp.13 = null;
+        ret %tmp.13;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_186_47_192_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 193; @symbol_functiondef = [getCompassDirectionString,193,9,34]; @symbol_return<0> = [String,193,40,46]; ]
+    function getCompassDirectionString() as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 194 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_stop" ]
+        %heading.1 = local;
+        symbol [ heading %heading.1 194 8 15 ];
+        %tmp.1 = self;
+        symbol [ getCompassHeading %tmp.2 194 18 35 ];
+        %tmp.2 = getv function %tmp.1 :getCompassHeading;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %heading.1 %tmp.3;
+        symbol [ heading %heading.1 194 8 15 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 195 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_4_197_4_if_stmt:
+        %tmp.4 = lgetv %heading.1;
+        symbol [ heading %tmp.4 195 8 15 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_4_197_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_4_197_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_25_197_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 196 8 ]
+        %tmp.7 = "Unknown";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_25_197_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_4_197_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_195_4_197_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 198 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_stop" ]
+        %directions.2 = local;
+        symbol [ directions %directions.2 198 8 18 ];
+        %tmp.8 = newa 8;
+        %tmp.9 = "N";
+        %tmp.10 = dup %tmp.8;
+        %tmp.11 = aputv %tmp.10 0 %tmp.9;
+        %tmp.12 = "NE";
+        %tmp.13 = dup %tmp.11;
+        %tmp.14 = aputv %tmp.13 1 %tmp.12;
+        %tmp.15 = "E";
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 2 %tmp.15;
+        %tmp.18 = "SE";
+        %tmp.19 = dup %tmp.17;
+        %tmp.20 = aputv %tmp.19 3 %tmp.18;
+        %tmp.21 = "S";
+        %tmp.22 = dup %tmp.20;
+        %tmp.23 = aputv %tmp.22 4 %tmp.21;
+        %tmp.24 = "SW";
+        %tmp.25 = dup %tmp.23;
+        %tmp.26 = aputv %tmp.25 5 %tmp.24;
+        %tmp.27 = "W";
+        %tmp.28 = dup %tmp.26;
+        %tmp.29 = aputv %tmp.28 6 %tmp.27;
+        %tmp.30 = "NW";
+        %tmp.31 = dup %tmp.29;
+        %tmp.32 = aputv %tmp.31 7 %tmp.30;
+        lputv %directions.2 %tmp.32;
+        symbol [ directions %directions.2 198 8 18 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 199 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_stop" ]
+        %index.3 = local;
+        symbol [ index %index.3 199 8 13 ];
+        symbol [ Math %tmp.33 199 16 20 ];
+        %tmp.33 = getm $.Toybox.Math;
+        symbol [ floor %tmp.34 199 21 26 ];
+        %tmp.34 = getv function %tmp.33 :floor;
+        %tmp.35 = lgetv %heading.1;
+        symbol [ heading %tmp.35 199 28 35 ];
+        %tmp.36 = 22.5;
+        %tmp.37 = add %tmp.35 %tmp.36;
+        %tmp.38 = 45;
+        %tmp.39 = div %tmp.37 %tmp.38;
+        %tmp.40 = invoke %tmp.33 %tmp.34(%tmp.39);
+        symbol [ toNumber %tmp.41 199 50 58 ];
+        %tmp.41 = getv function %tmp.40 :toNumber;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = 8;
+        %tmp.44 = mod %tmp.42 %tmp.43;
+        lputv %index.3 %tmp.44;
+        symbol [ index %index.3 199 8 13 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 200 4 ]
+        %tmp.45 = lgetv %directions.2;
+        symbol [ directions %tmp.45 200 11 21 ];
+        %tmp.46 = lgetv %index.3;
+        symbol [ index %tmp.46 200 22 27 ];
+        %tmp.47 = agetv %tmp.45 %tmp.46;
+        ret %tmp.47;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_193_47_201_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 205; @symbol_functiondef = [getWindBearing,205,9,23]; @symbol_return<0> = [Number,205,29,35]; ]
+    function getWindBearing() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_205_44_210_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 206 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_8_206_56_begin:
+        symbol [ conditions %tmp.2 206 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_30_206_56_true:
+        symbol [ conditions %tmp.6 206 30 40 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ windBearing %tmp.8 206 41 52 ];
+        %tmp.8 = getv %tmp.7 :windBearing;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_30_206_56_end:
+        %tmp.11 = phi [%tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_8_206_56_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_30_206_56_true] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_30_206_56_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_62_208_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 207 8 ]
+        symbol [ conditions %tmp.13 207 15 25 ];
+        %tmp.13 = getv ? :conditions;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ windBearing %tmp.15 207 26 37 ];
+        %tmp.15 = getv %tmp.14 :windBearing;
+        ret %tmp.15;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_62_208_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_206_4_208_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 209 4 ]
+        %tmp.16 = null;
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_205_44_210_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 214; @symbol_functiondef = [getCondition,214,13,25]; @symbol_return<0> = [String,214,31,37]; ]
+    function getCondition() as String or Null {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_214_46_219_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 215 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_8_217_8_if_stmt:
+        symbol [ conditions %tmp.2 215 12 22 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_8_217_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_8_217_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_32_217_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 216 12 ]
+        symbol [ conditions %tmp.6 216 19 29 ];
+        %tmp.6 = getv ? :conditions;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ condition %tmp.8 216 30 39 ];
+        %tmp.8 = getv %tmp.7 :condition;
+        ret %tmp.8;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_32_217_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_8_217_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_215_8_217_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 218 8 ]
+        %tmp.9 = null;
+        ret %tmp.9;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_214_46_219_4_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 222; @symbol_functiondef = [getWeatherColor,222,13,28]; @symbol_return<0> = [Number,222,34,40]; ]
+    function getWeatherColor() as Number {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_222_41_352_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 223 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_stmt:
+        symbol [ conditions %tmp.2 223 8 18 ];
+        %tmp.2 = getv ? :conditions;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_true:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_223_4_227_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 229 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_222_41_352_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_222_41_352_0_stop" ]
+        %dynamicWeatherColor.1 = local;
+        symbol [ dynamicWeatherColor %dynamicWeatherColor.1 229 8 27 ];
+        symbol [ Application %tmp.6 229 30 41 ];
+        %tmp.6 = getv ? :Application;
+        symbol [ Properties %tmp.7 229 42 52 ];
+        %tmp.7 = getv %tmp.6 :Properties;
+        symbol [ getValue %tmp.8 229 53 61 ];
+        %tmp.8 = getv function %tmp.7 :getValue;
+        %tmp.9 = "DynamicWeatherColor";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        lputv %dynamicWeatherColor.1 %tmp.10;
+        symbol [ dynamicWeatherColor %dynamicWeatherColor.1 229 8 27 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 230 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_4_230_68_if_stmt:
+        %tmp.11 = lgetv %dynamicWeatherColor.1;
+        symbol [ dynamicWeatherColor %tmp.11 230 8 27 ];
+        %tmp.12 = null;
+        %tmp.13 = eq %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_4_230_68_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_4_230_68_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_37_230_68_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 230 39 ]
+        %tmp.14 = false;
+        lputv %dynamicWeatherColor.1 %tmp.14;
+        symbol [ dynamicWeatherColor %dynamicWeatherColor.1 230 39 58 ];
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_37_230_68_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_4_230_68_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_230_4_230_68_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 231 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_stmt:
+        %tmp.15 = lgetv %dynamicWeatherColor.1;
+        symbol [ dynamicWeatherColor %tmp.15 231 8 27 ];
+        %tmp.16 = true;
+        %tmp.17 = eq %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_37_347_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 232 8 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_8_345_8_if_stmt:
+        symbol [ conditions %tmp.19 232 12 22 ];
+        %tmp.19 = getv ? :conditions;
+        %tmp.20 = null;
+        %tmp.21 = ne %tmp.19 %tmp.20;
+        bf %tmp.21 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_8_345_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_8_345_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_32_345_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 233 12 ]
+        symbol [ conditions %tmp.23 233 20 30 ];
+        %tmp.23 = getv ? :conditions;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        symbol [ condition %tmp.25 233 31 40 ];
+        %tmp.25 = getv %tmp.24 :condition;
+        push %tmp.25;
+        switch %tmp.25 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_switchStmtEnd;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_switchStmtBegin:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 234 16 ]
+        %tmp.26 = dup %tmp.25;
+        %tmp.27 = 0;
+        %tmp.28 = getv function %tmp.26 :equals;
+        %tmp.29 = invoke %tmp.26 %tmp.28 (%tmp.27);
+        bt %tmp.29 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_234_16_235_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 236 16 ]
+        %tmp.30 = dup %tmp.25;
+        %tmp.31 = 1;
+        %tmp.32 = getv function %tmp.30 :equals;
+        %tmp.33 = invoke %tmp.30 %tmp.32 (%tmp.31);
+        bt %tmp.33 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_236_16_237_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 238 16 ]
+        %tmp.34 = dup %tmp.25;
+        %tmp.35 = 2;
+        %tmp.36 = getv function %tmp.34 :equals;
+        %tmp.37 = invoke %tmp.34 %tmp.36 (%tmp.35);
+        bt %tmp.37 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_238_16_239_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 240 16 ]
+        %tmp.38 = dup %tmp.25;
+        %tmp.39 = 3;
+        %tmp.40 = getv function %tmp.38 :equals;
+        %tmp.41 = invoke %tmp.38 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_240_16_241_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 242 16 ]
+        %tmp.42 = dup %tmp.25;
+        %tmp.43 = 4;
+        %tmp.44 = getv function %tmp.42 :equals;
+        %tmp.45 = invoke %tmp.42 %tmp.44 (%tmp.43);
+        bt %tmp.45 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_242_16_243_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 244 16 ]
+        %tmp.46 = dup %tmp.25;
+        %tmp.47 = 5;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_244_16_245_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 246 16 ]
+        %tmp.50 = dup %tmp.25;
+        %tmp.51 = 6;
+        %tmp.52 = getv function %tmp.50 :equals;
+        %tmp.53 = invoke %tmp.50 %tmp.52 (%tmp.51);
+        bt %tmp.53 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_246_16_247_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 248 16 ]
+        %tmp.54 = dup %tmp.25;
+        %tmp.55 = 7;
+        %tmp.56 = getv function %tmp.54 :equals;
+        %tmp.57 = invoke %tmp.54 %tmp.56 (%tmp.55);
+        bt %tmp.57 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_248_16_249_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 250 16 ]
+        %tmp.58 = dup %tmp.25;
+        %tmp.59 = 8;
+        %tmp.60 = getv function %tmp.58 :equals;
+        %tmp.61 = invoke %tmp.58 %tmp.60 (%tmp.59);
+        bt %tmp.61 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_250_16_251_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 252 16 ]
+        %tmp.62 = dup %tmp.25;
+        %tmp.63 = 9;
+        %tmp.64 = getv function %tmp.62 :equals;
+        %tmp.65 = invoke %tmp.62 %tmp.64 (%tmp.63);
+        bt %tmp.65 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_252_16_253_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 254 16 ]
+        %tmp.66 = dup %tmp.25;
+        %tmp.67 = 10;
+        %tmp.68 = getv function %tmp.66 :equals;
+        %tmp.69 = invoke %tmp.66 %tmp.68 (%tmp.67);
+        bt %tmp.69 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_254_16_255_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 256 16 ]
+        %tmp.70 = dup %tmp.25;
+        %tmp.71 = 11;
+        %tmp.72 = getv function %tmp.70 :equals;
+        %tmp.73 = invoke %tmp.70 %tmp.72 (%tmp.71);
+        bt %tmp.73 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_256_16_257_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 258 16 ]
+        %tmp.74 = dup %tmp.25;
+        %tmp.75 = 12;
+        %tmp.76 = getv function %tmp.74 :equals;
+        %tmp.77 = invoke %tmp.74 %tmp.76 (%tmp.75);
+        bt %tmp.77 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_258_16_259_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 260 16 ]
+        %tmp.78 = dup %tmp.25;
+        %tmp.79 = 13;
+        %tmp.80 = getv function %tmp.78 :equals;
+        %tmp.81 = invoke %tmp.78 %tmp.80 (%tmp.79);
+        bt %tmp.81 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_260_16_261_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 262 16 ]
+        %tmp.82 = dup %tmp.25;
+        %tmp.83 = 14;
+        %tmp.84 = getv function %tmp.82 :equals;
+        %tmp.85 = invoke %tmp.82 %tmp.84 (%tmp.83);
+        bt %tmp.85 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_262_16_263_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 264 16 ]
+        %tmp.86 = dup %tmp.25;
+        %tmp.87 = 15;
+        %tmp.88 = getv function %tmp.86 :equals;
+        %tmp.89 = invoke %tmp.86 %tmp.88 (%tmp.87);
+        bt %tmp.89 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_264_16_265_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 266 16 ]
+        %tmp.90 = dup %tmp.25;
+        %tmp.91 = 16;
+        %tmp.92 = getv function %tmp.90 :equals;
+        %tmp.93 = invoke %tmp.90 %tmp.92 (%tmp.91);
+        bt %tmp.93 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_266_16_267_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 268 16 ]
+        %tmp.94 = dup %tmp.25;
+        %tmp.95 = 17;
+        %tmp.96 = getv function %tmp.94 :equals;
+        %tmp.97 = invoke %tmp.94 %tmp.96 (%tmp.95);
+        bt %tmp.97 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_268_16_269_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 270 16 ]
+        %tmp.98 = dup %tmp.25;
+        %tmp.99 = 18;
+        %tmp.100 = getv function %tmp.98 :equals;
+        %tmp.101 = invoke %tmp.98 %tmp.100 (%tmp.99);
+        bt %tmp.101 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_270_16_271_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 272 16 ]
+        %tmp.102 = dup %tmp.25;
+        %tmp.103 = 19;
+        %tmp.104 = getv function %tmp.102 :equals;
+        %tmp.105 = invoke %tmp.102 %tmp.104 (%tmp.103);
+        bt %tmp.105 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_272_16_273_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 274 16 ]
+        %tmp.106 = dup %tmp.25;
+        %tmp.107 = 20;
+        %tmp.108 = getv function %tmp.106 :equals;
+        %tmp.109 = invoke %tmp.106 %tmp.108 (%tmp.107);
+        bt %tmp.109 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_274_16_275_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 276 16 ]
+        %tmp.110 = dup %tmp.25;
+        %tmp.111 = 21;
+        %tmp.112 = getv function %tmp.110 :equals;
+        %tmp.113 = invoke %tmp.110 %tmp.112 (%tmp.111);
+        bt %tmp.113 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_276_16_277_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 278 16 ]
+        %tmp.114 = dup %tmp.25;
+        %tmp.115 = 22;
+        %tmp.116 = getv function %tmp.114 :equals;
+        %tmp.117 = invoke %tmp.114 %tmp.116 (%tmp.115);
+        bt %tmp.117 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_278_16_279_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 280 16 ]
+        %tmp.118 = dup %tmp.25;
+        %tmp.119 = 23;
+        %tmp.120 = getv function %tmp.118 :equals;
+        %tmp.121 = invoke %tmp.118 %tmp.120 (%tmp.119);
+        bt %tmp.121 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_280_16_281_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 282 16 ]
+        %tmp.122 = dup %tmp.25;
+        %tmp.123 = 24;
+        %tmp.124 = getv function %tmp.122 :equals;
+        %tmp.125 = invoke %tmp.122 %tmp.124 (%tmp.123);
+        bt %tmp.125 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_282_16_283_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 284 16 ]
+        %tmp.126 = dup %tmp.25;
+        %tmp.127 = 25;
+        %tmp.128 = getv function %tmp.126 :equals;
+        %tmp.129 = invoke %tmp.126 %tmp.128 (%tmp.127);
+        bt %tmp.129 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_284_16_285_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 286 16 ]
+        %tmp.130 = dup %tmp.25;
+        %tmp.131 = 26;
+        %tmp.132 = getv function %tmp.130 :equals;
+        %tmp.133 = invoke %tmp.130 %tmp.132 (%tmp.131);
+        bt %tmp.133 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_286_16_287_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 288 16 ]
+        %tmp.134 = dup %tmp.25;
+        %tmp.135 = 27;
+        %tmp.136 = getv function %tmp.134 :equals;
+        %tmp.137 = invoke %tmp.134 %tmp.136 (%tmp.135);
+        bt %tmp.137 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_288_16_289_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 290 16 ]
+        %tmp.138 = dup %tmp.25;
+        %tmp.139 = 28;
+        %tmp.140 = getv function %tmp.138 :equals;
+        %tmp.141 = invoke %tmp.138 %tmp.140 (%tmp.139);
+        bt %tmp.141 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_290_16_291_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 292 16 ]
+        %tmp.142 = dup %tmp.25;
+        %tmp.143 = 29;
+        %tmp.144 = getv function %tmp.142 :equals;
+        %tmp.145 = invoke %tmp.142 %tmp.144 (%tmp.143);
+        bt %tmp.145 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_292_16_293_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 294 16 ]
+        %tmp.146 = dup %tmp.25;
+        %tmp.147 = 30;
+        %tmp.148 = getv function %tmp.146 :equals;
+        %tmp.149 = invoke %tmp.146 %tmp.148 (%tmp.147);
+        bt %tmp.149 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_294_16_295_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 296 16 ]
+        %tmp.150 = dup %tmp.25;
+        %tmp.151 = 31;
+        %tmp.152 = getv function %tmp.150 :equals;
+        %tmp.153 = invoke %tmp.150 %tmp.152 (%tmp.151);
+        bt %tmp.153 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_296_16_297_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 298 16 ]
+        %tmp.154 = dup %tmp.25;
+        %tmp.155 = 32;
+        %tmp.156 = getv function %tmp.154 :equals;
+        %tmp.157 = invoke %tmp.154 %tmp.156 (%tmp.155);
+        bt %tmp.157 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_298_16_299_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 300 16 ]
+        %tmp.158 = dup %tmp.25;
+        %tmp.159 = 33;
+        %tmp.160 = getv function %tmp.158 :equals;
+        %tmp.161 = invoke %tmp.158 %tmp.160 (%tmp.159);
+        bt %tmp.161 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_300_16_301_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 302 16 ]
+        %tmp.162 = dup %tmp.25;
+        %tmp.163 = 34;
+        %tmp.164 = getv function %tmp.162 :equals;
+        %tmp.165 = invoke %tmp.162 %tmp.164 (%tmp.163);
+        bt %tmp.165 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_302_16_303_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 304 16 ]
+        %tmp.166 = dup %tmp.25;
+        %tmp.167 = 35;
+        %tmp.168 = getv function %tmp.166 :equals;
+        %tmp.169 = invoke %tmp.166 %tmp.168 (%tmp.167);
+        bt %tmp.169 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_304_16_305_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 306 16 ]
+        %tmp.170 = dup %tmp.25;
+        %tmp.171 = 36;
+        %tmp.172 = getv function %tmp.170 :equals;
+        %tmp.173 = invoke %tmp.170 %tmp.172 (%tmp.171);
+        bt %tmp.173 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_306_16_307_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 308 16 ]
+        %tmp.174 = dup %tmp.25;
+        %tmp.175 = 37;
+        %tmp.176 = getv function %tmp.174 :equals;
+        %tmp.177 = invoke %tmp.174 %tmp.176 (%tmp.175);
+        bt %tmp.177 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_308_16_309_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 310 16 ]
+        %tmp.178 = dup %tmp.25;
+        %tmp.179 = 38;
+        %tmp.180 = getv function %tmp.178 :equals;
+        %tmp.181 = invoke %tmp.178 %tmp.180 (%tmp.179);
+        bt %tmp.181 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_310_16_311_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 312 16 ]
+        %tmp.182 = dup %tmp.25;
+        %tmp.183 = 39;
+        %tmp.184 = getv function %tmp.182 :equals;
+        %tmp.185 = invoke %tmp.182 %tmp.184 (%tmp.183);
+        bt %tmp.185 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_312_16_313_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 314 16 ]
+        %tmp.186 = dup %tmp.25;
+        %tmp.187 = 40;
+        %tmp.188 = getv function %tmp.186 :equals;
+        %tmp.189 = invoke %tmp.186 %tmp.188 (%tmp.187);
+        bt %tmp.189 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_314_16_315_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 316 16 ]
+        %tmp.190 = dup %tmp.25;
+        %tmp.191 = 41;
+        %tmp.192 = getv function %tmp.190 :equals;
+        %tmp.193 = invoke %tmp.190 %tmp.192 (%tmp.191);
+        bt %tmp.193 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_316_16_317_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 318 16 ]
+        %tmp.194 = dup %tmp.25;
+        %tmp.195 = 42;
+        %tmp.196 = getv function %tmp.194 :equals;
+        %tmp.197 = invoke %tmp.194 %tmp.196 (%tmp.195);
+        bt %tmp.197 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_318_16_319_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 320 16 ]
+        %tmp.198 = dup %tmp.25;
+        %tmp.199 = 43;
+        %tmp.200 = getv function %tmp.198 :equals;
+        %tmp.201 = invoke %tmp.198 %tmp.200 (%tmp.199);
+        bt %tmp.201 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_320_16_321_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 322 16 ]
+        %tmp.202 = dup %tmp.25;
+        %tmp.203 = 44;
+        %tmp.204 = getv function %tmp.202 :equals;
+        %tmp.205 = invoke %tmp.202 %tmp.204 (%tmp.203);
+        bt %tmp.205 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_322_16_323_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 324 16 ]
+        %tmp.206 = dup %tmp.25;
+        %tmp.207 = 45;
+        %tmp.208 = getv function %tmp.206 :equals;
+        %tmp.209 = invoke %tmp.206 %tmp.208 (%tmp.207);
+        bt %tmp.209 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_324_16_325_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 326 16 ]
+        %tmp.210 = dup %tmp.25;
+        %tmp.211 = 46;
+        %tmp.212 = getv function %tmp.210 :equals;
+        %tmp.213 = invoke %tmp.210 %tmp.212 (%tmp.211);
+        bt %tmp.213 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_326_16_327_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 328 16 ]
+        %tmp.214 = dup %tmp.25;
+        %tmp.215 = 47;
+        %tmp.216 = getv function %tmp.214 :equals;
+        %tmp.217 = invoke %tmp.214 %tmp.216 (%tmp.215);
+        bt %tmp.217 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_328_16_329_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 330 16 ]
+        %tmp.218 = dup %tmp.25;
+        %tmp.219 = 48;
+        %tmp.220 = getv function %tmp.218 :equals;
+        %tmp.221 = invoke %tmp.218 %tmp.220 (%tmp.219);
+        bt %tmp.221 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_330_16_331_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 332 16 ]
+        %tmp.222 = dup %tmp.25;
+        %tmp.223 = 49;
+        %tmp.224 = getv function %tmp.222 :equals;
+        %tmp.225 = invoke %tmp.222 %tmp.224 (%tmp.223);
+        bt %tmp.225 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_332_16_333_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 334 16 ]
+        %tmp.226 = dup %tmp.25;
+        %tmp.227 = 50;
+        %tmp.228 = getv function %tmp.226 :equals;
+        %tmp.229 = invoke %tmp.226 %tmp.228 (%tmp.227);
+        bt %tmp.229 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_334_16_335_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 336 16 ]
+        %tmp.230 = dup %tmp.25;
+        %tmp.231 = 51;
+        %tmp.232 = getv function %tmp.230 :equals;
+        %tmp.233 = invoke %tmp.230 %tmp.232 (%tmp.231);
+        bt %tmp.233 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_336_16_337_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 338 16 ]
+        %tmp.234 = dup %tmp.25;
+        %tmp.235 = 52;
+        %tmp.236 = getv function %tmp.234 :equals;
+        %tmp.237 = invoke %tmp.234 %tmp.236 (%tmp.235);
+        bt %tmp.237 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_338_16_339_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 340 16 ]
+        %tmp.238 = dup %tmp.25;
+        %tmp.239 = 53;
+        %tmp.240 = getv function %tmp.238 :equals;
+        %tmp.241 = invoke %tmp.238 %tmp.240 (%tmp.239);
+        bt %tmp.241 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_340_16_341_35_switchCase;
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 342 16 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_switchStmtDefault:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_defaultCodeBegin;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_234_16_235_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 235 20 ]
+        %tmp.242 = 0xFFFF00;
+        ret %tmp.242;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_236_16_237_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 237 20 ]
+        %tmp.243 = 0xFFD700;
+        ret %tmp.243;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_238_16_239_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 239 20 ]
+        %tmp.244 = 0xAAAAAA;
+        ret %tmp.244;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_240_16_241_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 241 20 ]
+        %tmp.245 = 0x0000FF;
+        ret %tmp.245;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_242_16_243_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 243 20 ]
+        %tmp.246 = 0xFFFFFF;
+        ret %tmp.246;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_244_16_245_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 245 20 ]
+        %tmp.247 = 0x00FFFF;
+        ret %tmp.247;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_246_16_247_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 247 20 ]
+        %tmp.248 = 0x000080;
+        ret %tmp.248;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_248_16_249_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 249 20 ]
+        %tmp.249 = 0xADD8E6;
+        ret %tmp.249;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_250_16_251_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 251 20 ]
+        %tmp.250 = 0xCCCCCC;
+        ret %tmp.250;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_252_16_253_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 253 20 ]
+        %tmp.251 = 0xBDB76B;
+        ret %tmp.251;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_254_16_255_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 255 20 ]
+        %tmp.252 = 0xE0FFFF;
+        ret %tmp.252;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_256_16_257_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 257 20 ]
+        %tmp.253 = 0x87CEEB;
+        ret %tmp.253;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_258_16_259_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 259 20 ]
+        %tmp.254 = 0x800080;
+        ret %tmp.254;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_260_16_261_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 261 20 ]
+        %tmp.255 = 0xFF00FF;
+        ret %tmp.255;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_262_16_263_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 263 20 ]
+        %tmp.256 = 0xB0E0E6;
+        ret %tmp.256;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_264_16_265_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 265 20 ]
+        %tmp.257 = 0x191970;
+        ret %tmp.257;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_266_16_267_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 267 20 ]
+        %tmp.258 = 0xF8F8FF;
+        ret %tmp.258;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_268_16_269_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 269 20 ]
+        %tmp.259 = 0xC0C0C0;
+        ret %tmp.259;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_270_16_271_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 271 20 ]
+        %tmp.260 = 0xAFEEEE;
+        ret %tmp.260;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_272_16_273_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 273 20 ]
+        %tmp.261 = 0x4682B4;
+        ret %tmp.261;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_274_16_275_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 275 20 ]
+        %tmp.262 = 0x808080;
+        ret %tmp.262;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_276_16_277_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 277 20 ]
+        %tmp.263 = 0x5F9EA0;
+        ret %tmp.263;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_278_16_279_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 279 20 ]
+        %tmp.264 = 0xFFE4B5;
+        ret %tmp.264;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_280_16_281_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 281 20 ]
+        %tmp.265 = 0xFFFFE0;
+        ret %tmp.265;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_282_16_283_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 283 20 ]
+        %tmp.266 = 0x40E0D0;
+        ret %tmp.266;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_284_16_285_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 285 20 ]
+        %tmp.267 = 0x1E90FF;
+        ret %tmp.267;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_286_16_287_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 287 20 ]
+        %tmp.268 = 0x00008B;
+        ret %tmp.268;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_288_16_289_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 289 20 ]
+        %tmp.269 = 0x00BFFF;
+        ret %tmp.269;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_290_16_291_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 291 20 ]
+        %tmp.270 = 0x8B0000;
+        ret %tmp.270;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_292_16_293_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 293 20 ]
+        %tmp.271 = 0xD3D3D3;
+        ret %tmp.271;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_294_16_295_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 295 20 ]
+        %tmp.272 = 0xDEB887;
+        ret %tmp.272;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_296_16_297_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 297 20 ]
+        %tmp.273 = 0xAFEEEE;
+        ret %tmp.273;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_298_16_299_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 299 20 ]
+        %tmp.274 = 0xFF0000;
+        ret %tmp.274;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_300_16_301_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 301 20 ]
+        %tmp.275 = 0x696969;
+        ret %tmp.275;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_302_16_303_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 303 20 ]
+        %tmp.276 = 0x00CED1;
+        ret %tmp.276;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_304_16_305_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 305 20 ]
+        %tmp.277 = 0xF4A460;
+        ret %tmp.277;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_306_16_307_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 307 20 ]
+        %tmp.278 = 0xA52A2A;
+        ret %tmp.278;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_308_16_309_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 309 20 ]
+        %tmp.279 = 0xDAA520;
+        ret %tmp.279;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_310_16_311_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 311 20 ]
+        %tmp.280 = 0x2F4F4F;
+        ret %tmp.280;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_312_16_313_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 313 20 ]
+        %tmp.281 = 0xF5F5DC;
+        ret %tmp.281;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_314_16_315_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 315 20 ]
+        %tmp.282 = 0x7CFC00;
+        ret %tmp.282;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_316_16_317_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 317 20 ]
+        %tmp.283 = 0xFF4500;
+        ret %tmp.283;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_318_16_319_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 319 20 ]
+        %tmp.284 = 0x00FA9A;
+        ret %tmp.284;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_320_16_321_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 321 20 ]
+        %tmp.285 = 0xE6E6FA;
+        ret %tmp.285;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_322_16_323_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 323 20 ]
+        %tmp.286 = 0xB0C4DE;
+        ret %tmp.286;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_324_16_325_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 325 20 ]
+        %tmp.287 = 0x4682B4;
+        ret %tmp.287;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_326_16_327_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 327 20 ]
+        %tmp.288 = 0xF0FFFF;
+        ret %tmp.288;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_328_16_329_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 329 20 ]
+        %tmp.289 = 0xB0E0E6;
+        ret %tmp.289;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_330_16_331_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 331 20 ]
+        %tmp.290 = 0xF0FFF0;
+        ret %tmp.290;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_332_16_333_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 333 20 ]
+        %tmp.291 = 0x00BFFF;
+        ret %tmp.291;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_334_16_335_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 335 20 ]
+        %tmp.292 = 0xB0C4DE;
+        ret %tmp.292;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_336_16_337_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 337 20 ]
+        %tmp.293 = 0xE0FFFF;
+        ret %tmp.293;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_338_16_339_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 339 20 ]
+        %tmp.294 = 0xF5F5F5;
+        ret %tmp.294;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_340_16_341_35_switchCase:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 341 20 ]
+        %tmp.295 = 0xFFA500;
+        ret %tmp.295;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_342_16_343_35_switchCase:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_defaultCodeBegin:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 343 20 ]
+        %tmp.296 = 0xFFA500;
+        ret %tmp.296;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_233_12_344_12_switchStmtEnd:
+        pop;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_32_345_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_8_345_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_232_8_345_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 346 8 ]
+        %tmp.297 = 0xFFA500;
+        ret %tmp.297;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_37_347_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_347_11_351_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 348 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_347_11_351_4_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_347_11_351_4_stop" ]
+        %faceColor.2 = local;
+        symbol [ faceColor %faceColor.2 348 8 17 ];
+        symbol [ Application %tmp.299 348 20 31 ];
+        %tmp.299 = getv ? :Application;
+        symbol [ Properties %tmp.300 348 32 42 ];
+        %tmp.300 = getv %tmp.299 :Properties;
+        symbol [ getValue %tmp.301 348 43 51 ];
+        %tmp.301 = getv function %tmp.300 :getValue;
+        %tmp.302 = "FaceColor";
+        %tmp.303 = invoke %tmp.300 %tmp.301(%tmp.302);
+        lputv %faceColor.2 %tmp.303;
+        symbol [ faceColor %faceColor.2 348 8 17 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 349 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_4_349_51_if_stmt:
+        %tmp.304 = lgetv %faceColor.2;
+        symbol [ faceColor %tmp.304 349 8 17 ];
+        %tmp.305 = null;
+        %tmp.306 = eq %tmp.304 %tmp.305;
+        bf %tmp.306 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_4_349_51_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_4_349_51_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_27_349_51_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 349 29 ]
+        %tmp.307 = 0x009933;
+        lputv %faceColor.2 %tmp.307;
+        symbol [ faceColor %faceColor.2 349 29 38 ];
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_27_349_51_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_4_349_51_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_349_4_349_51_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 350 4 ]
+        %tmp.308 = lgetv %faceColor.2;
+        symbol [ faceColor %tmp.308 350 11 20 ];
+        ret %tmp.308;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_347_11_351_4_stop:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_231_4_351_4_if_end:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_222_41_352_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 355; @symbol_functiondef = [getConditionName,355,9,25]; @symbol_param<0> = [condNum,355,26,33]; @symbol_param<0>_type<0> = [Number,355,37,43]; @symbol_return<0> = [String,355,48,54]; ]
+    function getConditionName(condNum as Number) as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_355_55_417_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 356 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_355_55_417_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_355_55_417_0_stop" ]
+        %CONDITION_NAMES.1 = local;
+        symbol [ CONDITION_NAMES %CONDITION_NAMES.1 356 8 23 ];
+        %tmp.1 = newd 54;
+        %tmp.2 = 0;
+        %tmp.3 = "Clear";
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 %tmp.2 %tmp.3;
+        %tmp.6 = 1;
+        %tmp.7 = "Partly cld";
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        %tmp.10 = 2;
+        %tmp.11 = "Mostly cld";
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        %tmp.14 = 3;
+        %tmp.15 = "Rain";
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 %tmp.14 %tmp.15;
+        %tmp.18 = 4;
+        %tmp.19 = "Snow";
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
+        %tmp.22 = 5;
+        %tmp.23 = "Windy";
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
+        %tmp.26 = 6;
+        %tmp.27 = "T-storms";
+        %tmp.28 = dup %tmp.25;
+        %tmp.29 = aputv %tmp.28 %tmp.26 %tmp.27;
+        %tmp.30 = 7;
+        %tmp.31 = "Wintry mix";
+        %tmp.32 = dup %tmp.29;
+        %tmp.33 = aputv %tmp.32 %tmp.30 %tmp.31;
+        %tmp.34 = 8;
+        %tmp.35 = "Fog";
+        %tmp.36 = dup %tmp.33;
+        %tmp.37 = aputv %tmp.36 %tmp.34 %tmp.35;
+        %tmp.38 = 9;
+        %tmp.39 = "Hazy";
+        %tmp.40 = dup %tmp.37;
+        %tmp.41 = aputv %tmp.40 %tmp.38 %tmp.39;
+        %tmp.42 = 10;
+        %tmp.43 = "Hail";
+        %tmp.44 = dup %tmp.41;
+        %tmp.45 = aputv %tmp.44 %tmp.42 %tmp.43;
+        %tmp.46 = 11;
+        %tmp.47 = "Scatt shwr";
+        %tmp.48 = dup %tmp.45;
+        %tmp.49 = aputv %tmp.48 %tmp.46 %tmp.47;
+        %tmp.50 = 12;
+        %tmp.51 = "Scatt T-strm";
+        %tmp.52 = dup %tmp.49;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.54 = 13;
+        %tmp.55 = "Unk precip";
+        %tmp.56 = dup %tmp.53;
+        %tmp.57 = aputv %tmp.56 %tmp.54 %tmp.55;
+        %tmp.58 = 14;
+        %tmp.59 = "Lt rain";
+        %tmp.60 = dup %tmp.57;
+        %tmp.61 = aputv %tmp.60 %tmp.58 %tmp.59;
+        %tmp.62 = 15;
+        %tmp.63 = "Hvy rain";
+        %tmp.64 = dup %tmp.61;
+        %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
+        %tmp.66 = 16;
+        %tmp.67 = "Lt snow";
+        %tmp.68 = dup %tmp.65;
+        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
+        %tmp.70 = 17;
+        %tmp.71 = "Hvy snow";
+        %tmp.72 = dup %tmp.69;
+        %tmp.73 = aputv %tmp.72 %tmp.70 %tmp.71;
+        %tmp.74 = 18;
+        %tmp.75 = "Lt rn/sn";
+        %tmp.76 = dup %tmp.73;
+        %tmp.77 = aputv %tmp.76 %tmp.74 %tmp.75;
+        %tmp.78 = 19;
+        %tmp.79 = "Hvy rn/sn";
+        %tmp.80 = dup %tmp.77;
+        %tmp.81 = aputv %tmp.80 %tmp.78 %tmp.79;
+        %tmp.82 = 20;
+        %tmp.83 = "Cloudy";
+        %tmp.84 = dup %tmp.81;
+        %tmp.85 = aputv %tmp.84 %tmp.82 %tmp.83;
+        %tmp.86 = 21;
+        %tmp.87 = "Rn/snow";
+        %tmp.88 = dup %tmp.85;
+        %tmp.89 = aputv %tmp.88 %tmp.86 %tmp.87;
+        %tmp.90 = 22;
+        %tmp.91 = "Partly clr";
+        %tmp.92 = dup %tmp.89;
+        %tmp.93 = aputv %tmp.92 %tmp.90 %tmp.91;
+        %tmp.94 = 23;
+        %tmp.95 = "Mostly clr";
+        %tmp.96 = dup %tmp.93;
+        %tmp.97 = aputv %tmp.96 %tmp.94 %tmp.95;
+        %tmp.98 = 24;
+        %tmp.99 = "Lt shwr";
+        %tmp.100 = dup %tmp.97;
+        %tmp.101 = aputv %tmp.100 %tmp.98 %tmp.99;
+        %tmp.102 = 25;
+        %tmp.103 = "Showers";
+        %tmp.104 = dup %tmp.101;
+        %tmp.105 = aputv %tmp.104 %tmp.102 %tmp.103;
+        %tmp.106 = 26;
+        %tmp.107 = "Hvy shwr";
+        %tmp.108 = dup %tmp.105;
+        %tmp.109 = aputv %tmp.108 %tmp.106 %tmp.107;
+        %tmp.110 = 27;
+        %tmp.111 = "Ch shwr";
+        %tmp.112 = dup %tmp.109;
+        %tmp.113 = aputv %tmp.112 %tmp.110 %tmp.111;
+        %tmp.114 = 28;
+        %tmp.115 = "Ch T-strm";
+        %tmp.116 = dup %tmp.113;
+        %tmp.117 = aputv %tmp.116 %tmp.114 %tmp.115;
+        %tmp.118 = 29;
+        %tmp.119 = "Mist";
+        %tmp.120 = dup %tmp.117;
+        %tmp.121 = aputv %tmp.120 %tmp.118 %tmp.119;
+        %tmp.122 = 30;
+        %tmp.123 = "Dust";
+        %tmp.124 = dup %tmp.121;
+        %tmp.125 = aputv %tmp.124 %tmp.122 %tmp.123;
+        %tmp.126 = 31;
+        %tmp.127 = "Drizzle";
+        %tmp.128 = dup %tmp.125;
+        %tmp.129 = aputv %tmp.128 %tmp.126 %tmp.127;
+        %tmp.130 = 32;
+        %tmp.131 = "Tornado";
+        %tmp.132 = dup %tmp.129;
+        %tmp.133 = aputv %tmp.132 %tmp.130 %tmp.131;
+        %tmp.134 = 33;
+        %tmp.135 = "Smoke";
+        %tmp.136 = dup %tmp.133;
+        %tmp.137 = aputv %tmp.136 %tmp.134 %tmp.135;
+        %tmp.138 = 34;
+        %tmp.139 = "Ice";
+        %tmp.140 = dup %tmp.137;
+        %tmp.141 = aputv %tmp.140 %tmp.138 %tmp.139;
+        %tmp.142 = 35;
+        %tmp.143 = "Sand";
+        %tmp.144 = dup %tmp.141;
+        %tmp.145 = aputv %tmp.144 %tmp.142 %tmp.143;
+        %tmp.146 = 36;
+        %tmp.147 = "Squall";
+        %tmp.148 = dup %tmp.145;
+        %tmp.149 = aputv %tmp.148 %tmp.146 %tmp.147;
+        %tmp.150 = 37;
+        %tmp.151 = "Sandstorm";
+        %tmp.152 = dup %tmp.149;
+        %tmp.153 = aputv %tmp.152 %tmp.150 %tmp.151;
+        %tmp.154 = 38;
+        %tmp.155 = "Volc ash";
+        %tmp.156 = dup %tmp.153;
+        %tmp.157 = aputv %tmp.156 %tmp.154 %tmp.155;
+        %tmp.158 = 39;
+        %tmp.159 = "Haze";
+        %tmp.160 = dup %tmp.157;
+        %tmp.161 = aputv %tmp.160 %tmp.158 %tmp.159;
+        %tmp.162 = 40;
+        %tmp.163 = "Fair";
+        %tmp.164 = dup %tmp.161;
+        %tmp.165 = aputv %tmp.164 %tmp.162 %tmp.163;
+        %tmp.166 = 41;
+        %tmp.167 = "Hurricane";
+        %tmp.168 = dup %tmp.165;
+        %tmp.169 = aputv %tmp.168 %tmp.166 %tmp.167;
+        %tmp.170 = 42;
+        %tmp.171 = "Trop storm";
+        %tmp.172 = dup %tmp.169;
+        %tmp.173 = aputv %tmp.172 %tmp.170 %tmp.171;
+        %tmp.174 = 43;
+        %tmp.175 = "Ch snow";
+        %tmp.176 = dup %tmp.173;
+        %tmp.177 = aputv %tmp.176 %tmp.174 %tmp.175;
+        %tmp.178 = 44;
+        %tmp.179 = "Ch rn/sn";
+        %tmp.180 = dup %tmp.177;
+        %tmp.181 = aputv %tmp.180 %tmp.178 %tmp.179;
+        %tmp.182 = 45;
+        %tmp.183 = "Cldy ch rn";
+        %tmp.184 = dup %tmp.181;
+        %tmp.185 = aputv %tmp.184 %tmp.182 %tmp.183;
+        %tmp.186 = 46;
+        %tmp.187 = "Cldy ch sn";
+        %tmp.188 = dup %tmp.185;
+        %tmp.189 = aputv %tmp.188 %tmp.186 %tmp.187;
+        %tmp.190 = 47;
+        %tmp.191 = "Cldy ch rn/sn";
+        %tmp.192 = dup %tmp.189;
+        %tmp.193 = aputv %tmp.192 %tmp.190 %tmp.191;
+        %tmp.194 = 48;
+        %tmp.195 = "Flurries";
+        %tmp.196 = dup %tmp.193;
+        %tmp.197 = aputv %tmp.196 %tmp.194 %tmp.195;
+        %tmp.198 = 49;
+        %tmp.199 = "Frz rain";
+        %tmp.200 = dup %tmp.197;
+        %tmp.201 = aputv %tmp.200 %tmp.198 %tmp.199;
+        %tmp.202 = 50;
+        %tmp.203 = "Sleet";
+        %tmp.204 = dup %tmp.201;
+        %tmp.205 = aputv %tmp.204 %tmp.202 %tmp.203;
+        %tmp.206 = 51;
+        %tmp.207 = "Ice snow";
+        %tmp.208 = dup %tmp.205;
+        %tmp.209 = aputv %tmp.208 %tmp.206 %tmp.207;
+        %tmp.210 = 52;
+        %tmp.211 = "Thin clds";
+        %tmp.212 = dup %tmp.209;
+        %tmp.213 = aputv %tmp.212 %tmp.210 %tmp.211;
+        %tmp.214 = 53;
+        %tmp.215 = "Unknown";
+        %tmp.216 = dup %tmp.213;
+        %tmp.217 = aputv %tmp.216 %tmp.214 %tmp.215;
+        lputv %CONDITION_NAMES.1 %tmp.217;
+        symbol [ CONDITION_NAMES %CONDITION_NAMES.1 356 8 23 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 413 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_4_415_4_if_stmt:
+        %tmp.218 = lgetv %CONDITION_NAMES.1;
+        symbol [ CONDITION_NAMES %tmp.218 413 8 23 ];
+        symbol [ hasKey %tmp.219 413 24 30 ];
+        %tmp.219 = getv function %tmp.218 :hasKey;
+        %tmp.220 = lgetv %condNum;
+        symbol [ condNum %tmp.220 413 31 38 ];
+        %tmp.221 = invoke %tmp.218 %tmp.219(%tmp.220);
+        bf %tmp.221 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_4_415_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_4_415_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_41_415_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 414 8 ]
+        %tmp.222 = lgetv %CONDITION_NAMES.1;
+        symbol [ CONDITION_NAMES %tmp.222 414 15 30 ];
+        %tmp.223 = lgetv %condNum;
+        symbol [ condNum %tmp.223 414 31 38 ];
+        %tmp.224 = agetv %tmp.222 %tmp.223;
+        ret %tmp.224;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_41_415_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_4_415_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_413_4_415_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 416 4 ]
+        %tmp.225 = "Unknown";
+        ret %tmp.225;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_355_55_417_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 486; @symbol_functiondef = [getUVIndexString,486,9,25]; @symbol_return<0> = [String,486,31,37]; ]
+    function getUVIndexString() as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_486_38_492_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 487 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_486_38_492_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_486_38_492_0_stop" ]
+        %uv.1 = local;
+        symbol [ uv %uv.1 487 8 10 ];
+        %tmp.1 = self;
+        symbol [ getUvIndex %tmp.2 487 13 23 ];
+        %tmp.2 = getv function %tmp.1 :getUvIndex;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %uv.1 %tmp.3;
+        symbol [ uv %uv.1 487 8 10 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 488 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_4_490_4_if_stmt:
+        %tmp.4 = lgetv %uv.1;
+        symbol [ uv %tmp.4 488 8 10 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_4_490_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_4_490_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_20_490_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 489 8 ]
+        %tmp.7 = "-";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_20_490_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_4_490_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_488_4_490_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 491 4 ]
+        %tmp.8 = lgetv %uv.1;
+        symbol [ uv %tmp.8 491 11 13 ];
+        symbol [ format %tmp.9 491 14 20 ];
+        %tmp.9 = getv function %tmp.8 :format;
+        %tmp.10 = "%d";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        ret %tmp.11;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_486_38_492_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 496; @symbol_functiondef = [getHumidityString,496,9,26]; @symbol_return<0> = [String,496,32,38]; ]
+    function getHumidityString() as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_496_39_502_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 497 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_496_39_502_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_496_39_502_0_stop" ]
+        %humidity.1 = local;
+        symbol [ humidity %humidity.1 497 8 16 ];
+        %tmp.1 = self;
+        symbol [ getHumidity %tmp.2 497 19 30 ];
+        %tmp.2 = getv function %tmp.1 :getHumidity;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %humidity.1 %tmp.3;
+        symbol [ humidity %humidity.1 497 8 16 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 498 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_4_500_4_if_stmt:
+        %tmp.4 = lgetv %humidity.1;
+        symbol [ humidity %tmp.4 498 8 16 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_4_500_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_4_500_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_26_500_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 499 8 ]
+        %tmp.7 = "-";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_26_500_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_4_500_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_498_4_500_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 501 4 ]
+        %tmp.8 = lgetv %humidity.1;
+        symbol [ humidity %tmp.8 501 11 19 ];
+        symbol [ toString %tmp.9 501 20 28 ];
+        %tmp.9 = getv function %tmp.8 :toString;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = "%";
+        %tmp.12 = add %tmp.10 %tmp.11;
+        ret %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_496_39_502_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 505; @symbol_functiondef = [getSunEventTimeString,505,9,30]; @symbol_return<0> = [String,505,36,42]; ]
+    function getSunEventTimeString() as String {
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 506 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_stop" ]
+        %sunEvent.1 = local;
+        symbol [ sunEvent %sunEvent.1 506 8 16 ];
+        %tmp.1 = self;
+        symbol [ getSunEventTime %tmp.2 506 19 34 ];
+        %tmp.2 = getv function %tmp.1 :getSunEventTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %sunEvent.1 %tmp.3;
+        symbol [ sunEvent %sunEvent.1 506 8 16 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 508 4 ]
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_4_510_4_if_stmt:
+        %tmp.4 = lgetv %sunEvent.1;
+        symbol [ sunEvent %tmp.4 508 8 16 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_4_510_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_4_510_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_26_510_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 509 8 ]
+        %tmp.7 = "-";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_26_510_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_4_510_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_508_4_510_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 511 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_stop" ]
+        %info.2 = local;
+        symbol [ info %info.2 511 8 12 ];
+        symbol [ Time %tmp.8 511 15 19 ];
+        %tmp.8 = getm $.Toybox.Time;
+        symbol [ Gregorian %tmp.9 511 20 29 ];
+        %tmp.9 = getv %tmp.8 :Gregorian;
+        symbol [ info %tmp.10 511 30 34 ];
+        %tmp.10 = getv function %tmp.9 :info;
+        %tmp.11 = lgetv %sunEvent.1;
+        symbol [ sunEvent %tmp.11 511 35 43 ];
+        symbol [ Time %tmp.12 511 45 49 ];
+        %tmp.12 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.13 511 50 62 ];
+        %tmp.13 = getv %tmp.12 :FORMAT_SHORT;
+        %tmp.14 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.13);
+        lputv %info.2 %tmp.14;
+        symbol [ info %info.2 511 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 512 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_stop" ]
+        %hour.3 = local;
+        symbol [ hour %hour.3 512 8 12 ];
+        %tmp.15 = lgetv %info.2;
+        symbol [ info %tmp.15 512 15 19 ];
+        symbol [ hour %tmp.16 512 20 24 ];
+        %tmp.16 = getv %tmp.15 :hour;
+        lputv %hour.3 %tmp.16;
+        symbol [ hour %hour.3 512 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 513 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_start" "_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_stop" ]
+        %min.4 = local;
+        symbol [ min %min.4 513 8 11 ];
+        %tmp.17 = lgetv %info.2;
+        symbol [ info %tmp.17 513 14 18 ];
+        symbol [ min %tmp.18 513 19 22 ];
+        %tmp.18 = getv %tmp.17 :min;
+        lputv %min.4 %tmp.18;
+        symbol [ min %min.4 513 8 11 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" 514 4 ]
+        %tmp.19 = lgetv %hour.3;
+        symbol [ hour %tmp.19 514 11 15 ];
+        symbol [ format %tmp.20 514 16 22 ];
+        %tmp.20 = getv function %tmp.19 :format;
+        %tmp.21 = "%02d";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        %tmp.23 = ":";
+        %tmp.24 = add %tmp.22 %tmp.23;
+        %tmp.25 = lgetv %min.4;
+        symbol [ min %tmp.25 514 39 42 ];
+        symbol [ format %tmp.26 514 43 49 ];
+        %tmp.26 = getv function %tmp.25 :format;
+        %tmp.27 = "%02d";
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        %tmp.29 = add %tmp.24 %tmp.28;
+        ret %tmp.29;
+_Users_will_WatchFaces_RetroWeather_source_WeatherControl_mc_505_43_515_0_stop:
+    }
+}
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc"; @line = 1; ]
+<init> {
+}

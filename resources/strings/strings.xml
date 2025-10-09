@@ -1,0 +1,25 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Abstract Weather</string>
+
+    <string id="ColorThemeTitle">Color Theme</string>
+    <string id="MatrixGreen">Matrix Green</string>
+    <string id="RetroCyan">Retro Cyan</string>
+    <string id="RetroAmber">Retro Amber</string>
+    <string id="RetroPurple">Retro Purple</string>
+    <string id="RetroRed">Retro Red</string>
+    <string id="RetroBlue">Retro Blue</string>
+    <string id="RetroOrange">Retro Orange</string>
+    <string id="RetroPink">Retro Pink</string>
+    <string id="RetroYellow">Retro Yellow</string>
+    <string id="RetroWhite">Retro White</string>
+    <string id="WindSpeedUnitTitle">Wind Speed Units</string>
+    <string id="WindUnit_ms">m/s</string>
+    <string id="WindUnit_mph">mph</string>
+    <string id="WindUnit_kmh">km/h</string>
+    <string id="TemperatureUnitTitle">Temperature Units</string>
+    <string id="TempUnit_C">°C</string>
+    <string id="TempUnit_F">°F</string>
+    <string id="ShowDataStripTitle">Show Data Strip Below Time</string>
+    <string id="Off">Off</string>
+    <string id="On">On</string>
+</strings>

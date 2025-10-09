@@ -1,0 +1,907 @@
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Position,4,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Weather,5,14,21]; ]
+import Toybox.Weather;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Application,6,13,24]; @symbol_usingdef<2> = [Properties,6,25,35]; ]
+using Toybox.Application.Properties;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Math,7,14,18]; ]
+import Toybox.Math;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [Time,8,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 9; @symbol_importdef<0> = [Toybox,9,7,13]; @symbol_importdef<1> = [ActivityMonitor,9,14,29]; ]
+import Toybox.ActivityMonitor;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 13; @symbol_classdef = [HealthControl,13,6,19]; ]
+class HealthControl {
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 13; ]
+    <init> {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 13; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 16; @symbol_functiondef = [HealthControl,16,9,22]; ]
+    function HealthControl() {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 21; @symbol_functiondef = [getStepGoal,21,9,20]; @symbol_return<0> = [Number,21,26,32]; ]
+    function getStepGoal() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_21_41_23_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 22 4 ]
+        symbol [ Toybox %tmp.2 22 11 17 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.3 22 18 33 ];
+        %tmp.3 = getv %tmp.2 :ActivityMonitor;
+        symbol [ getInfo %tmp.4 22 34 41 ];
+        %tmp.4 = getv function %tmp.3 :getInfo;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ stepGoal %tmp.6 22 44 52 ];
+        %tmp.6 = getv %tmp.5 :stepGoal;
+        ret %tmp.6;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_21_41_23_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 25; @symbol_functiondef = [getStepsRatioThresholded,25,9,33]; @symbol_return<0> = [Float,25,39,44]; ]
+    function getStepsRatioThresholded() as Float or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 26 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_stop" ]
+        %stepGoal.1 = local;
+        symbol [ stepGoal %stepGoal.1 26 8 16 ];
+        %tmp.1 = self;
+        symbol [ getStepGoal %tmp.2 26 19 30 ];
+        %tmp.2 = getv function %tmp.1 :getStepGoal;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %stepGoal.1 %tmp.3;
+        symbol [ stepGoal %stepGoal.1 26 8 16 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 27 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_stop" ]
+        %steps.2 = local;
+        symbol [ steps %steps.2 27 8 13 ];
+        %tmp.4 = self;
+        symbol [ getSteps %tmp.5 27 16 24 ];
+        %tmp.5 = getv function %tmp.4 :getSteps;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %steps.2 %tmp.6;
+        symbol [ steps %steps.2 27 8 13 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 29 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_8_29_37_begin:
+        %tmp.7 = lgetv %steps.2;
+        symbol [ steps %tmp.7 29 8 13 ];
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bt %tmp.9 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_true;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_25_29_37_false:
+        %tmp.10 = lgetv %stepGoal.1;
+        symbol [ stepGoal %tmp.10 29 25 33 ];
+        %tmp.11 = null;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        push %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_25_29_37_end:
+        %tmp.13 = phi [%tmp.9 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_8_29_37_begin] [%tmp.12 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_25_29_37_false] [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_25_29_37_end];
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_43_31_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 30 8 ]
+        %tmp.14 = null;
+        ret %tmp.14;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_43_31_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_29_4_31_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 33 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_4_35_4_if_stmt:
+        %tmp.15 = lgetv %steps.2;
+        symbol [ steps %tmp.15 33 8 13 ];
+        %tmp.16 = lgetv %stepGoal.1;
+        symbol [ stepGoal %tmp.16 33 16 24 ];
+        %tmp.17 = gt %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_4_35_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_4_35_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_26_35_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 34 8 ]
+        %tmp.18 = lgetv %stepGoal.1;
+        symbol [ stepGoal %tmp.18 34 16 24 ];
+        lputv %steps.2 %tmp.18;
+        symbol [ steps %steps.2 34 8 13 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_26_35_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_4_35_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_33_4_35_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 37 4 ]
+        %tmp.19 = 1.0;
+        %tmp.20 = lgetv %steps.2;
+        symbol [ steps %tmp.20 37 17 22 ];
+        %tmp.21 = mul %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %stepGoal.1;
+        symbol [ stepGoal %tmp.22 37 25 33 ];
+        %tmp.23 = div %tmp.21 %tmp.22;
+        ret %tmp.23;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_25_53_38_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 40; @symbol_functiondef = [getSteps,40,9,17]; @symbol_return<0> = [Number,40,23,29]; ]
+    function getSteps() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_40_38_42_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 41 4 ]
+        symbol [ Toybox %tmp.2 41 11 17 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.3 41 18 33 ];
+        %tmp.3 = getv %tmp.2 :ActivityMonitor;
+        symbol [ getInfo %tmp.4 41 34 41 ];
+        %tmp.4 = getv function %tmp.3 :getInfo;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ steps %tmp.6 41 44 49 ];
+        %tmp.6 = getv %tmp.5 :steps;
+        ret %tmp.6;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_40_38_42_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 44; @symbol_functiondef = [getStepsString,44,9,23]; @symbol_return<0> = [String,44,29,35]; ]
+    function getStepsString() as String {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_44_36_50_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 45 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_44_36_50_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_44_36_50_0_stop" ]
+        %steps.1 = local;
+        symbol [ steps %steps.1 45 8 13 ];
+        %tmp.1 = self;
+        symbol [ getSteps %tmp.2 45 16 24 ];
+        %tmp.2 = getv function %tmp.1 :getSteps;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %steps.1 %tmp.3;
+        symbol [ steps %steps.1 45 8 13 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 46 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_4_48_4_if_stmt:
+        %tmp.4 = lgetv %steps.1;
+        symbol [ steps %tmp.4 46 8 13 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_4_48_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_4_48_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_23_48_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 47 8 ]
+        %tmp.7 = "-";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_23_48_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_4_48_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_46_4_48_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 49 4 ]
+        %tmp.8 = self;
+        symbol [ getSteps %tmp.9 49 11 19 ];
+        %tmp.9 = getv function %tmp.8 :getSteps;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        symbol [ format %tmp.11 49 22 28 ];
+        %tmp.11 = getv function %tmp.10 :format;
+        %tmp.12 = "%d";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        ret %tmp.13;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_44_36_50_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 53; @symbol_functiondef = [getCalories,53,9,20]; @symbol_return<0> = [Number,53,26,32]; ]
+    function getCalories() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_53_41_60_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 54 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_53_41_60_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_53_41_60_0_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 54 8 12 ];
+        symbol [ Toybox %tmp.2 54 15 21 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.3 54 22 37 ];
+        %tmp.3 = getv %tmp.2 :ActivityMonitor;
+        symbol [ getInfo %tmp.4 54 38 45 ];
+        %tmp.4 = getv function %tmp.3 :getInfo;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %info.1 %tmp.5;
+        symbol [ info %info.1 54 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 55 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_8_55_41_begin:
+        %tmp.6 = lgetv %info.1;
+        symbol [ info %tmp.6 55 8 12 ];
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_24_55_41_true:
+        %tmp.9 = lgetv %info.1;
+        symbol [ info %tmp.9 55 24 28 ];
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ calories %tmp.11 55 29 37 ];
+        %tmp.11 = getv %tmp.10 :calories;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        push %tmp.13;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_24_55_41_end:
+        %tmp.14 = phi [%tmp.8 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_8_55_41_begin] [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_24_55_41_true] [%tmp.14 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_24_55_41_end];
+        bf %tmp.14 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_47_58_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 56 8 ]
+        %tmp.15 = lgetv %info.1;
+        symbol [ info %tmp.15 56 15 19 ];
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ calories %tmp.17 56 20 28 ];
+        %tmp.17 = getv %tmp.16 :calories;
+        ret %tmp.17;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_47_58_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_55_4_58_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 59 4 ]
+        %tmp.18 = null;
+        ret %tmp.18;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_53_41_60_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 63; @symbol_functiondef = [getStressIterator,63,9,26]; ]
+    function getStressIterator() {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_63_29_70_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 64 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_8_64_82_begin:
+        symbol [ Toybox %tmp.2 64 9 15 ];
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :SensorHistory;
+        symbol [ SensorHistory %tmp.4 64 21 34 const ];
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_39_64_82_true:
+        symbol [ Toybox %tmp.7 64 40 46 ];
+        %tmp.7 = getv ? :Toybox;
+        %tmp.8 = as %tmp.7 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.9 64 47 60 ];
+        %tmp.9 = getv %tmp.8 :SensorHistory;
+        %tmp.11 = const :getStressHistory;
+        symbol [ getStressHistory %tmp.11 64 66 82 const ];
+        %tmp.12 = canhazplz %tmp.9 %tmp.11;
+        push %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_39_64_82_end:
+        %tmp.13 = phi [%tmp.5 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_8_64_82_begin] [%tmp.12 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_39_64_82_true] [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_39_64_82_end];
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_85_68_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 65 8 ]
+        symbol [ Toybox %tmp.15 65 15 21 ];
+        %tmp.15 = getv ? :Toybox;
+        %tmp.16 = as %tmp.15 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.17 65 22 35 ];
+        %tmp.17 = getv %tmp.16 :SensorHistory;
+        symbol [ getStressHistory %tmp.18 65 36 52 ];
+        %tmp.18 = getv function %tmp.17 :getStressHistory;
+        %tmp.19 = newd 2;
+        %tmp.21 = const :period;
+        symbol [ period %tmp.21 65 56 62 const ];
+        %tmp.22 = 1;
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        %tmp.26 = const :order;
+        symbol [ order %tmp.26 66 14 19 const ];
+        symbol [ Toybox %tmp.28 66 23 29 ];
+        %tmp.28 = getv ? :Toybox;
+        %tmp.29 = as %tmp.28 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.30 66 30 43 ];
+        %tmp.30 = getv %tmp.29 :SensorHistory;
+        symbol [ ORDER_NEWEST_FIRST %tmp.31 66 44 62 ];
+        %tmp.31 = getv %tmp.30 :ORDER_NEWEST_FIRST;
+        %tmp.32 = dup %tmp.24;
+        %tmp.33 = aputv %tmp.32 %tmp.26 %tmp.31;
+        %tmp.34 = invoke %tmp.17 %tmp.18(%tmp.33);
+        ret %tmp.34;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_85_68_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_64_4_68_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 69 4 ]
+        %tmp.35 = null;
+        ret %tmp.35;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_63_29_70_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 73; @symbol_functiondef = [getStress,73,9,18]; @symbol_return<0> = [Number,73,24,30]; ]
+    function getStress() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_73_39_85_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 74 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_73_39_85_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_73_39_85_0_stop" ]
+        %stressIterator.1 = local;
+        symbol [ stressIterator %stressIterator.1 74 8 22 ];
+        %tmp.1 = self;
+        symbol [ getStressIterator %tmp.2 74 25 42 ];
+        %tmp.2 = getv function %tmp.1 :getStressIterator;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %stressIterator.1 %tmp.3;
+        symbol [ stressIterator %stressIterator.1 74 8 22 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 75 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_4_83_4_if_stmt:
+        %tmp.4 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.4 75 8 22 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_4_83_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_4_83_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_32_83_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 76 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_32_83_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_32_83_4_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 76 12 18 ];
+        %tmp.7 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.7 76 21 35 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ next %tmp.9 76 36 40 ];
+        %tmp.9 = getv function %tmp.8 :next;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %sample.2 %tmp.10;
+        symbol [ sample %sample.2 76 12 18 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 77 8 ]
+        while @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_test @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_test:
+        %tmp.11 = lgetv %sample.2;
+        symbol [ sample %tmp.11 77 15 21 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_begin:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_31_82_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 78 12 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_12_80_12_if_stmt:
+        %tmp.14 = lgetv %sample.2;
+        symbol [ sample %tmp.14 78 16 22 ];
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ data %tmp.16 78 23 27 ];
+        %tmp.16 = getv %tmp.15 :data;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_12_80_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_12_80_12_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_37_80_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 79 16 ]
+        %tmp.19 = lgetv %sample.2;
+        symbol [ sample %tmp.19 79 23 29 ];
+        %tmp.20 = as %tmp.19 { (!Null) };
+        symbol [ data %tmp.21 79 30 34 ];
+        %tmp.21 = getv %tmp.20 :data;
+        ret %tmp.21;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_37_80_12_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_12_80_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_78_12_80_12_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 81 12 ]
+        %tmp.22 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.22 81 21 35 ];
+        %tmp.23 = as %tmp.22 { (!Null) };
+        symbol [ next %tmp.24 81 36 40 ];
+        %tmp.24 = getv function %tmp.23 :next;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        lputv %sample.2 %tmp.25;
+        symbol [ sample %sample.2 81 12 18 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_31_82_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_test;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_77_8_82_8_while_end:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_32_83_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_4_83_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_75_4_83_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 84 4 ]
+        %tmp.26 = null;
+        ret %tmp.26;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_73_39_85_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 87; @symbol_functiondef = [getStressString,87,9,24]; @symbol_return<0> = [String,87,30,36]; ]
+    function getStressString() as String {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_87_37_99_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 88 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_87_37_99_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_87_37_99_0_stop" ]
+        %stressIterator.1 = local;
+        symbol [ stressIterator %stressIterator.1 88 8 22 ];
+        %tmp.1 = self;
+        symbol [ getStressIterator %tmp.2 88 25 42 ];
+        %tmp.2 = getv function %tmp.1 :getStressIterator;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %stressIterator.1 %tmp.3;
+        symbol [ stressIterator %stressIterator.1 88 8 22 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 89 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_4_97_4_if_stmt:
+        %tmp.4 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.4 89 8 22 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_4_97_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_4_97_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_32_97_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 90 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_32_97_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_32_97_4_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 90 12 18 ];
+        %tmp.7 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.7 90 21 35 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ next %tmp.9 90 36 40 ];
+        %tmp.9 = getv function %tmp.8 :next;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %sample.2 %tmp.10;
+        symbol [ sample %sample.2 90 12 18 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 91 8 ]
+        while @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_test @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_test:
+        %tmp.11 = lgetv %sample.2;
+        symbol [ sample %tmp.11 91 15 21 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_begin:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_31_96_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 92 12 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_12_94_12_if_stmt:
+        %tmp.14 = lgetv %sample.2;
+        symbol [ sample %tmp.14 92 16 22 ];
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ data %tmp.16 92 23 27 ];
+        %tmp.16 = getv %tmp.15 :data;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_12_94_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_12_94_12_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_37_94_12_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 93 16 ]
+        %tmp.19 = lgetv %sample.2;
+        symbol [ sample %tmp.19 93 23 29 ];
+        %tmp.20 = as %tmp.19 { (!Null) };
+        symbol [ data %tmp.21 93 30 34 ];
+        %tmp.21 = getv %tmp.20 :data;
+        symbol [ format %tmp.22 93 35 41 ];
+        %tmp.22 = getv function %tmp.21 :format;
+        %tmp.23 = "%d";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        ret %tmp.24;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_37_94_12_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_12_94_12_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_92_12_94_12_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 95 12 ]
+        %tmp.25 = lgetv %stressIterator.1;
+        symbol [ stressIterator %tmp.25 95 21 35 ];
+        %tmp.26 = as %tmp.25 { (!Null) };
+        symbol [ next %tmp.27 95 36 40 ];
+        %tmp.27 = getv function %tmp.26 :next;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        lputv %sample.2 %tmp.28;
+        symbol [ sample %sample.2 95 12 18 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_31_96_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_test;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_91_8_96_8_while_end:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_32_97_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_4_97_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_89_4_97_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 98 4 ]
+        %tmp.29 = "-";
+        ret %tmp.29;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_87_37_99_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 102; @symbol_functiondef = [getDistance,102,9,20]; @symbol_return<0> = [Number,102,26,32]; ]
+    function getDistance() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_102_41_119_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 103 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_102_41_119_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_102_41_119_0_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 103 8 12 ];
+        symbol [ Toybox %tmp.2 103 15 21 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.3 103 22 37 ];
+        %tmp.3 = getv %tmp.2 :ActivityMonitor;
+        symbol [ getInfo %tmp.4 103 38 45 ];
+        %tmp.4 = getv function %tmp.3 :getInfo;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %info.1 %tmp.5;
+        symbol [ info %info.1 103 8 12 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 104 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_8_104_38_begin:
+        %tmp.6 = lgetv %info.1;
+        symbol [ info %tmp.6 104 8 12 ];
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_24_104_38_true:
+        %tmp.9 = lgetv %info.1;
+        symbol [ info %tmp.9 104 24 28 ];
+        %tmp.10 = as %tmp.9 { (!Null) };
+        symbol [ steps %tmp.11 104 29 34 ];
+        %tmp.11 = getv %tmp.10 :steps;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        push %tmp.13;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_24_104_38_end:
+        %tmp.14 = phi [%tmp.8 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_8_104_38_begin] [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_24_104_38_true] [%tmp.14 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_24_104_38_end];
+        bf %tmp.14 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 105 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop" ]
+        %steps.2 = local;
+        symbol [ steps %steps.2 105 12 17 ];
+        %tmp.15 = lgetv %info.1;
+        symbol [ info %tmp.15 105 20 24 ];
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ steps %tmp.17 105 25 30 ];
+        %tmp.17 = getv %tmp.16 :steps;
+        lputv %steps.2 %tmp.17;
+        symbol [ steps %steps.2 105 12 17 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 106 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop" ]
+        %strideLength.3 = local;
+        symbol [ strideLength %strideLength.3 106 12 24 ];
+        %tmp.18 = 0.75;
+        lputv %strideLength.3 %tmp.18;
+        symbol [ strideLength %strideLength.3 106 12 24 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 107 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop" ]
+        %distanceMeters.4 = local;
+        symbol [ distanceMeters %distanceMeters.4 107 12 26 ];
+        %tmp.19 = lgetv %steps.2;
+        symbol [ steps %tmp.19 107 29 34 ];
+        %tmp.20 = lgetv %strideLength.3;
+        symbol [ strideLength %tmp.20 107 37 49 ];
+        %tmp.21 = mul %tmp.19 %tmp.20;
+        lputv %distanceMeters.4 %tmp.21;
+        symbol [ distanceMeters %distanceMeters.4 107 12 26 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 108 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop" ]
+        %unit.5 = local;
+        symbol [ unit %unit.5 108 12 16 ];
+        symbol [ Application %tmp.23 108 19 30 ];
+        %tmp.23 = getv ? :Application;
+        symbol [ Properties %tmp.24 108 31 41 ];
+        %tmp.24 = getv %tmp.23 :Properties;
+        symbol [ getValue %tmp.25 108 42 50 ];
+        %tmp.25 = getv function %tmp.24 :getValue;
+        %tmp.26 = "DistanceUnit";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        lputv %unit.5 %tmp.27;
+        symbol [ unit %unit.5 108 12 16 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 109 8 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_8_109_38_if_stmt:
+        %tmp.28 = lgetv %unit.5;
+        symbol [ unit %tmp.28 109 12 16 ];
+        %tmp.29 = null;
+        %tmp.30 = eq %tmp.28 %tmp.29;
+        bf %tmp.30 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_8_109_38_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_8_109_38_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_26_109_38_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 109 28 ]
+        %tmp.31 = 1;
+        lputv %unit.5 %tmp.31;
+        symbol [ unit %unit.5 109 28 32 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_26_109_38_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_8_109_38_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_109_8_109_38_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 110 8 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop" ]
+        %value.6 = local;
+        symbol [ value %value.6 110 12 17 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 111 8 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_stmt:
+        %tmp.32 = lgetv %unit.5;
+        symbol [ unit %tmp.32 111 12 16 ];
+        %tmp.33 = 2;
+        %tmp.34 = eq %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_else_false;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_23_113_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 112 12 ]
+        %tmp.35 = lgetv %distanceMeters.4;
+        symbol [ distanceMeters %tmp.35 112 20 34 ];
+        %tmp.36 = 1609.344;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        lputv %value.6 %tmp.37;
+        symbol [ value %value.6 112 12 17 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_23_113_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_else_false:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_113_15_115_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 114 12 ]
+        %tmp.38 = lgetv %distanceMeters.4;
+        symbol [ distanceMeters %tmp.38 114 20 34 ];
+        %tmp.39 = 1000.0;
+        %tmp.40 = div %tmp.38 %tmp.39;
+        lputv %value.6 %tmp.40;
+        symbol [ value %value.6 114 12 17 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_113_15_115_8_stop:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_111_8_115_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 116 8 ]
+        %tmp.41 = lgetv %value.6;
+        symbol [ value %tmp.41 116 15 20 ];
+        %tmp.42 = as %tmp.41 Number;
+        symbol [ Number %tmp.42 116 24 30 ];
+        ret %tmp.42;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_44_117_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_104_4_117_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 118 4 ]
+        %tmp.43 = null;
+        ret %tmp.43;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_102_41_119_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 121; @symbol_functiondef = [getBodyBatteryIterator,121,9,31]; ]
+    function getBodyBatteryIterator() {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_121_34_128_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 122 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_8_122_87_begin:
+        symbol [ Toybox %tmp.2 122 9 15 ];
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :SensorHistory;
+        symbol [ SensorHistory %tmp.4 122 21 34 const ];
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_39_122_87_true:
+        symbol [ Toybox %tmp.7 122 40 46 ];
+        %tmp.7 = getv ? :Toybox;
+        %tmp.8 = as %tmp.7 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.9 122 47 60 ];
+        %tmp.9 = getv %tmp.8 :SensorHistory;
+        %tmp.11 = const :getBodyBatteryHistory;
+        symbol [ getBodyBatteryHistory %tmp.11 122 66 87 const ];
+        %tmp.12 = canhazplz %tmp.9 %tmp.11;
+        push %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_39_122_87_end:
+        %tmp.13 = phi [%tmp.5 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_8_122_87_begin] [%tmp.12 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_39_122_87_true] [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_39_122_87_end];
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_90_126_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 123 8 ]
+        symbol [ Toybox %tmp.15 123 15 21 ];
+        %tmp.15 = getv ? :Toybox;
+        %tmp.16 = as %tmp.15 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.17 123 22 35 ];
+        %tmp.17 = getv %tmp.16 :SensorHistory;
+        symbol [ getBodyBatteryHistory %tmp.18 123 36 57 ];
+        %tmp.18 = getv function %tmp.17 :getBodyBatteryHistory;
+        %tmp.19 = newd 2;
+        %tmp.21 = const :period;
+        symbol [ period %tmp.21 123 61 67 const ];
+        %tmp.22 = 1;
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        %tmp.26 = const :order;
+        symbol [ order %tmp.26 124 14 19 const ];
+        symbol [ Toybox %tmp.28 124 23 29 ];
+        %tmp.28 = getv ? :Toybox;
+        %tmp.29 = as %tmp.28 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.30 124 30 43 ];
+        %tmp.30 = getv %tmp.29 :SensorHistory;
+        symbol [ ORDER_NEWEST_FIRST %tmp.31 124 44 62 ];
+        %tmp.31 = getv %tmp.30 :ORDER_NEWEST_FIRST;
+        %tmp.32 = dup %tmp.24;
+        %tmp.33 = aputv %tmp.32 %tmp.26 %tmp.31;
+        %tmp.34 = invoke %tmp.17 %tmp.18(%tmp.33);
+        ret %tmp.34;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_90_126_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_122_4_126_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 127 4 ]
+        %tmp.35 = null;
+        ret %tmp.35;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_121_34_128_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 130; @symbol_functiondef = [getBodyBattery,130,9,23]; @symbol_return<0> = [Number,130,29,35]; ]
+    function getBodyBattery() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 131 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_stop" ]
+        %bbIterator.1 = local;
+        symbol [ bbIterator %bbIterator.1 131 8 18 ];
+        %tmp.1 = self;
+        symbol [ getBodyBatteryIterator %tmp.2 131 21 43 ];
+        %tmp.2 = getv function %tmp.1 :getBodyBatteryIterator;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %bbIterator.1 %tmp.3;
+        symbol [ bbIterator %bbIterator.1 131 8 18 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 132 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 132 8 14 ];
+        %tmp.4 = lgetv %bbIterator.1;
+        symbol [ bbIterator %tmp.4 132 17 27 ];
+        symbol [ next %tmp.5 132 28 32 ];
+        %tmp.5 = getv function %tmp.4 :next;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %sample.2 %tmp.6;
+        symbol [ sample %sample.2 132 8 14 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 134 4 ]
+        while @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_test @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_test:
+        %tmp.7 = lgetv %sample.2;
+        symbol [ sample %tmp.7 134 11 17 ];
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_begin:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_27_139_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 135 8 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_8_137_8_if_stmt:
+        %tmp.10 = lgetv %sample.2;
+        symbol [ sample %tmp.10 135 12 18 ];
+        %tmp.11 = as %tmp.10 { (!Null) };
+        symbol [ data %tmp.12 135 19 23 ];
+        %tmp.12 = getv %tmp.11 :data;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_8_137_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_8_137_8_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_33_137_8_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 136 12 ]
+        %tmp.15 = lgetv %sample.2;
+        symbol [ sample %tmp.15 136 19 25 ];
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ data %tmp.17 136 26 30 ];
+        %tmp.17 = getv %tmp.16 :data;
+        ret %tmp.17;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_33_137_8_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_8_137_8_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_135_8_137_8_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 138 8 ]
+        %tmp.18 = lgetv %bbIterator.1;
+        symbol [ bbIterator %tmp.18 138 17 27 ];
+        symbol [ next %tmp.19 138 28 32 ];
+        %tmp.19 = getv function %tmp.18 :next;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %sample.2 %tmp.20;
+        symbol [ sample %sample.2 138 8 14 ];
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_27_139_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_test;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_134_4_139_4_while_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 141 4 ]
+        %tmp.21 = null;
+        ret %tmp.21;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_130_44_142_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 144; @symbol_functiondef = [getBodyBatteryString,144,9,29]; @symbol_return<0> = [String,144,35,41]; ]
+    function getBodyBatteryString() as String {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_144_42_150_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 145 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_144_42_150_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_144_42_150_0_stop" ]
+        %bodyBattery.1 = local;
+        symbol [ bodyBattery %bodyBattery.1 145 8 19 ];
+        %tmp.1 = self;
+        symbol [ getBodyBattery %tmp.2 145 22 36 ];
+        %tmp.2 = getv function %tmp.1 :getBodyBattery;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %bodyBattery.1 %tmp.3;
+        symbol [ bodyBattery %bodyBattery.1 145 8 19 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 146 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_4_148_4_if_stmt:
+        %tmp.4 = lgetv %bodyBattery.1;
+        symbol [ bodyBattery %tmp.4 146 8 19 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_4_148_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_4_148_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_29_148_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 147 8 ]
+        %tmp.7 = "-";
+        ret %tmp.7;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_29_148_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_4_148_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_146_4_148_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 149 4 ]
+        %tmp.8 = lgetv %bodyBattery.1;
+        symbol [ bodyBattery %tmp.8 149 11 22 ];
+        symbol [ format %tmp.9 149 23 29 ];
+        %tmp.9 = getv function %tmp.8 :format;
+        %tmp.10 = "%d";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        %tmp.12 = "%";
+        %tmp.13 = add %tmp.11 %tmp.12;
+        ret %tmp.13;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_144_42_150_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 153; @symbol_functiondef = [getHeartRate,153,9,21]; @symbol_return<0> = [Number,153,27,33]; ]
+    function getHeartRate() as Number or Null {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 154 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_stop" ]
+        %heartrateIterator.1 = local;
+        symbol [ heartrateIterator %heartrateIterator.1 154 8 25 ];
+        symbol [ Toybox %tmp.2 154 28 34 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.3 154 35 50 ];
+        %tmp.3 = getv %tmp.2 :ActivityMonitor;
+        symbol [ getHeartRateHistory %tmp.4 154 51 70 ];
+        %tmp.4 = getv function %tmp.3 :getHeartRateHistory;
+        %tmp.5 = 1;
+        %tmp.6 = true;
+        %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6);
+        lputv %heartrateIterator.1 %tmp.7;
+        symbol [ heartrateIterator %heartrateIterator.1 154 8 25 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 155 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 155 8 14 ];
+        %tmp.8 = lgetv %heartrateIterator.1;
+        symbol [ heartrateIterator %tmp.8 155 17 34 ];
+        symbol [ next %tmp.9 155 35 39 ];
+        %tmp.9 = getv function %tmp.8 :next;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %sample.2 %tmp.10;
+        symbol [ sample %sample.2 155 8 14 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 156 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_8_156_46_begin:
+        %tmp.11 = lgetv %sample.2;
+        symbol [ sample %tmp.11 156 8 14 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_26_156_46_true:
+        %tmp.14 = lgetv %sample.2;
+        symbol [ sample %tmp.14 156 26 32 ];
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ heartRate %tmp.16 156 33 42 ];
+        %tmp.16 = getv %tmp.15 :heartRate;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        push %tmp.18;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_26_156_46_end:
+        %tmp.19 = phi [%tmp.13 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_8_156_46_begin] [%tmp.18 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_26_156_46_true] [%tmp.19 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_26_156_46_end];
+        bf %tmp.19 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_52_158_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 157 8 ]
+        %tmp.20 = lgetv %sample.2;
+        symbol [ sample %tmp.20 157 15 21 ];
+        %tmp.21 = as %tmp.20 { (!Null) };
+        symbol [ heartRate %tmp.22 157 22 31 ];
+        %tmp.22 = getv %tmp.21 :heartRate;
+        ret %tmp.22;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_52_158_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_156_4_158_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 159 4 ]
+        %tmp.23 = null;
+        ret %tmp.23;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_153_42_160_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 162; @symbol_functiondef = [getHeartRateString,162,9,27]; @symbol_return<0> = [String,162,33,39]; ]
+    function getHeartRateString() as String {
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_162_40_168_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 163 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_162_40_168_0_start" "_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_162_40_168_0_stop" ]
+        %hr.1 = local;
+        symbol [ hr %hr.1 163 8 10 ];
+        %tmp.1 = self;
+        symbol [ getHeartRate %tmp.2 163 13 25 ];
+        %tmp.2 = getv function %tmp.1 :getHeartRate;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %hr.1 %tmp.3;
+        symbol [ hr %hr.1 163 8 10 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 164 4 ]
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_stmt:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_8_164_28_begin:
+        %tmp.4 = lgetv %hr.1;
+        symbol [ hr %tmp.4 164 8 10 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bt %tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_true;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_22_164_28_false:
+        %tmp.7 = lgetv %hr.1;
+        symbol [ hr %tmp.7 164 22 24 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = 255;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_22_164_28_end:
+        %tmp.11 = phi [%tmp.6 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_8_164_28_begin] [%tmp.10 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_22_164_28_false] [%tmp.11 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_22_164_28_end];
+        bf %tmp.11 @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_true:
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_33_166_4_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 165 8 ]
+        %tmp.12 = "-";
+        ret %tmp.12;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_33_166_4_stop:
+        goto @_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_end;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_164_4_166_4_if_end:
+[ "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" 167 4 ]
+        %tmp.13 = lgetv %hr.1;
+        symbol [ hr %tmp.13 167 11 13 ];
+        symbol [ format %tmp.14 167 14 20 ];
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "%d";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        ret %tmp.16;
+_Users_will_WatchFaces_RetroWeather_source_HealthControl_mc_162_40_168_0_stop:
+    }
+}
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc"; @line = 1; ]
+<init> {
+}

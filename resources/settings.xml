@@ -1,0 +1,35 @@
+<settings>
+    <setting propertyKey="@Properties.ColorTheme" title="@Strings.ColorThemeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.MatrixGreen</listEntry>
+            <listEntry value="1">@Strings.RetroCyan</listEntry>
+            <listEntry value="2">@Strings.RetroAmber</listEntry>
+            <listEntry value="3">@Strings.RetroPurple</listEntry>
+            <listEntry value="4">@Strings.RetroRed</listEntry>
+            <listEntry value="5">@Strings.RetroBlue</listEntry>
+            <listEntry value="6">@Strings.RetroOrange</listEntry>
+            <listEntry value="7">@Strings.RetroPink</listEntry>
+            <listEntry value="8">@Strings.RetroYellow</listEntry>
+            <listEntry value="9">@Strings.RetroWhite</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WindSpeedUnit" title="@Strings.WindSpeedUnitTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.WindUnit_ms</listEntry>
+            <listEntry value="2">@Strings.WindUnit_mph</listEntry>
+            <listEntry value="3">@Strings.WindUnit_kmh</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.TemperatureUnit" title="@Strings.TemperatureUnitTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.TempUnit_C</listEntry>
+            <listEntry value="2">@Strings.TempUnit_F</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowDataStrip" title="@Strings.ShowDataStripTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Off</listEntry>
+            <listEntry value="1">@Strings.On</listEntry>
+        </settingConfig>
+    </setting>
+</settings>

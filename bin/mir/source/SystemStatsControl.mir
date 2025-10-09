@@ -1,0 +1,163 @@
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Position,4,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Weather,5,14,21]; ]
+import Toybox.Weather;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Application,6,13,24]; @symbol_usingdef<2> = [Properties,6,25,35]; ]
+using Toybox.Application.Properties;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Math,7,14,18]; ]
+import Toybox.Math;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [Time,8,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 10; @symbol_classdef = [SystemStatsControl,10,6,24]; ]
+class SystemStatsControl {
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 12; @symbol_functiondef = [SystemStatsControl,12,9,27]; ]
+    function SystemStatsControl() {
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 18; @symbol_functiondef = [getBattery,18,9,19]; @symbol_return<0> = [Float,18,25,30]; ]
+    function getBattery() as Float {
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_18_31_20_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 19 4 ]
+        symbol [ Toybox %tmp.2 19 11 17 ];
+        %tmp.2 = getv ? :Toybox;
+        symbol [ System %tmp.3 19 18 24 ];
+        %tmp.3 = getv %tmp.2 :System;
+        symbol [ getSystemStats %tmp.4 19 25 39 ];
+        %tmp.4 = getv function %tmp.3 :getSystemStats;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ battery %tmp.6 19 42 49 ];
+        %tmp.6 = getv %tmp.5 :battery;
+        ret %tmp.6;
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_18_31_20_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 22; @symbol_functiondef = [getBatteryString,22,9,25]; @symbol_return<0> = [String,22,31,37]; ]
+    function getBatteryString() as String {
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_22_38_24_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 23 4 ]
+        %tmp.1 = self;
+        symbol [ getBattery %tmp.2 23 11 21 ];
+        %tmp.2 = getv function %tmp.1 :getBattery;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ format %tmp.4 23 24 30 ];
+        %tmp.4 = getv function %tmp.3 :format;
+        %tmp.5 = "%d";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        %tmp.7 = "%";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        ret %tmp.8;
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_22_38_24_0_stop:
+    }
+    [ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 27; @symbol_functiondef = [getDate,27,9,16]; @symbol_return<0> = [String,27,22,28]; ]
+    function getDate() as String {
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_start:
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 28 3 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_start" "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_stop" ]
+        %now.1 = local;
+        symbol [ now %now.1 28 7 10 ];
+        symbol [ Gregorian %tmp.2 28 13 22 ];
+        %tmp.2 = getv ? :Gregorian;
+        symbol [ info %tmp.3 28 23 27 ];
+        %tmp.3 = getv function %tmp.2 :info;
+        symbol [ Time %tmp.4 28 28 32 ];
+        %tmp.4 = getm $.Toybox.Time;
+        symbol [ now %tmp.5 28 33 36 ];
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ Time %tmp.7 28 40 44 ];
+        %tmp.7 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.8 28 45 57 ];
+        %tmp.8 = getv %tmp.7 :FORMAT_SHORT;
+        %tmp.9 = invoke %tmp.2 %tmp.3(%tmp.6, %tmp.8);
+        lputv %now.1 %tmp.9;
+        symbol [ now %now.1 28 7 10 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 29 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_start" "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_stop" ]
+        %MONTHS.2 = local;
+        symbol [ MONTHS %MONTHS.2 29 8 14 ];
+        %tmp.10 = newa 12;
+        %tmp.11 = "Jan";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 0 %tmp.11;
+        %tmp.14 = "Feb";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 1 %tmp.14;
+        %tmp.17 = "Mar";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 2 %tmp.17;
+        %tmp.20 = "Apr";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 3 %tmp.20;
+        %tmp.23 = "May";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 4 %tmp.23;
+        %tmp.26 = "Jun";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 5 %tmp.26;
+        %tmp.29 = "Jul";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 6 %tmp.29;
+        %tmp.32 = "Aug";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 7 %tmp.32;
+        %tmp.35 = "Sep";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 8 %tmp.35;
+        %tmp.38 = "Oct";
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 9 %tmp.38;
+        %tmp.41 = "Nov";
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 10 %tmp.41;
+        %tmp.44 = "Dec";
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 11 %tmp.44;
+        lputv %MONTHS.2 %tmp.46;
+        symbol [ MONTHS %MONTHS.2 29 8 14 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 30 4 ]
+        [ "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_start" "_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_stop" ]
+        %monthStr.3 = local;
+        symbol [ monthStr %monthStr.3 30 8 16 ];
+        %tmp.47 = lgetv %MONTHS.2;
+        symbol [ MONTHS %tmp.47 30 19 25 ];
+        %tmp.48 = lgetv %now.1;
+        symbol [ now %tmp.48 30 26 29 ];
+        symbol [ month %tmp.49 30 30 35 ];
+        %tmp.49 = getv %tmp.48 :month;
+        %tmp.50 = 1;
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        %tmp.52 = agetv %tmp.47 %tmp.51;
+        lputv %monthStr.3 %tmp.52;
+        symbol [ monthStr %monthStr.3 30 8 16 ];
+[ "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" 31 4 ]
+        %tmp.53 = lgetv %now.1;
+        symbol [ now %tmp.53 31 11 14 ];
+        symbol [ day %tmp.54 31 15 18 ];
+        %tmp.54 = getv %tmp.53 :day;
+        symbol [ format %tmp.55 31 19 25 ];
+        %tmp.55 = getv function %tmp.54 :format;
+        %tmp.56 = "%d";
+        %tmp.57 = invoke %tmp.54 %tmp.55(%tmp.56);
+        %tmp.58 = " ";
+        %tmp.59 = add %tmp.57 %tmp.58;
+        %tmp.60 = lgetv %monthStr.3;
+        symbol [ monthStr %tmp.60 31 40 48 ];
+        %tmp.61 = add %tmp.59 %tmp.60;
+        ret %tmp.61;
+_Users_will_WatchFaces_RetroWeather_source_SystemStatsControl_mc_27_29_32_0_stop:
+    }
+}
+[ @file = "/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc"; @line = 1; ]
+<init> {
+}

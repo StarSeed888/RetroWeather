@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/will/WatchFaces/RetroWeather/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="2" lineNum="14" parent="globals/WeatherControl" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/bin/gen/006-B4105-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435499" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="4" lineNum="5" parent="globals/RetroWeatherApp" pc="268435519" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="5" lineNum="11" parent="globals/RetroWeatherView" pc="268435531" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="102" parent="globals/HealthControl" pc="268435543" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="103" parent="globals/HealthControl" pc="268435546" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="104" parent="globals/HealthControl" pc="268435558" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="105" parent="globals/HealthControl" pc="268435575" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="106" parent="globals/HealthControl" pc="268435584" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="107" parent="globals/HealthControl" pc="268435591" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="108" parent="globals/HealthControl" pc="268435598" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="109" parent="globals/HealthControl" pc="268435617" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="109" parent="globals/HealthControl" pc="268435623" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="111" parent="globals/HealthControl" pc="268435630" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="112" parent="globals/HealthControl" pc="268435638" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="114" parent="globals/HealthControl" pc="268435651" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="116" parent="globals/HealthControl" pc="268435661" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="6" lineNum="118" parent="globals/HealthControl" pc="268435667" symbol="getDistance"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="25" parent="globals/HealthControl" pc="268435669" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="26" parent="globals/HealthControl" pc="268435672" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="27" parent="globals/HealthControl" pc="268435680" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="29" parent="globals/HealthControl" pc="268435688" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="30" parent="globals/HealthControl" pc="268435700" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="33" parent="globals/HealthControl" pc="268435705" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="34" parent="globals/HealthControl" pc="268435713" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="8" lineNum="37" parent="globals/HealthControl" pc="268435720" symbol="getStepsRatioThresholded"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="9" lineNum="44" parent="globals/HealthControl" pc="268435732" symbol="getStepsString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="9" lineNum="45" parent="globals/HealthControl" pc="268435735" symbol="getStepsString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="9" lineNum="46" parent="globals/HealthControl" pc="268435743" symbol="getStepsString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="9" lineNum="47" parent="globals/HealthControl" pc="268435749" symbol="getStepsString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="9" lineNum="49" parent="globals/HealthControl" pc="268435758" symbol="getStepsString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="73" parent="globals/HealthControl" pc="268435778" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="74" parent="globals/HealthControl" pc="268435781" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="75" parent="globals/HealthControl" pc="268435789" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="76" parent="globals/HealthControl" pc="268435795" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="77" parent="globals/HealthControl" pc="268435805" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="78" parent="globals/HealthControl" pc="268435811" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="79" parent="globals/HealthControl" pc="268435822" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="81" parent="globals/HealthControl" pc="268435833" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="10" lineNum="84" parent="globals/HealthControl" pc="268435849" symbol="getStress"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="130" parent="globals/HealthControl" pc="268435851" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="131" parent="globals/HealthControl" pc="268435854" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="132" parent="globals/HealthControl" pc="268435862" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="134" parent="globals/HealthControl" pc="268435871" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="135" parent="globals/HealthControl" pc="268435877" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="136" parent="globals/HealthControl" pc="268435888" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="138" parent="globals/HealthControl" pc="268435899" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="11" lineNum="141" parent="globals/HealthControl" pc="268435911" symbol="getBodyBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="12" lineNum="21" parent="globals/HealthControl" pc="268435913" symbol="getStepGoal"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="12" lineNum="22" parent="globals/HealthControl" pc="268435915" symbol="getStepGoal"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="13" lineNum="121" parent="globals/HealthControl" pc="268435931" symbol="getBodyBatteryIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="13" lineNum="122" parent="globals/HealthControl" pc="268435933" symbol="getBodyBatteryIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="13" lineNum="123" parent="globals/HealthControl" pc="268435968" symbol="getBodyBatteryIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="13" lineNum="127" parent="globals/HealthControl" pc="268436011" symbol="getBodyBatteryIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="153" parent="globals/HealthControl" pc="268436013" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="154" parent="globals/HealthControl" pc="268436016" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="155" parent="globals/HealthControl" pc="268436033" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="156" parent="globals/HealthControl" pc="268436042" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="157" parent="globals/HealthControl" pc="268436059" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="14" lineNum="159" parent="globals/HealthControl" pc="268436070" symbol="getHeartRate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="15" lineNum="144" parent="globals/HealthControl" pc="268436072" symbol="getBodyBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="15" lineNum="145" parent="globals/HealthControl" pc="268436075" symbol="getBodyBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="15" lineNum="146" parent="globals/HealthControl" pc="268436083" symbol="getBodyBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="15" lineNum="147" parent="globals/HealthControl" pc="268436089" symbol="getBodyBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="15" lineNum="149" parent="globals/HealthControl" pc="268436098" symbol="getBodyBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="16" lineNum="162" parent="globals/HealthControl" pc="268436119" symbol="getHeartRateString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="16" lineNum="163" parent="globals/HealthControl" pc="268436122" symbol="getHeartRateString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="16" lineNum="164" parent="globals/HealthControl" pc="268436130" symbol="getHeartRateString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="16" lineNum="165" parent="globals/HealthControl" pc="268436145" symbol="getHeartRateString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="16" lineNum="167" parent="globals/HealthControl" pc="268436154" symbol="getHeartRateString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="17" lineNum="53" parent="globals/HealthControl" pc="268436169" symbol="getCalories"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="17" lineNum="54" parent="globals/HealthControl" pc="268436172" symbol="getCalories"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="17" lineNum="55" parent="globals/HealthControl" pc="268436184" symbol="getCalories"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="17" lineNum="56" parent="globals/HealthControl" pc="268436201" symbol="getCalories"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="17" lineNum="59" parent="globals/HealthControl" pc="268436212" symbol="getCalories"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="18" lineNum="63" parent="globals/HealthControl" pc="268436214" symbol="getStressIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="18" lineNum="64" parent="globals/HealthControl" pc="268436216" symbol="getStressIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="18" lineNum="65" parent="globals/HealthControl" pc="268436251" symbol="getStressIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="18" lineNum="69" parent="globals/HealthControl" pc="268436294" symbol="getStressIterator"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="87" parent="globals/HealthControl" pc="268436296" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="88" parent="globals/HealthControl" pc="268436299" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="89" parent="globals/HealthControl" pc="268436307" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="90" parent="globals/HealthControl" pc="268436313" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="91" parent="globals/HealthControl" pc="268436323" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="92" parent="globals/HealthControl" pc="268436329" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="93" parent="globals/HealthControl" pc="268436340" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="95" parent="globals/HealthControl" pc="268436364" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="19" lineNum="98" parent="globals/HealthControl" pc="268436380" symbol="getStressString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="20" lineNum="40" parent="globals/HealthControl" pc="268436386" symbol="getSteps"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/HealthControl.mc" id="20" lineNum="41" parent="globals/HealthControl" pc="268436388" symbol="getSteps"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="22" lineNum="496" parent="globals/WeatherControl" pc="268436404" symbol="getHumidityString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="22" lineNum="497" parent="globals/WeatherControl" pc="268436407" symbol="getHumidityString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="22" lineNum="498" parent="globals/WeatherControl" pc="268436415" symbol="getHumidityString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="22" lineNum="499" parent="globals/WeatherControl" pc="268436421" symbol="getHumidityString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="22" lineNum="501" parent="globals/WeatherControl" pc="268436430" symbol="getHumidityString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="23" lineNum="141" parent="globals/WeatherControl" pc="268436444" symbol="getDewPoint"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="23" lineNum="142" parent="globals/WeatherControl" pc="268436446" symbol="getDewPoint"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="23" lineNum="143" parent="globals/WeatherControl" pc="268436455" symbol="getDewPoint"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="23" lineNum="145" parent="globals/WeatherControl" pc="268436469" symbol="getDewPoint"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="130" parent="globals/WeatherControl" pc="268436471" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="131" parent="globals/WeatherControl" pc="268436474" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="132" parent="globals/WeatherControl" pc="268436497" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="133" parent="globals/WeatherControl" pc="268436514" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="134" parent="globals/WeatherControl" pc="268436522" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="136" parent="globals/WeatherControl" pc="268436545" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="24" lineNum="139" parent="globals/WeatherControl" pc="268436559" symbol="getFeelsLikeTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="174" parent="globals/WeatherControl" pc="268436561" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="175" parent="globals/WeatherControl" pc="268436564" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="176" parent="globals/WeatherControl" pc="268436587" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="177" parent="globals/WeatherControl" pc="268436599" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="178" parent="globals/WeatherControl" pc="268436606" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="179" parent="globals/WeatherControl" pc="268436640" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="25" lineNum="181" parent="globals/WeatherControl" pc="268436649" symbol="getWindBearingString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="222" parent="globals/WeatherControl" pc="268436655" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="223" parent="globals/WeatherControl" pc="268436658" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="229" parent="globals/WeatherControl" pc="268436670" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="230" parent="globals/WeatherControl" pc="268436689" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="230" parent="globals/WeatherControl" pc="268436695" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="231" parent="globals/WeatherControl" pc="268436701" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="232" parent="globals/WeatherControl" pc="268436708" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="233" parent="globals/WeatherControl" pc="268436717" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="234" parent="globals/WeatherControl" pc="268436727" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="236" parent="globals/WeatherControl" pc="268436742" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="238" parent="globals/WeatherControl" pc="268436758" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="240" parent="globals/WeatherControl" pc="268436774" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="242" parent="globals/WeatherControl" pc="268436790" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="244" parent="globals/WeatherControl" pc="268436806" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="246" parent="globals/WeatherControl" pc="268436822" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="248" parent="globals/WeatherControl" pc="268436838" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="250" parent="globals/WeatherControl" pc="268436854" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="252" parent="globals/WeatherControl" pc="268436870" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="254" parent="globals/WeatherControl" pc="268436886" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="256" parent="globals/WeatherControl" pc="268436902" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="258" parent="globals/WeatherControl" pc="268436918" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="260" parent="globals/WeatherControl" pc="268436934" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="262" parent="globals/WeatherControl" pc="268436950" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="264" parent="globals/WeatherControl" pc="268436966" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="266" parent="globals/WeatherControl" pc="268436982" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="268" parent="globals/WeatherControl" pc="268436998" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="270" parent="globals/WeatherControl" pc="268437014" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="272" parent="globals/WeatherControl" pc="268437030" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="274" parent="globals/WeatherControl" pc="268437046" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="276" parent="globals/WeatherControl" pc="268437062" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="278" parent="globals/WeatherControl" pc="268437078" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="280" parent="globals/WeatherControl" pc="268437094" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="282" parent="globals/WeatherControl" pc="268437110" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="284" parent="globals/WeatherControl" pc="268437126" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="286" parent="globals/WeatherControl" pc="268437142" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="288" parent="globals/WeatherControl" pc="268437158" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="290" parent="globals/WeatherControl" pc="268437174" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="292" parent="globals/WeatherControl" pc="268437190" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="294" parent="globals/WeatherControl" pc="268437206" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="296" parent="globals/WeatherControl" pc="268437222" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="298" parent="globals/WeatherControl" pc="268437238" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="300" parent="globals/WeatherControl" pc="268437254" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="302" parent="globals/WeatherControl" pc="268437270" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="304" parent="globals/WeatherControl" pc="268437286" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="306" parent="globals/WeatherControl" pc="268437302" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="308" parent="globals/WeatherControl" pc="268437318" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="310" parent="globals/WeatherControl" pc="268437334" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="312" parent="globals/WeatherControl" pc="268437350" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="314" parent="globals/WeatherControl" pc="268437366" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="316" parent="globals/WeatherControl" pc="268437382" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="318" parent="globals/WeatherControl" pc="268437398" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="320" parent="globals/WeatherControl" pc="268437414" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="322" parent="globals/WeatherControl" pc="268437430" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="324" parent="globals/WeatherControl" pc="268437446" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="326" parent="globals/WeatherControl" pc="268437462" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="328" parent="globals/WeatherControl" pc="268437478" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="330" parent="globals/WeatherControl" pc="268437494" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="332" parent="globals/WeatherControl" pc="268437510" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="334" parent="globals/WeatherControl" pc="268437526" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="336" parent="globals/WeatherControl" pc="268437542" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="338" parent="globals/WeatherControl" pc="268437558" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="340" parent="globals/WeatherControl" pc="268437574" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="342" parent="globals/WeatherControl" pc="268437590" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="235" parent="globals/WeatherControl" pc="268437593" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="237" parent="globals/WeatherControl" pc="268437599" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="239" parent="globals/WeatherControl" pc="268437605" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="241" parent="globals/WeatherControl" pc="268437611" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="243" parent="globals/WeatherControl" pc="268437615" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="245" parent="globals/WeatherControl" pc="268437621" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="247" parent="globals/WeatherControl" pc="268437626" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="249" parent="globals/WeatherControl" pc="268437630" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="251" parent="globals/WeatherControl" pc="268437636" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="253" parent="globals/WeatherControl" pc="268437642" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="255" parent="globals/WeatherControl" pc="268437648" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="257" parent="globals/WeatherControl" pc="268437654" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="259" parent="globals/WeatherControl" pc="268437660" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="261" parent="globals/WeatherControl" pc="268437666" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="263" parent="globals/WeatherControl" pc="268437672" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="265" parent="globals/WeatherControl" pc="268437678" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="267" parent="globals/WeatherControl" pc="268437683" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="269" parent="globals/WeatherControl" pc="268437689" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="271" parent="globals/WeatherControl" pc="268437695" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="273" parent="globals/WeatherControl" pc="268437701" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="275" parent="globals/WeatherControl" pc="268437706" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="277" parent="globals/WeatherControl" pc="268437712" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="279" parent="globals/WeatherControl" pc="268437717" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="281" parent="globals/WeatherControl" pc="268437723" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="283" parent="globals/WeatherControl" pc="268437729" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="285" parent="globals/WeatherControl" pc="268437734" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="287" parent="globals/WeatherControl" pc="268437739" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="289" parent="globals/WeatherControl" pc="268437743" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="291" parent="globals/WeatherControl" pc="268437748" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="293" parent="globals/WeatherControl" pc="268437754" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="295" parent="globals/WeatherControl" pc="268437760" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="297" parent="globals/WeatherControl" pc="268437766" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="299" parent="globals/WeatherControl" pc="268437772" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="301" parent="globals/WeatherControl" pc="268437778" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="303" parent="globals/WeatherControl" pc="268437783" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="305" parent="globals/WeatherControl" pc="268437788" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="307" parent="globals/WeatherControl" pc="268437794" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="309" parent="globals/WeatherControl" pc="268437800" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="311" parent="globals/WeatherControl" pc="268437806" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="313" parent="globals/WeatherControl" pc="268437811" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="315" parent="globals/WeatherControl" pc="268437817" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="317" parent="globals/WeatherControl" pc="268437822" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="319" parent="globals/WeatherControl" pc="268437828" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="321" parent="globals/WeatherControl" pc="268437833" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="323" parent="globals/WeatherControl" pc="268437839" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="325" parent="globals/WeatherControl" pc="268437845" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="327" parent="globals/WeatherControl" pc="268437850" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="329" parent="globals/WeatherControl" pc="268437856" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="331" parent="globals/WeatherControl" pc="268437862" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="333" parent="globals/WeatherControl" pc="268437868" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="335" parent="globals/WeatherControl" pc="268437873" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="337" parent="globals/WeatherControl" pc="268437879" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="339" parent="globals/WeatherControl" pc="268437885" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="341" parent="globals/WeatherControl" pc="268437891" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="343" parent="globals/WeatherControl" pc="268437897" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="346" parent="globals/WeatherControl" pc="268437907" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="348" parent="globals/WeatherControl" pc="268437916" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="349" parent="globals/WeatherControl" pc="268437935" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="349" parent="globals/WeatherControl" pc="268437941" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="26" lineNum="350" parent="globals/WeatherControl" pc="268437950" symbol="getWeatherColor"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="505" parent="globals/WeatherControl" pc="268437954" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="506" parent="globals/WeatherControl" pc="268437957" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="508" parent="globals/WeatherControl" pc="268437965" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="509" parent="globals/WeatherControl" pc="268437971" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="511" parent="globals/WeatherControl" pc="268437980" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="512" parent="globals/WeatherControl" pc="268437997" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="513" parent="globals/WeatherControl" pc="268438005" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="27" lineNum="514" parent="globals/WeatherControl" pc="268438013" symbol="getSunEventTimeString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="39" parent="globals/WeatherControl" pc="268438049" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="41" parent="globals/WeatherControl" pc="268438052" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="42" parent="globals/WeatherControl" pc="268438068" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="43" parent="globals/WeatherControl" pc="268438074" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="47" parent="globals/WeatherControl" pc="268438083" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="48" parent="globals/WeatherControl" pc="268438098" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="51" parent="globals/WeatherControl" pc="268438114" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="52" parent="globals/WeatherControl" pc="268438126" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="28" lineNum="53" parent="globals/WeatherControl" pc="268438130" symbol="_getProperty"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="159" parent="globals/WeatherControl" pc="268438150" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="160" parent="globals/WeatherControl" pc="268438153" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="161" parent="globals/WeatherControl" pc="268438162" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="162" parent="globals/WeatherControl" pc="268438179" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="163" parent="globals/WeatherControl" pc="268438187" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="164" parent="globals/WeatherControl" pc="268438207" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="165" parent="globals/WeatherControl" pc="268438215" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="167" parent="globals/WeatherControl" pc="268438235" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="29" lineNum="170" parent="globals/WeatherControl" pc="268438249" symbol="getWindSpeed"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="193" parent="globals/WeatherControl" pc="268438251" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="194" parent="globals/WeatherControl" pc="268438254" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="195" parent="globals/WeatherControl" pc="268438262" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="196" parent="globals/WeatherControl" pc="268438268" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="198" parent="globals/WeatherControl" pc="268438277" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="199" parent="globals/WeatherControl" pc="268438284" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="30" lineNum="200" parent="globals/WeatherControl" pc="268438318" symbol="getCompassDirectionString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="31" lineNum="486" parent="globals/WeatherControl" pc="268438324" symbol="getUVIndexString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="31" lineNum="487" parent="globals/WeatherControl" pc="268438327" symbol="getUVIndexString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="31" lineNum="488" parent="globals/WeatherControl" pc="268438335" symbol="getUVIndexString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="31" lineNum="489" parent="globals/WeatherControl" pc="268438341" symbol="getUVIndexString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="31" lineNum="491" parent="globals/WeatherControl" pc="268438350" symbol="getUVIndexString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="32" lineNum="123" parent="globals/WeatherControl" pc="268438365" symbol="getUvIndex"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="32" lineNum="124" parent="globals/WeatherControl" pc="268438367" symbol="getUvIndex"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="32" lineNum="125" parent="globals/WeatherControl" pc="268438390" symbol="getUvIndex"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="32" lineNum="127" parent="globals/WeatherControl" pc="268438404" symbol="getUvIndex"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="33" lineNum="21" parent="globals/WeatherControl" pc="268438406" symbol="WeatherControl"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="33" lineNum="24" parent="globals/WeatherControl" pc="268438408" symbol="WeatherControl"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="34" lineNum="148" parent="globals/WeatherControl" pc="268438416" symbol="getConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="34" lineNum="149" parent="globals/WeatherControl" pc="268438418" symbol="getConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="35" lineNum="28" parent="globals/WeatherControl" pc="268438424" symbol="refreshConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="35" lineNum="29" parent="globals/WeatherControl" pc="268438427" symbol="refreshConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="35" lineNum="32" parent="globals/WeatherControl" pc="268438445" symbol="refreshConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="35" lineNum="33" parent="globals/WeatherControl" pc="268438460" symbol="refreshConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="35" lineNum="34" parent="globals/WeatherControl" pc="268438477" symbol="refreshConditions"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="36" lineNum="99" parent="globals/WeatherControl" pc="268438490" symbol="getHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="36" lineNum="100" parent="globals/WeatherControl" pc="268438492" symbol="getHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="36" lineNum="101" parent="globals/WeatherControl" pc="268438515" symbol="getHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="36" lineNum="103" parent="globals/WeatherControl" pc="268438529" symbol="getHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="37" lineNum="114" parent="globals/WeatherControl" pc="268438531" symbol="getUpdateTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="37" lineNum="115" parent="globals/WeatherControl" pc="268438533" symbol="getUpdateTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="37" lineNum="116" parent="globals/WeatherControl" pc="268438556" symbol="getUpdateTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="37" lineNum="118" parent="globals/WeatherControl" pc="268438570" symbol="getUpdateTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="38" lineNum="186" parent="globals/WeatherControl" pc="268438572" symbol="getCompassHeading"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="38" lineNum="187" parent="globals/WeatherControl" pc="268438575" symbol="getCompassHeading"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="38" lineNum="188" parent="globals/WeatherControl" pc="268438592" symbol="getCompassHeading"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="38" lineNum="189" parent="globals/WeatherControl" pc="268438598" symbol="getCompassHeading"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="38" lineNum="191" parent="globals/WeatherControl" pc="268438610" symbol="getCompassHeading"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="39" lineNum="152" parent="globals/WeatherControl" pc="268438612" symbol="getPressure"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="39" lineNum="153" parent="globals/WeatherControl" pc="268438614" symbol="getPressure"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="39" lineNum="154" parent="globals/WeatherControl" pc="268438623" symbol="getPressure"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="39" lineNum="156" parent="globals/WeatherControl" pc="268438640" symbol="getPressure"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="40" lineNum="205" parent="globals/WeatherControl" pc="268438642" symbol="getWindBearing"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="40" lineNum="206" parent="globals/WeatherControl" pc="268438644" symbol="getWindBearing"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="40" lineNum="207" parent="globals/WeatherControl" pc="268438667" symbol="getWindBearing"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="40" lineNum="209" parent="globals/WeatherControl" pc="268438681" symbol="getWindBearing"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="41" lineNum="214" parent="globals/WeatherControl" pc="268438683" symbol="getCondition"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="41" lineNum="215" parent="globals/WeatherControl" pc="268438685" symbol="getCondition"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="41" lineNum="216" parent="globals/WeatherControl" pc="268438694" symbol="getCondition"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="41" lineNum="218" parent="globals/WeatherControl" pc="268438708" symbol="getCondition"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="72" parent="globals/WeatherControl" pc="268438710" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="73" parent="globals/WeatherControl" pc="268438713" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="75" parent="globals/WeatherControl" pc="268438725" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="76" parent="globals/WeatherControl" pc="268438753" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="77" parent="globals/WeatherControl" pc="268438765" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="78" parent="globals/WeatherControl" pc="268438788" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="80" parent="globals/WeatherControl" pc="268438811" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="81" parent="globals/WeatherControl" pc="268438823" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="83" parent="globals/WeatherControl" pc="268438839" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="84" parent="globals/WeatherControl" pc="268438845" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="86" parent="globals/WeatherControl" pc="268438877" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="89" parent="globals/WeatherControl" pc="268438883" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="90" parent="globals/WeatherControl" pc="268438911" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="91" parent="globals/WeatherControl" pc="268438924" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="92" parent="globals/WeatherControl" pc="268438947" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="42" lineNum="96" parent="globals/WeatherControl" pc="268438956" symbol="getSunEventTime"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="44" lineNum="355" parent="globals/WeatherControl" pc="268438958" symbol="getConditionName"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="44" lineNum="356" parent="globals/WeatherControl" pc="268438961" symbol="getConditionName"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="44" lineNum="413" parent="globals/WeatherControl" pc="268438968" symbol="getConditionName"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="44" lineNum="414" parent="globals/WeatherControl" pc="268438982" symbol="getConditionName"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="44" lineNum="416" parent="globals/WeatherControl" pc="268438991" symbol="getConditionName"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="59" parent="globals/WeatherControl" pc="268438997" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="60" parent="globals/WeatherControl" pc="268439000" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="61" parent="globals/WeatherControl" pc="268439009" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="62" parent="globals/WeatherControl" pc="268439026" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="63" parent="globals/WeatherControl" pc="268439034" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="65" parent="globals/WeatherControl" pc="268439057" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="45" lineNum="68" parent="globals/WeatherControl" pc="268439071" symbol="getTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="46" lineNum="107" parent="globals/WeatherControl" pc="268439073" symbol="getVisibility"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="46" lineNum="108" parent="globals/WeatherControl" pc="268439075" symbol="getVisibility"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="46" lineNum="109" parent="globals/WeatherControl" pc="268439098" symbol="getVisibility"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/WeatherControl.mc" id="46" lineNum="111" parent="globals/WeatherControl" pc="268439112" symbol="getVisibility"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="48" lineNum="18" parent="globals/SystemStatsControl" pc="268439114" symbol="getBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="48" lineNum="19" parent="globals/SystemStatsControl" pc="268439116" symbol="getBattery"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="49" lineNum="22" parent="globals/SystemStatsControl" pc="268439132" symbol="getBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="49" lineNum="23" parent="globals/SystemStatsControl" pc="268439134" symbol="getBatteryString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="50" lineNum="27" parent="globals/SystemStatsControl" pc="268439160" symbol="getDate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="50" lineNum="28" parent="globals/SystemStatsControl" pc="268439163" symbol="getDate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="50" lineNum="29" parent="globals/SystemStatsControl" pc="268439188" symbol="getDate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="50" lineNum="30" parent="globals/SystemStatsControl" pc="268439195" symbol="getDate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/SystemStatsControl.mc" id="50" lineNum="31" parent="globals/SystemStatsControl" pc="268439209" symbol="getDate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="52" lineNum="12" parent="globals/RetroWeatherApp" pc="268439238" symbol="onStart"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="53" lineNum="20" parent="globals/RetroWeatherApp" pc="268439241" symbol="getInitialView"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="53" lineNum="21" parent="globals/RetroWeatherApp" pc="268439243" symbol="getInitialView"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="54" lineNum="7" parent="globals/RetroWeatherApp" pc="268439269" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="54" lineNum="8" parent="globals/RetroWeatherApp" pc="268439271" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherApp.mc" id="55" lineNum="16" parent="globals/RetroWeatherApp" pc="268439284" symbol="onStop"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="579" parent="globals/RetroWeatherView" pc="268439287" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="580" parent="globals/RetroWeatherView" pc="268439290" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="581" parent="globals/RetroWeatherView" pc="268439303" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="582" parent="globals/RetroWeatherView" pc="268439319" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="583" parent="globals/RetroWeatherView" pc="268439327" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="585" parent="globals/RetroWeatherView" pc="268439334" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="589" parent="globals/RetroWeatherView" pc="268439347" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="590" parent="globals/RetroWeatherView" pc="268439364" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="593" parent="globals/RetroWeatherView" pc="268439388" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="594" parent="globals/RetroWeatherView" pc="268439395" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="595" parent="globals/RetroWeatherView" pc="268439401" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="596" parent="globals/RetroWeatherView" pc="268439411" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="596" parent="globals/RetroWeatherView" pc="268439416" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="597" parent="globals/RetroWeatherView" pc="268439421" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="598" parent="globals/RetroWeatherView" pc="268439429" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="600" parent="globals/RetroWeatherView" pc="268439436" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="601" parent="globals/RetroWeatherView" pc="268439444" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="603" parent="globals/RetroWeatherView" pc="268439451" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="606" parent="globals/RetroWeatherView" pc="268439473" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="607" parent="globals/RetroWeatherView" pc="268439486" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="608" parent="globals/RetroWeatherView" pc="268439503" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="611" parent="globals/RetroWeatherView" pc="268439533" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="612" parent="globals/RetroWeatherView" pc="268439537" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="56" lineNum="613" parent="globals/RetroWeatherView" pc="268439554" symbol="drawBarometer"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="45" parent="globals/RetroWeatherView" pc="268439582" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="47" parent="globals/RetroWeatherView" pc="268439585" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="48" parent="globals/RetroWeatherView" pc="268439604" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="49" parent="globals/RetroWeatherView" pc="268439623" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="51" parent="globals/RetroWeatherView" pc="268439629" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="52" parent="globals/RetroWeatherView" pc="268439650" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="52" parent="globals/RetroWeatherView" pc="268439654" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="54" parent="globals/RetroWeatherView" pc="268439677" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="56" parent="globals/RetroWeatherView" pc="268439683" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="57" parent="globals/RetroWeatherView" pc="268439704" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="57" parent="globals/RetroWeatherView" pc="268439708" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="59" parent="globals/RetroWeatherView" pc="268439731" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="59" parent="globals/RetroWeatherView" pc="268439741" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="60" parent="globals/RetroWeatherView" pc="268439758" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="62" parent="globals/RetroWeatherView" pc="268439762" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="57" lineNum="62" parent="globals/RetroWeatherView" pc="268439770" symbol="loadSunEventState"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="318" parent="globals/RetroWeatherView" pc="268439791" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="320" parent="globals/RetroWeatherView" pc="268439794" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="323" parent="globals/RetroWeatherView" pc="268439811" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="324" parent="globals/RetroWeatherView" pc="268439815" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="326" parent="globals/RetroWeatherView" pc="268439822" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="327" parent="globals/RetroWeatherView" pc="268439825" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="328" parent="globals/RetroWeatherView" pc="268439831" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="329" parent="globals/RetroWeatherView" pc="268439862" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="330" parent="globals/RetroWeatherView" pc="268439870" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="332" parent="globals/RetroWeatherView" pc="268439877" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="334" parent="globals/RetroWeatherView" pc="268439884" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="335" parent="globals/RetroWeatherView" pc="268439900" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="336" parent="globals/RetroWeatherView" pc="268439908" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="339" parent="globals/RetroWeatherView" pc="268439915" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="340" parent="globals/RetroWeatherView" pc="268439934" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="340" parent="globals/RetroWeatherView" pc="268439940" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="341" parent="globals/RetroWeatherView" pc="268439947" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="341" parent="globals/RetroWeatherView" pc="268439962" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="341" parent="globals/RetroWeatherView" pc="268439966" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="342" parent="globals/RetroWeatherView" pc="268439982" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="343" parent="globals/RetroWeatherView" pc="268439986" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="343" parent="globals/RetroWeatherView" pc="268439994" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="344" parent="globals/RetroWeatherView" pc="268440001" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="344" parent="globals/RetroWeatherView" pc="268440009" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="345" parent="globals/RetroWeatherView" pc="268440016" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="347" parent="globals/RetroWeatherView" pc="268440020" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="348" parent="globals/RetroWeatherView" pc="268440031" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="349" parent="globals/RetroWeatherView" pc="268440062" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="350" parent="globals/RetroWeatherView" pc="268440081" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="352" parent="globals/RetroWeatherView" pc="268440089" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="354" parent="globals/RetroWeatherView" pc="268440096" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="355" parent="globals/RetroWeatherView" pc="268440116" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="357" parent="globals/RetroWeatherView" pc="268440132" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="358" parent="globals/RetroWeatherView" pc="268440148" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="359" parent="globals/RetroWeatherView" pc="268440162" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="361" parent="globals/RetroWeatherView" pc="268440183" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="58" lineNum="362" parent="globals/RetroWeatherView" pc="268440200" symbol="drawWind"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="667" parent="globals/RetroWeatherView" pc="268440229" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="669" parent="globals/RetroWeatherView" pc="268440232" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="670" parent="globals/RetroWeatherView" pc="268440263" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="671" parent="globals/RetroWeatherView" pc="268440300" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="674" parent="globals/RetroWeatherView" pc="268440331" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="674" parent="globals/RetroWeatherView" pc="268440342" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="675" parent="globals/RetroWeatherView" pc="268440349" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="677" parent="globals/RetroWeatherView" pc="268440355" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="678" parent="globals/RetroWeatherView" pc="268440365" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="679" parent="globals/RetroWeatherView" pc="268440372" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="680" parent="globals/RetroWeatherView" pc="268440406" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="681" parent="globals/RetroWeatherView" pc="268440413" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="682" parent="globals/RetroWeatherView" pc="268440432" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="686" parent="globals/RetroWeatherView" pc="268440451" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="689" parent="globals/RetroWeatherView" pc="268440482" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="690" parent="globals/RetroWeatherView" pc="268440501" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="692" parent="globals/RetroWeatherView" pc="268440508" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="692" parent="globals/RetroWeatherView" pc="268440528" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="693" parent="globals/RetroWeatherView" pc="268440544" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="694" parent="globals/RetroWeatherView" pc="268440560" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="697" parent="globals/RetroWeatherView" pc="268440567" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="698" parent="globals/RetroWeatherView" pc="268440574" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="701" parent="globals/RetroWeatherView" pc="268440596" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="702" parent="globals/RetroWeatherView" pc="268440600" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="59" lineNum="704" parent="globals/RetroWeatherView" pc="268440617" symbol="drawConsolidatedLabels"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="151" parent="globals/RetroWeatherView" pc="268440638" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="153" parent="globals/RetroWeatherView" pc="268440641" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="154" parent="globals/RetroWeatherView" pc="268440660" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="155" parent="globals/RetroWeatherView" pc="268440666" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="157" parent="globals/RetroWeatherView" pc="268440673" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="158" parent="globals/RetroWeatherView" pc="268440675" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="159" parent="globals/RetroWeatherView" pc="268440690" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="160" parent="globals/RetroWeatherView" pc="268440706" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="161" parent="globals/RetroWeatherView" pc="268440722" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="158" parent="globals/RetroWeatherView" pc="268440725" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="159" parent="globals/RetroWeatherView" pc="268440731" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="160" parent="globals/RetroWeatherView" pc="268440737" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="60" lineNum="161" parent="globals/RetroWeatherView" pc="268440743" symbol="getWindUnitString"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="370" parent="globals/RetroWeatherView" pc="268440751" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="371" parent="globals/RetroWeatherView" pc="268440754" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="372" parent="globals/RetroWeatherView" pc="268440770" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="373" parent="globals/RetroWeatherView" pc="268440778" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="375" parent="globals/RetroWeatherView" pc="268440785" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="378" parent="globals/RetroWeatherView" pc="268440789" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="379" parent="globals/RetroWeatherView" pc="268440808" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="380" parent="globals/RetroWeatherView" pc="268440814" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="383" parent="globals/RetroWeatherView" pc="268440821" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="384" parent="globals/RetroWeatherView" pc="268440837" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="385" parent="globals/RetroWeatherView" pc="268440841" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="388" parent="globals/RetroWeatherView" pc="268440857" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="391" parent="globals/RetroWeatherView" pc="268440873" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="392" parent="globals/RetroWeatherView" pc="268440876" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="393" parent="globals/RetroWeatherView" pc="268440879" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="394" parent="globals/RetroWeatherView" pc="268440885" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="395" parent="globals/RetroWeatherView" pc="268440888" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="399" parent="globals/RetroWeatherView" pc="268440901" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="399" parent="globals/RetroWeatherView" pc="268440905" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="399" parent="globals/RetroWeatherView" pc="268440909" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="400" parent="globals/RetroWeatherView" pc="268440913" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="402" parent="globals/RetroWeatherView" pc="268440921" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="402" parent="globals/RetroWeatherView" pc="268440925" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="402" parent="globals/RetroWeatherView" pc="268440929" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="406" parent="globals/RetroWeatherView" pc="268440936" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="407" parent="globals/RetroWeatherView" pc="268440949" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="410" parent="globals/RetroWeatherView" pc="268440977" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="411" parent="globals/RetroWeatherView" pc="268441002" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="416" parent="globals/RetroWeatherView" pc="268441018" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="419" parent="globals/RetroWeatherView" pc="268441035" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="420" parent="globals/RetroWeatherView" pc="268441046" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="421" parent="globals/RetroWeatherView" pc="268441056" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="422" parent="globals/RetroWeatherView" pc="268441075" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="423" parent="globals/RetroWeatherView" pc="268441078" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="424" parent="globals/RetroWeatherView" pc="268441083" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="425" parent="globals/RetroWeatherView" pc="268441091" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="429" parent="globals/RetroWeatherView" pc="268441100" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="431" parent="globals/RetroWeatherView" pc="268441105" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="432" parent="globals/RetroWeatherView" pc="268441118" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="433" parent="globals/RetroWeatherView" pc="268441138" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="434" parent="globals/RetroWeatherView" pc="268441146" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="436" parent="globals/RetroWeatherView" pc="268441166" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="438" parent="globals/RetroWeatherView" pc="268441182" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="440" parent="globals/RetroWeatherView" pc="268441203" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="61" lineNum="441" parent="globals/RetroWeatherView" pc="268441220" symbol="drawTemperature"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="451" parent="globals/RetroWeatherView" pc="268441249" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="453" parent="globals/RetroWeatherView" pc="268441252" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="454" parent="globals/RetroWeatherView" pc="268441268" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="455" parent="globals/RetroWeatherView" pc="268441276" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="457" parent="globals/RetroWeatherView" pc="268441283" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="458" parent="globals/RetroWeatherView" pc="268441302" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="460" parent="globals/RetroWeatherView" pc="268441321" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="461" parent="globals/RetroWeatherView" pc="268441324" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="465" parent="globals/RetroWeatherView" pc="268441330" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="467" parent="globals/RetroWeatherView" pc="268441340" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="468" parent="globals/RetroWeatherView" pc="268441347" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="469" parent="globals/RetroWeatherView" pc="268441363" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="470" parent="globals/RetroWeatherView" pc="268441374" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="471" parent="globals/RetroWeatherView" pc="268441377" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="474" parent="globals/RetroWeatherView" pc="268441399" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="478" parent="globals/RetroWeatherView" pc="268441418" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="479" parent="globals/RetroWeatherView" pc="268441423" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="480" parent="globals/RetroWeatherView" pc="268441440" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="481" parent="globals/RetroWeatherView" pc="268441473" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="483" parent="globals/RetroWeatherView" pc="268441509" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="484" parent="globals/RetroWeatherView" pc="268441526" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="485" parent="globals/RetroWeatherView" pc="268441556" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="486" parent="globals/RetroWeatherView" pc="268441586" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="63" lineNum="487" parent="globals/RetroWeatherView" pc="268441616" symbol="drawForecastIcon"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="66" lineNum="140" parent="globals/RetroWeatherView" pc="268441647" symbol="onLayout"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="66" lineNum="141" parent="globals/RetroWeatherView" pc="268441649" symbol="onLayout"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="494" parent="globals/RetroWeatherView" pc="268441683" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="495" parent="globals/RetroWeatherView" pc="268441686" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="496" parent="globals/RetroWeatherView" pc="268441690" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="496" parent="globals/RetroWeatherView" pc="268441706" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="496" parent="globals/RetroWeatherView" pc="268441714" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="497" parent="globals/RetroWeatherView" pc="268441721" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="500" parent="globals/RetroWeatherView" pc="268441725" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="501" parent="globals/RetroWeatherView" pc="268441729" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="503" parent="globals/RetroWeatherView" pc="268441735" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="504" parent="globals/RetroWeatherView" pc="268441753" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="505" parent="globals/RetroWeatherView" pc="268441763" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="506" parent="globals/RetroWeatherView" pc="268441782" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="507" parent="globals/RetroWeatherView" pc="268441786" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="511" parent="globals/RetroWeatherView" pc="268441805" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="512" parent="globals/RetroWeatherView" pc="268441830" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="515" parent="globals/RetroWeatherView" pc="268441846" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="516" parent="globals/RetroWeatherView" pc="268441859" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="517" parent="globals/RetroWeatherView" pc="268441870" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="518" parent="globals/RetroWeatherView" pc="268441889" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="519" parent="globals/RetroWeatherView" pc="268441906" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="521" parent="globals/RetroWeatherView" pc="268441934" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="522" parent="globals/RetroWeatherView" pc="268441951" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="524" parent="globals/RetroWeatherView" pc="268441986" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="524" parent="globals/RetroWeatherView" pc="268441994" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="526" parent="globals/RetroWeatherView" pc="268442002" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="527" parent="globals/RetroWeatherView" pc="268442020" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="528" parent="globals/RetroWeatherView" pc="268442044" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="529" parent="globals/RetroWeatherView" pc="268442060" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="533" parent="globals/RetroWeatherView" pc="268442064" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="534" parent="globals/RetroWeatherView" pc="268442079" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="535" parent="globals/RetroWeatherView" pc="268442100" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="536" parent="globals/RetroWeatherView" pc="268442109" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="537" parent="globals/RetroWeatherView" pc="268442118" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="537" parent="globals/RetroWeatherView" pc="268442128" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="539" parent="globals/RetroWeatherView" pc="268442140" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="540" parent="globals/RetroWeatherView" pc="268442163" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="541" parent="globals/RetroWeatherView" pc="268442192" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="546" parent="globals/RetroWeatherView" pc="268442211" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="548" parent="globals/RetroWeatherView" pc="268442248" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="548" parent="globals/RetroWeatherView" pc="268442255" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="549" parent="globals/RetroWeatherView" pc="268442261" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="549" parent="globals/RetroWeatherView" pc="268442269" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="552" parent="globals/RetroWeatherView" pc="268442276" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="554" parent="globals/RetroWeatherView" pc="268442307" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="555" parent="globals/RetroWeatherView" pc="268442318" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="558" parent="globals/RetroWeatherView" pc="268442337" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="560" parent="globals/RetroWeatherView" pc="268442345" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="561" parent="globals/RetroWeatherView" pc="268442353" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="563" parent="globals/RetroWeatherView" pc="268442373" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="565" parent="globals/RetroWeatherView" pc="268442390" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="567" parent="globals/RetroWeatherView" pc="268442411" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="67" lineNum="568" parent="globals/RetroWeatherView" pc="268442428" symbol="drawSunCountdown"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="619" parent="globals/RetroWeatherView" pc="268442457" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="621" parent="globals/RetroWeatherView" pc="268442460" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="622" parent="globals/RetroWeatherView" pc="268442476" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="622" parent="globals/RetroWeatherView" pc="268442484" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="623" parent="globals/RetroWeatherView" pc="268442491" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="625" parent="globals/RetroWeatherView" pc="268442495" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="628" parent="globals/RetroWeatherView" pc="268442499" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="629" parent="globals/RetroWeatherView" pc="268442502" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="630" parent="globals/RetroWeatherView" pc="268442508" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="631" parent="globals/RetroWeatherView" pc="268442518" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="635" parent="globals/RetroWeatherView" pc="268442552" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="636" parent="globals/RetroWeatherView" pc="268442559" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="637" parent="globals/RetroWeatherView" pc="268442565" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="638" parent="globals/RetroWeatherView" pc="268442575" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="639" parent="globals/RetroWeatherView" pc="268442583" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="640" parent="globals/RetroWeatherView" pc="268442593" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="641" parent="globals/RetroWeatherView" pc="268442601" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="643" parent="globals/RetroWeatherView" pc="268442611" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="647" parent="globals/RetroWeatherView" pc="268442621" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="648" parent="globals/RetroWeatherView" pc="268442646" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="651" parent="globals/RetroWeatherView" pc="268442662" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="652" parent="globals/RetroWeatherView" pc="268442673" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="653" parent="globals/RetroWeatherView" pc="268442692" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="654" parent="globals/RetroWeatherView" pc="268442700" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="655" parent="globals/RetroWeatherView" pc="268442714" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="657" parent="globals/RetroWeatherView" pc="268442735" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="68" lineNum="658" parent="globals/RetroWeatherView" pc="268442752" symbol="drawHumidity"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="67" parent="globals/RetroWeatherView" pc="268442781" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="68" parent="globals/RetroWeatherView" pc="268442784" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="69" parent="globals/RetroWeatherView" pc="268442803" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="70" parent="globals/RetroWeatherView" pc="268442809" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="75" parent="globals/RetroWeatherView" pc="268442815" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="76" parent="globals/RetroWeatherView" pc="268442830" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="80" parent="globals/RetroWeatherView" pc="268442846" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="81" parent="globals/RetroWeatherView" pc="268442848" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="86" parent="globals/RetroWeatherView" pc="268442863" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="91" parent="globals/RetroWeatherView" pc="268442879" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="96" parent="globals/RetroWeatherView" pc="268442895" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="101" parent="globals/RetroWeatherView" pc="268442911" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="106" parent="globals/RetroWeatherView" pc="268442927" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="111" parent="globals/RetroWeatherView" pc="268442943" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="116" parent="globals/RetroWeatherView" pc="268442959" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="121" parent="globals/RetroWeatherView" pc="268442975" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="126" parent="globals/RetroWeatherView" pc="268442991" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="131" parent="globals/RetroWeatherView" pc="268443007" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="82" parent="globals/RetroWeatherView" pc="268443010" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="83" parent="globals/RetroWeatherView" pc="268443021" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="84" parent="globals/RetroWeatherView" pc="268443032" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="85" parent="globals/RetroWeatherView" pc="268443044" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="87" parent="globals/RetroWeatherView" pc="268443047" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="88" parent="globals/RetroWeatherView" pc="268443058" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="89" parent="globals/RetroWeatherView" pc="268443069" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="90" parent="globals/RetroWeatherView" pc="268443081" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="92" parent="globals/RetroWeatherView" pc="268443084" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="93" parent="globals/RetroWeatherView" pc="268443096" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="94" parent="globals/RetroWeatherView" pc="268443108" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="95" parent="globals/RetroWeatherView" pc="268443120" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="97" parent="globals/RetroWeatherView" pc="268443123" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="98" parent="globals/RetroWeatherView" pc="268443135" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="99" parent="globals/RetroWeatherView" pc="268443146" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="100" parent="globals/RetroWeatherView" pc="268443158" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="102" parent="globals/RetroWeatherView" pc="268443161" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="103" parent="globals/RetroWeatherView" pc="268443173" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="104" parent="globals/RetroWeatherView" pc="268443185" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="105" parent="globals/RetroWeatherView" pc="268443197" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="107" parent="globals/RetroWeatherView" pc="268443200" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="108" parent="globals/RetroWeatherView" pc="268443211" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="109" parent="globals/RetroWeatherView" pc="268443222" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="110" parent="globals/RetroWeatherView" pc="268443234" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="112" parent="globals/RetroWeatherView" pc="268443237" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="113" parent="globals/RetroWeatherView" pc="268443249" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="114" parent="globals/RetroWeatherView" pc="268443261" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="115" parent="globals/RetroWeatherView" pc="268443273" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="117" parent="globals/RetroWeatherView" pc="268443276" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="118" parent="globals/RetroWeatherView" pc="268443288" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="119" parent="globals/RetroWeatherView" pc="268443300" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="120" parent="globals/RetroWeatherView" pc="268443312" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="122" parent="globals/RetroWeatherView" pc="268443315" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="123" parent="globals/RetroWeatherView" pc="268443327" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="124" parent="globals/RetroWeatherView" pc="268443339" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="125" parent="globals/RetroWeatherView" pc="268443351" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="127" parent="globals/RetroWeatherView" pc="268443354" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="128" parent="globals/RetroWeatherView" pc="268443366" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="129" parent="globals/RetroWeatherView" pc="268443378" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="130" parent="globals/RetroWeatherView" pc="268443390" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="132" parent="globals/RetroWeatherView" pc="268443393" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="133" parent="globals/RetroWeatherView" pc="268443404" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="70" lineNum="134" parent="globals/RetroWeatherView" pc="268443415" symbol="loadColorTheme"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="30" parent="globals/RetroWeatherView" pc="268443429" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="31" parent="globals/RetroWeatherView" pc="268443432" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="34" parent="globals/RetroWeatherView" pc="268443444" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="35" parent="globals/RetroWeatherView" pc="268443475" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="36" parent="globals/RetroWeatherView" pc="268443479" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="39" parent="globals/RetroWeatherView" pc="268443499" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="71" lineNum="41" parent="globals/RetroWeatherView" pc="268443506" symbol="initialize"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="170" parent="globals/RetroWeatherView" pc="268443514" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="172" parent="globals/RetroWeatherView" pc="268443517" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="173" parent="globals/RetroWeatherView" pc="268443537" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="174" parent="globals/RetroWeatherView" pc="268443549" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="175" parent="globals/RetroWeatherView" pc="268443561" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="177" parent="globals/RetroWeatherView" pc="268443585" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="182" parent="globals/RetroWeatherView" pc="268443600" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="183" parent="globals/RetroWeatherView" pc="268443608" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="184" parent="globals/RetroWeatherView" pc="268443629" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="185" parent="globals/RetroWeatherView" pc="268443646" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="186" parent="globals/RetroWeatherView" pc="268443650" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="187" parent="globals/RetroWeatherView" pc="268443657" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="188" parent="globals/RetroWeatherView" pc="268443663" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="189" parent="globals/RetroWeatherView" pc="268443686" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="189" parent="globals/RetroWeatherView" pc="268443693" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="190" parent="globals/RetroWeatherView" pc="268443700" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="190" parent="globals/RetroWeatherView" pc="268443708" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="192" parent="globals/RetroWeatherView" pc="268443721" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="193" parent="globals/RetroWeatherView" pc="268443746" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="194" parent="globals/RetroWeatherView" pc="268443753" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="194" parent="globals/RetroWeatherView" pc="268443759" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="196" parent="globals/RetroWeatherView" pc="268443766" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="197" parent="globals/RetroWeatherView" pc="268443778" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="198" parent="globals/RetroWeatherView" pc="268443790" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="199" parent="globals/RetroWeatherView" pc="268443799" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="200" parent="globals/RetroWeatherView" pc="268443808" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="202" parent="globals/RetroWeatherView" pc="268443831" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="207" parent="globals/RetroWeatherView" pc="268443867" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="208" parent="globals/RetroWeatherView" pc="268443878" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="209" parent="globals/RetroWeatherView" pc="268443897" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="210" parent="globals/RetroWeatherView" pc="268443922" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="211" parent="globals/RetroWeatherView" pc="268443939" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="215" parent="globals/RetroWeatherView" pc="268443974" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="215" parent="globals/RetroWeatherView" pc="268443977" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="215" parent="globals/RetroWeatherView" pc="268443980" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="216" parent="globals/RetroWeatherView" pc="268443983" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="217" parent="globals/RetroWeatherView" pc="268443992" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="217" parent="globals/RetroWeatherView" pc="268444010" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="218" parent="globals/RetroWeatherView" pc="268444026" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="219" parent="globals/RetroWeatherView" pc="268444039" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="220" parent="globals/RetroWeatherView" pc="268444052" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="224" parent="globals/RetroWeatherView" pc="268444068" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="225" parent="globals/RetroWeatherView" pc="268444087" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="230" parent="globals/RetroWeatherView" pc="268444106" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="233" parent="globals/RetroWeatherView" pc="268444163" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="236" parent="globals/RetroWeatherView" pc="268444218" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="237" parent="globals/RetroWeatherView" pc="268444221" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="238" parent="globals/RetroWeatherView" pc="268444230" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="238" parent="globals/RetroWeatherView" pc="268444249" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="238" parent="globals/RetroWeatherView" pc="268444253" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="240" parent="globals/RetroWeatherView" pc="268444271" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="243" parent="globals/RetroWeatherView" pc="268444326" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="244" parent="globals/RetroWeatherView" pc="268444329" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="245" parent="globals/RetroWeatherView" pc="268444338" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="245" parent="globals/RetroWeatherView" pc="268444357" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="245" parent="globals/RetroWeatherView" pc="268444361" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="248" parent="globals/RetroWeatherView" pc="268444379" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="249" parent="globals/RetroWeatherView" pc="268444398" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="250" parent="globals/RetroWeatherView" pc="268444402" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="251" parent="globals/RetroWeatherView" pc="268444408" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="251" parent="globals/RetroWeatherView" pc="268444424" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="251" parent="globals/RetroWeatherView" pc="268444428" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="253" parent="globals/RetroWeatherView" pc="268444447" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="254" parent="globals/RetroWeatherView" pc="268444454" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="258" parent="globals/RetroWeatherView" pc="268444508" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="259" parent="globals/RetroWeatherView" pc="268444511" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="260" parent="globals/RetroWeatherView" pc="268444520" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="260" parent="globals/RetroWeatherView" pc="268444539" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="260" parent="globals/RetroWeatherView" pc="268444543" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="72" lineNum="262" parent="globals/RetroWeatherView" pc="268444561" symbol="onUpdate"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="282" parent="globals/RetroWeatherView" pc="268444617" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="285" parent="globals/RetroWeatherView" pc="268444620" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="286" parent="globals/RetroWeatherView" pc="268444628" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="287" parent="globals/RetroWeatherView" pc="268444635" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="288" parent="globals/RetroWeatherView" pc="268444643" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="290" parent="globals/RetroWeatherView" pc="268444650" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="294" parent="globals/RetroWeatherView" pc="268444654" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="295" parent="globals/RetroWeatherView" pc="268444671" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="298" parent="globals/RetroWeatherView" pc="268444697" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="299" parent="globals/RetroWeatherView" pc="268444711" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="299" parent="globals/RetroWeatherView" pc="268444729" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="299" parent="globals/RetroWeatherView" pc="268444737" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="300" parent="globals/RetroWeatherView" pc="268444744" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="301" parent="globals/RetroWeatherView" pc="268444756" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="302" parent="globals/RetroWeatherView" pc="268444779" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="303" parent="globals/RetroWeatherView" pc="268444802" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="304" parent="globals/RetroWeatherView" pc="268444825" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="305" parent="globals/RetroWeatherView" pc="268444848" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="306" parent="globals/RetroWeatherView" pc="268444874" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="307" parent="globals/RetroWeatherView" pc="268444900" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="308" parent="globals/RetroWeatherView" pc="268444926" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="311" parent="globals/RetroWeatherView" pc="268444952" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/source/RetroWeatherView.mc" id="73" lineNum="312" parent="globals/RetroWeatherView" pc="268444969" symbol="drawBlockText"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/bin/gen/006-B4105-00/source/Rez.mcgen" id="74" lineNum="13" parent="globals/Rez/Layouts" pc="268444990" symbol="WatchFace"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/bin/gen/006-B4105-00/source/Rez.mcgen" id="74" lineNum="14" parent="globals/Rez/Layouts" pc="268445001" symbol="WatchFace"/>
+        <entry filename="/Users/will/WatchFaces/RetroWeather/bin/gen/006-B4105-00/source/Rez.mcgen" id="74" lineNum="16" parent="globals/Rez/Layouts" pc="268445105" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="64" method="true" symbol="drawConsolidatedLabels"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="24" method="true" symbol="_getProperty"/>
+        <entry field="true" id="95" symbol="WindUnit_ms"/>
+        <entry field="true" id="76" symbol="MatrixGreen"/>
+        <entry id="40" method="true" symbol="getUpdateTime"/>
+        <entry field="true" id="88" symbol="ShowDataStripTitle"/>
+        <entry field="true" id="54" symbol="_brightGreen"/>
+        <entry id="30" method="true" symbol="getConditions"/>
+        <entry id="44" method="true" symbol="getWindBearing"/>
+        <entry field="true" id="85" symbol="RetroRed"/>
+        <entry id="48" method="true" symbol="refreshConditions"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="62" method="true" symbol="drawBarometer"/>
+        <entry id="6" method="true" object="true" symbol="HealthControl"/>
+        <entry field="true" id="91" symbol="TemperatureUnitTitle"/>
+        <entry field="true" id="77" symbol="Off"/>
+        <entry field="true" id="79" symbol="RetroAmber"/>
+        <entry id="36" method="true" symbol="getSunEventTime"/>
+        <entry field="true" id="47" symbol="lastUpdateTime"/>
+        <entry id="29" method="true" symbol="getConditionName"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry id="7" object="true" symbol="RetroWeatherApp"/>
+        <entry id="21" method="true" symbol="getStress"/>
+        <entry field="true" id="80" symbol="RetroBlue"/>
+        <entry id="18" method="true" symbol="getSteps"/>
+        <entry id="8391839" method="true" symbol="getBodyBatteryHistory"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="50" method="true" symbol="getBattery"/>
+        <entry field="true" id="58" symbol="_sunEventTotalSecs"/>
+        <entry field="true" id="75" symbol="ColorThemeTitle"/>
+        <entry field="true" id="74" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry field="true" id="90" symbol="TempUnit_F"/>
+        <entry field="true" id="89" symbol="TempUnit_C"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="45" method="true" symbol="getWindBearingString"/>
+        <entry id="12" method="true" symbol="getBodyBatteryIterator"/>
+        <entry id="15" method="true" symbol="getHeartRate"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8390425" module="true" symbol="Properties"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="20" method="true" symbol="getStepsString"/>
+        <entry field="true" id="94" symbol="WindUnit_mph"/>
+        <entry id="65" method="true" symbol="drawForecastIcon"/>
+        <entry id="16" method="true" symbol="getHeartRateString"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry id="38" method="true" symbol="getTemperature"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry field="true" id="81" symbol="RetroCyan"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="14" method="true" symbol="getCalories"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="9" method="true" object="true" symbol="SystemStatsControl"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="26" method="true" symbol="getCompassDirectionString"/>
+        <entry id="52" method="true" symbol="getDate"/>
+        <entry id="32" method="true" symbol="getFeelsLikeTemperature"/>
+        <entry id="31" method="true" symbol="getDewPoint"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="70" method="true" symbol="getWindUnitString"/>
+        <entry id="10" method="true" object="true" symbol="WeatherControl"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="39" method="true" symbol="getUVIndexString"/>
+        <entry field="true" id="25" symbol="conditions"/>
+        <entry id="71" method="true" symbol="loadColorTheme"/>
+        <entry id="8" object="true" symbol="RetroWeatherView"/>
+        <entry field="true" id="56" symbol="_matrixGreen"/>
+        <entry id="43" method="true" symbol="getWeatherColor"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="8389809" symbol="order"/>
+        <entry field="true" id="84" symbol="RetroPurple"/>
+        <entry id="37" method="true" symbol="getSunEventTimeString"/>
+        <entry id="33" method="true" symbol="getHumidity"/>
+        <entry id="11" method="true" symbol="getBodyBattery"/>
+        <entry id="28" method="true" symbol="getCondition"/>
+        <entry field="true" id="78" symbol="On"/>
+        <entry id="67" method="true" symbol="drawSunCountdown"/>
+        <entry id="51" method="true" symbol="getBatteryString"/>
+        <entry field="true" id="87" symbol="RetroYellow"/>
+        <entry id="35" method="true" symbol="getPressure"/>
+        <entry id="17" method="true" symbol="getStepGoal"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="57" symbol="_sunEventId"/>
+        <entry field="true" id="93" symbol="WindUnit_kmh"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="19" method="true" symbol="getStepsRatioThresholded"/>
+        <entry id="69" method="true" symbol="drawWind"/>
+        <entry field="true" id="73" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="66" method="true" symbol="drawHumidity"/>
+        <entry id="8391847" method="true" symbol="getStressHistory"/>
+        <entry id="41" method="true" symbol="getUvIndex"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="59" symbol="_sunVisiblePrev"/>
+        <entry id="23" method="true" symbol="getStressString"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="86" symbol="RetroWhite"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="83" symbol="RetroPink"/>
+        <entry field="true" id="61" symbol="_weatherCtrl"/>
+        <entry id="13" method="true" symbol="getBodyBatteryString"/>
+        <entry field="true" id="82" symbol="RetroOrange"/>
+        <entry id="8389808" symbol="period"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="8391826" method="true" symbol="getDistance"/>
+        <entry id="63" method="true" symbol="drawBlockText"/>
+        <entry field="true" id="55" symbol="_darkGreen"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="60" symbol="_sunVisibleStableCount"/>
+        <entry id="8389781" module="true" symbol="SensorHistory"/>
+        <entry id="46" method="true" symbol="getWindSpeed"/>
+        <entry field="true" id="92" symbol="WindSpeedUnitTitle"/>
+        <entry field="true" id="53" symbol="_black"/>
+        <entry id="27" method="true" symbol="getCompassHeading"/>
+        <entry id="49" module="true" symbol="Layouts"/>
+        <entry id="34" method="true" symbol="getHumidityString"/>
+        <entry id="22" method="true" symbol="getStressIterator"/>
+        <entry id="8388642" module="true" symbol="Position"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="68" method="true" symbol="drawTemperature"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="72" method="true" symbol="loadSunEventState"/>
+        <entry id="42" method="true" symbol="getVisibility"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435668" name="info" stackId="1" startPc="268435546"/>
+        <entry endPc="268435663" name="steps" stackId="2" startPc="268435575"/>
+        <entry endPc="268435663" name="strideLength" stackId="3" startPc="268435575"/>
+        <entry endPc="268435663" name="distanceMeters" stackId="4" startPc="268435575"/>
+        <entry endPc="268435663" name="unit" stackId="5" startPc="268435575"/>
+        <entry endPc="268435663" name="value" stackId="6" startPc="268435575"/>
+        <entry endPc="268435731" name="stepGoal" stackId="1" startPc="268435672"/>
+        <entry endPc="268435731" name="steps" stackId="2" startPc="268435672"/>
+        <entry endPc="268435777" name="steps" stackId="1" startPc="268435735"/>
+        <entry endPc="268435850" name="stressIterator" stackId="1" startPc="268435781"/>
+        <entry endPc="268435845" name="sample" stackId="2" startPc="268435795"/>
+        <entry endPc="268435912" name="bbIterator" stackId="1" startPc="268435854"/>
+        <entry endPc="268435912" name="sample" stackId="2" startPc="268435854"/>
+        <entry endPc="268436071" name="heartrateIterator" stackId="1" startPc="268436016"/>
+        <entry endPc="268436071" name="sample" stackId="2" startPc="268436016"/>
+        <entry endPc="268436118" name="bodyBattery" stackId="1" startPc="268436075"/>
+        <entry endPc="268436168" name="hr" stackId="1" startPc="268436122"/>
+        <entry endPc="268436213" name="info" stackId="1" startPc="268436172"/>
+        <entry endPc="268436385" name="stressIterator" stackId="1" startPc="268436299"/>
+        <entry endPc="268436376" name="sample" stackId="2" startPc="268436313"/>
+        <entry endPc="268436443" name="humidity" stackId="1" startPc="268436407"/>
+        <entry endPc="268436555" name="unit" stackId="1" startPc="268436497"/>
+        <entry endPc="268436645" name="bearing" stackId="1" startPc="268436587"/>
+        <entry endPc="268436645" name="directions" stackId="2" startPc="268436587"/>
+        <entry endPc="268436645" name="index" stackId="3" startPc="268436587"/>
+        <entry endPc="268437952" name="dynamicWeatherColor" stackId="1" startPc="268436658"/>
+        <entry endPc="268437952" name="faceColor" stackId="2" startPc="268437916"/>
+        <entry endPc="268438048" name="sunEvent" stackId="1" startPc="268437957"/>
+        <entry endPc="268438048" name="info" stackId="2" startPc="268437957"/>
+        <entry endPc="268438048" name="hour" stackId="3" startPc="268437957"/>
+        <entry endPc="268438048" name="min" stackId="4" startPc="268437957"/>
+        <entry arg="true" endPc="268438149" name="key" stackId="1" startPc="268438049"/>
+        <entry arg="true" endPc="268438149" name="defaultVal" stackId="2" startPc="268438049"/>
+        <entry endPc="268438119" name="v" stackId="3" startPc="268438052"/>
+        <entry endPc="268438108" name="ex" stackId="4" startPc="268438098"/>
+        <entry endPc="268438143" name="ex" stackId="5" startPc="268438126"/>
+        <entry endPc="268438245" name="unit" stackId="1" startPc="268438162"/>
+        <entry endPc="268438323" name="heading" stackId="1" startPc="268438254"/>
+        <entry endPc="268438323" name="directions" stackId="2" startPc="268438254"/>
+        <entry endPc="268438323" name="index" stackId="3" startPc="268438254"/>
+        <entry endPc="268438364" name="uv" stackId="1" startPc="268438327"/>
+        <entry endPc="268438488" name="currentTime" stackId="1" startPc="268438427"/>
+        <entry endPc="268438611" name="heading" stackId="1" startPc="268438575"/>
+        <entry endPc="268438957" name="positionInfo" stackId="1" startPc="268438713"/>
+        <entry endPc="268438952" name="now" stackId="2" startPc="268438753"/>
+        <entry endPc="268438952" name="sunriseMoment" stackId="3" startPc="268438753"/>
+        <entry endPc="268438952" name="sunsetMoment" stackId="4" startPc="268438753"/>
+        <entry endPc="268438949" name="oneDay" stackId="5" startPc="268438883"/>
+        <entry endPc="268438949" name="tomorrow" stackId="6" startPc="268438883"/>
+        <entry endPc="268438949" name="nextSunrise" stackId="7" startPc="268438883"/>
+        <entry arg="true" endPc="268438996" name="condNum" stackId="1" startPc="268438958"/>
+        <entry endPc="268438996" name="CONDITION_NAMES" stackId="2" startPc="268438961"/>
+        <entry endPc="268439067" name="unit" stackId="1" startPc="268439009"/>
+        <entry endPc="268439237" name="now" stackId="1" startPc="268439163"/>
+        <entry endPc="268439237" name="MONTHS" stackId="2" startPc="268439163"/>
+        <entry endPc="268439237" name="monthStr" stackId="3" startPc="268439163"/>
+        <entry arg="true" endPc="268439581" name="dc" stackId="1" startPc="268439287"/>
+        <entry arg="true" endPc="268439581" name="x" stackId="2" startPc="268439287"/>
+        <entry arg="true" endPc="268439581" name="y" stackId="3" startPc="268439287"/>
+        <entry arg="true" endPc="268439581" name="width" stackId="4" startPc="268439287"/>
+        <entry arg="true" endPc="268439581" name="pressure" stackId="5" startPc="268439287"/>
+        <entry endPc="268439580" name="hw" stackId="6" startPc="268439290"/>
+        <entry endPc="268439580" name="h" stackId="7" startPc="268439290"/>
+        <entry endPc="268439580" name="left" stackId="8" startPc="268439290"/>
+        <entry endPc="268439580" name="pct" stackId="9" startPc="268439290"/>
+        <entry endPc="268439469" name="p" stackId="10" startPc="268439401"/>
+        <entry endPc="268439469" name="minP" stackId="11" startPc="268439401"/>
+        <entry endPc="268439469" name="maxP" stackId="12" startPc="268439401"/>
+        <entry endPc="268439580" name="fillW" stackId="13" startPc="268439290"/>
+        <entry endPc="268439580" name="normalX" stackId="14" startPc="268439290"/>
+        <entry endPc="268439751" name="sid" stackId="1" startPc="268439585"/>
+        <entry endPc="268439751" name="ssecs" stackId="2" startPc="268439585"/>
+        <entry endPc="268439668" name="ex" stackId="3" startPc="268439650"/>
+        <entry endPc="268439722" name="ex" stackId="4" startPc="268439704"/>
+        <entry endPc="268439784" name="ex" stackId="5" startPc="268439758"/>
+        <entry arg="true" endPc="268440228" name="dc" stackId="1" startPc="268439791"/>
+        <entry arg="true" endPc="268440228" name="x" stackId="2" startPc="268439791"/>
+        <entry arg="true" endPc="268440228" name="y" stackId="3" startPc="268439791"/>
+        <entry arg="true" endPc="268440228" name="size" stackId="4" startPc="268439791"/>
+        <entry arg="true" endPc="268440228" name="speed" stackId="5" startPc="268439791"/>
+        <entry arg="true" endPc="268440228" name="dir" stackId="6" startPc="268439791"/>
+        <entry endPc="268440227" name="maxBars" stackId="7" startPc="268439794"/>
+        <entry endPc="268440227" name="divisor" stackId="8" startPc="268439794"/>
+        <entry endPc="268440227" name="bars" stackId="9" startPc="268439794"/>
+        <entry endPc="268439880" name="candidate" stackId="10" startPc="268439831"/>
+        <entry endPc="268440227" name="bw" stackId="11" startPc="268439794"/>
+        <entry endPc="268440227" name="unitVal" stackId="12" startPc="268439794"/>
+        <entry endPc="268439976" name="ex" stackId="13" startPc="268439962"/>
+        <entry endPc="268440227" name="speedThreshold" stackId="14" startPc="268439794"/>
+        <entry endPc="268440227" name="i" stackId="15" startPc="268440031"/>
+        <entry endPc="268440217" name="bx" stackId="16" startPc="268440031"/>
+        <entry endPc="268440217" name="by" stackId="17" startPc="268440031"/>
+        <entry endPc="268440179" name="fillColor" stackId="18" startPc="268440089"/>
+        <entry endPc="268440142" name="ex" stackId="19" startPc="268440132"/>
+        <entry arg="true" endPc="268440637" name="dc" stackId="1" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="x" stackId="2" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="y" stackId="3" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="size" stackId="4" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="temp" stackId="5" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="humidity" stackId="6" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="wind" stackId="7" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="windDir" stackId="8" startPc="268440229"/>
+        <entry arg="true" endPc="268440637" name="pressure" stackId="9" startPc="268440229"/>
+        <entry endPc="268440636" name="tLabel" stackId="10" startPc="268440232"/>
+        <entry endPc="268440636" name="hLabel" stackId="11" startPc="268440232"/>
+        <entry endPc="268440636" name="wLabel" stackId="12" startPc="268440232"/>
+        <entry endPc="268440425" name="d" stackId="13" startPc="268440355"/>
+        <entry endPc="268440425" name="dirs" stackId="14" startPc="268440355"/>
+        <entry endPc="268440425" name="idx" stackId="15" startPc="268440355"/>
+        <entry endPc="268440425" name="dirLabel" stackId="16" startPc="268440355"/>
+        <entry endPc="268440442" name="ex" stackId="17" startPc="268440432"/>
+        <entry endPc="268440636" name="pLabel" stackId="18" startPc="268440232"/>
+        <entry endPc="268440636" name="unitVal" stackId="19" startPc="268440232"/>
+        <entry endPc="268440636" name="tempUnit" stackId="20" startPc="268440232"/>
+        <entry endPc="268440554" name="ex" stackId="21" startPc="268440544"/>
+        <entry endPc="268440636" name="sep" stackId="22" startPc="268440232"/>
+        <entry endPc="268440636" name="line" stackId="23" startPc="268440232"/>
+        <entry endPc="268440636" name="font" stackId="24" startPc="268440232"/>
+        <entry endPc="268440749" name="windUnit" stackId="1" startPc="268440641"/>
+        <entry arg="true" endPc="268441248" name="dc" stackId="1" startPc="268440751"/>
+        <entry arg="true" endPc="268441248" name="x" stackId="2" startPc="268440751"/>
+        <entry arg="true" endPc="268441248" name="y" stackId="3" startPc="268440751"/>
+        <entry arg="true" endPc="268441248" name="size" stackId="4" startPc="268440751"/>
+        <entry arg="true" endPc="268441248" name="temp" stackId="5" startPc="268440751"/>
+        <entry endPc="268441247" name="barW" stackId="6" startPc="268440754"/>
+        <entry endPc="268441247" name="spacing" stackId="7" startPc="268440754"/>
+        <entry endPc="268441247" name="unitVal" stackId="8" startPc="268440754"/>
+        <entry endPc="268440851" name="ex" stackId="9" startPc="268440837"/>
+        <entry endPc="268441247" name="freeze" stackId="10" startPc="268440754"/>
+        <entry endPc="268441247" name="haveTemp" stackId="11" startPc="268440754"/>
+        <entry endPc="268441247" name="t" stackId="12" startPc="268440754"/>
+        <entry endPc="268441247" name="minV" stackId="13" startPc="268440754"/>
+        <entry endPc="268441247" name="maxV" stackId="14" startPc="268440754"/>
+        <entry endPc="268441247" name="step" stackId="15" startPc="268440754"/>
+        <entry endPc="268441247" name="span" stackId="16" startPc="268440754"/>
+        <entry endPc="268441247" name="markerCount" stackId="17" startPc="268440754"/>
+        <entry endPc="268441247" name="startX" stackId="18" startPc="268440754"/>
+        <entry endPc="268441247" name="by" stackId="19" startPc="268440754"/>
+        <entry endPc="268441247" name="highThreshold" stackId="20" startPc="268440754"/>
+        <entry endPc="268441247" name="i" stackId="21" startPc="268441046"/>
+        <entry endPc="268441237" name="val" stackId="22" startPc="268441046"/>
+        <entry endPc="268441237" name="bx" stackId="23" startPc="268441046"/>
+        <entry endPc="268441237" name="drawFilled" stackId="24" startPc="268441046"/>
+        <entry arg="true" endPc="268441646" name="dc" stackId="1" startPc="268441249"/>
+        <entry arg="true" endPc="268441646" name="x" stackId="2" startPc="268441249"/>
+        <entry arg="true" endPc="268441646" name="y" stackId="3" startPc="268441249"/>
+        <entry arg="true" endPc="268441646" name="size" stackId="4" startPc="268441249"/>
+        <entry arg="true" endPc="268441646" name="cond" stackId="5" startPc="268441249"/>
+        <entry endPc="268441645" name="block" stackId="6" startPc="268441252"/>
+        <entry endPc="268441645" name="startX" stackId="7" startPc="268441252"/>
+        <entry endPc="268441645" name="startY" stackId="8" startPc="268441252"/>
+        <entry endPc="268441645" name="isRain" stackId="9" startPc="268441252"/>
+        <entry endPc="268441392" name="cnum" stackId="10" startPc="268441330"/>
+        <entry endPc="268441392" name="rainCodes" stackId="11" startPc="268441330"/>
+        <entry endPc="268441392" name="i" stackId="12" startPc="268441363"/>
+        <entry endPc="268441409" name="ex" stackId="13" startPc="268441399"/>
+        <entry arg="true" endPc="268441682" name="dc" stackId="1" startPc="268441647"/>
+        <entry arg="true" endPc="268442456" name="dc" stackId="1" startPc="268441683"/>
+        <entry arg="true" endPc="268442456" name="x" stackId="2" startPc="268441683"/>
+        <entry arg="true" endPc="268442456" name="y" stackId="3" startPc="268441683"/>
+        <entry arg="true" endPc="268442456" name="size" stackId="4" startPc="268441683"/>
+        <entry arg="true" endPc="268442456" name="sunEvent" stackId="5" startPc="268441683"/>
+        <entry endPc="268442455" name="totalBars" stackId="6" startPc="268441686"/>
+        <entry endPc="268442455" name="barW" stackId="7" startPc="268441686"/>
+        <entry endPc="268442455" name="spacing" stackId="8" startPc="268441686"/>
+        <entry endPc="268442455" name="secsLeft" stackId="9" startPc="268441686"/>
+        <entry endPc="268441775" name="nowSec" stackId="10" startPc="268441735"/>
+        <entry endPc="268441775" name="sunSec" stackId="11" startPc="268441735"/>
+        <entry endPc="268441796" name="ex" stackId="12" startPc="268441782"/>
+        <entry endPc="268442455" name="startX" stackId="13" startPc="268441686"/>
+        <entry endPc="268442455" name="by" stackId="14" startPc="268441686"/>
+        <entry endPc="268441933" name="p" stackId="15" startPc="268441870"/>
+        <entry endPc="268441923" name="px" stackId="16" startPc="268441870"/>
+        <entry endPc="268442054" name="ex" stackId="17" startPc="268442044"/>
+        <entry endPc="268442455" name="thisEventId" stackId="18" startPc="268441686"/>
+        <entry endPc="268442202" name="ex" stackId="19" startPc="268442192"/>
+        <entry endPc="268442455" name="visible" stackId="20" startPc="268441686"/>
+        <entry endPc="268442455" name="redThreshold" stackId="21" startPc="268441686"/>
+        <entry endPc="268442455" name="i" stackId="22" startPc="268442318"/>
+        <entry endPc="268442445" name="bx" stackId="23" startPc="268442318"/>
+        <entry arg="true" endPc="268442780" name="dc" stackId="1" startPc="268442457"/>
+        <entry arg="true" endPc="268442780" name="x" stackId="2" startPc="268442457"/>
+        <entry arg="true" endPc="268442780" name="y" stackId="3" startPc="268442457"/>
+        <entry arg="true" endPc="268442780" name="size" stackId="4" startPc="268442457"/>
+        <entry arg="true" endPc="268442780" name="humidity" stackId="5" startPc="268442457"/>
+        <entry endPc="268442779" name="barW" stackId="6" startPc="268442460"/>
+        <entry endPc="268442779" name="spacing" stackId="7" startPc="268442460"/>
+        <entry endPc="268442779" name="totalBars" stackId="8" startPc="268442460"/>
+        <entry endPc="268442779" name="filled" stackId="9" startPc="268442460"/>
+        <entry endPc="268442548" name="hv" stackId="10" startPc="268442508"/>
+        <entry endPc="268442779" name="fillColor" stackId="11" startPc="268442460"/>
+        <entry endPc="268442617" name="hv2" stackId="12" startPc="268442565"/>
+        <entry endPc="268442779" name="startX" stackId="13" startPc="268442460"/>
+        <entry endPc="268442779" name="by" stackId="14" startPc="268442460"/>
+        <entry endPc="268442779" name="i" stackId="15" startPc="268442673"/>
+        <entry endPc="268442769" name="bx" stackId="16" startPc="268442673"/>
+        <entry endPc="268443427" name="colorTheme" stackId="1" startPc="268442784"/>
+        <entry endPc="268442840" name="ex" stackId="2" startPc="268442830"/>
+        <entry endPc="268443493" name="ex" stackId="1" startPc="268443475"/>
+        <entry arg="true" endPc="268444616" name="dc" stackId="1" startPc="268443514"/>
+        <entry endPc="268444615" name="clockTime" stackId="2" startPc="268443517"/>
+        <entry endPc="268444615" name="view" stackId="3" startPc="268443517"/>
+        <entry endPc="268444615" name="hour" stackId="4" startPc="268443517"/>
+        <entry endPc="268444615" name="minute" stackId="5" startPc="268443517"/>
+        <entry endPc="268444615" name="is24Hour" stackId="6" startPc="268443517"/>
+        <entry endPc="268444615" name="displayHour" stackId="7" startPc="268443517"/>
+        <entry endPc="268444615" name="ampm" stackId="8" startPc="268443517"/>
+        <entry endPc="268444615" name="timeMain" stackId="9" startPc="268443517"/>
+        <entry endPc="268444615" name="ampmText" stackId="10" startPc="268443517"/>
+        <entry endPc="268444615" name="cx" stackId="11" startPc="268443517"/>
+        <entry endPc="268444615" name="cy" stackId="12" startPc="268443517"/>
+        <entry endPc="268444615" name="w" stackId="13" startPc="268443517"/>
+        <entry endPc="268444615" name="h" stackId="14" startPc="268443517"/>
+        <entry endPc="268444615" name="radius" stackId="15" startPc="268443517"/>
+        <entry endPc="268443970" name="smallX" stackId="16" startPc="268443878"/>
+        <entry endPc="268443970" name="smallY" stackId="17" startPc="268443878"/>
+        <entry endPc="268444615" name="temp" stackId="18" startPc="268443517"/>
+        <entry endPc="268444615" name="wind" stackId="19" startPc="268443517"/>
+        <entry endPc="268444615" name="windDir" stackId="20" startPc="268443517"/>
+        <entry endPc="268444020" name="ex" stackId="21" startPc="268444010"/>
+        <entry endPc="268444615" name="tempX" stackId="22" startPc="268443517"/>
+        <entry endPc="268444615" name="rightX" stackId="23" startPc="268443517"/>
+        <entry endPc="268444615" name="humidity" stackId="24" startPc="268443517"/>
+        <entry endPc="268444262" name="ex" stackId="25" startPc="268444249"/>
+        <entry endPc="268444615" name="pressure" stackId="26" startPc="268443517"/>
+        <entry endPc="268444370" name="ex" stackId="27" startPc="268444357"/>
+        <entry endPc="268444615" name="showData" stackId="28" startPc="268443517"/>
+        <entry endPc="268444615" name="showVal" stackId="29" startPc="268443517"/>
+        <entry endPc="268444438" name="ex" stackId="30" startPc="268444424"/>
+        <entry endPc="268444615" name="sunEvent" stackId="31" startPc="268443517"/>
+        <entry endPc="268444552" name="ex" stackId="32" startPc="268444539"/>
+        <entry arg="true" endPc="268444989" name="dc" stackId="1" startPc="268444617"/>
+        <entry arg="true" endPc="268444989" name="text" stackId="2" startPc="268444617"/>
+        <entry arg="true" endPc="268444989" name="x" stackId="3" startPc="268444617"/>
+        <entry arg="true" endPc="268444989" name="y" stackId="4" startPc="268444617"/>
+        <entry arg="true" endPc="268444989" name="size" stackId="5" startPc="268444617"/>
+        <entry arg="true" endPc="268444989" name="color" stackId="6" startPc="268444617"/>
+        <entry endPc="268444988" name="font" stackId="7" startPc="268444620"/>
+        <entry endPc="268444988" name="stroke" stackId="8" startPc="268444620"/>
+        <entry arg="true" endPc="268445114" name="dc" stackId="1" startPc="268444990"/>
+        <entry endPc="268445114" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268445001"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B4105-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MatrixGreen"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorThemeTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroOrange"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Off"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindUnit_kmh"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindSpeedUnitTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroCyan"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ShowDataStripTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TempUnit_F"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroPurple"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroYellow"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindUnit_mph"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindUnit_ms"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="On"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TemperatureUnitTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroAmber"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TempUnit_C"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RetroPink"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/HealthControl" offset="152" parentId="globals" symbolId="HealthControl" type="class"/>
+        <dataEntry label="globals/WeatherControl" offset="331" parentId="globals" symbolId="WeatherControl" type="class"/>
+        <dataEntry label="globals/Rez" offset="609" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SystemStatsControl" offset="662" parentId="globals" symbolId="SystemStatsControl" type="class"/>
+        <dataEntry label="globals/RetroWeatherApp" offset="742" parentId="globals" symbolId="RetroWeatherApp" type="class"/>
+        <dataEntry label="globals/RetroWeatherView" offset="813" parentId="globals" symbolId="RetroWeatherView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1091" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1126" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1161" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="HealthControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435498" name="&lt;init&gt;" parent="WeatherControl" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435518" name="&lt;init&gt;" parent="Rez" startPc="268435499">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="SystemStatsControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435530" name="&lt;init&gt;" parent="RetroWeatherApp" startPc="268435519">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435542" name="&lt;init&gt;" parent="RetroWeatherView" startPc="268435531">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435668" name="getDistance" parent="HealthControl" startPc="268435543">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="HealthControl" parent="HealthControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435731" name="getStepsRatioThresholded" parent="HealthControl" startPc="268435669">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435777" name="getStepsString" parent="HealthControl" startPc="268435732">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435850" name="getStress" parent="HealthControl" startPc="268435778">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435912" name="getBodyBattery" parent="HealthControl" startPc="268435851">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435930" name="getStepGoal" parent="HealthControl" startPc="268435913">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436012" name="getBodyBatteryIterator" parent="HealthControl" startPc="268435931">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436071" name="getHeartRate" parent="HealthControl" startPc="268436013">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436118" name="getBodyBatteryString" parent="HealthControl" startPc="268436072">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436168" name="getHeartRateString" parent="HealthControl" startPc="268436119">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436213" name="getCalories" parent="HealthControl" startPc="268436169">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436295" name="getStressIterator" parent="HealthControl" startPc="268436214">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436385" name="getStressString" parent="HealthControl" startPc="268436296">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436403" name="getSteps" parent="HealthControl" startPc="268436386">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="HealthControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436443" name="getHumidityString" parent="WeatherControl" startPc="268436404">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436470" name="getDewPoint" parent="WeatherControl" startPc="268436444">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436560" name="getFeelsLikeTemperature" parent="WeatherControl" startPc="268436471">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436654" name="getWindBearingString" parent="WeatherControl" startPc="268436561">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437953" name="getWeatherColor" parent="WeatherControl" startPc="268436655">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438048" name="getSunEventTimeString" parent="WeatherControl" startPc="268437954">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438149" name="_getProperty" parent="WeatherControl" startPc="268438049">
+            <param id="key"/>
+            <param id="defaultVal"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438250" name="getWindSpeed" parent="WeatherControl" startPc="268438150">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438323" name="getCompassDirectionString" parent="WeatherControl" startPc="268438251">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438364" name="getUVIndexString" parent="WeatherControl" startPc="268438324">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438405" name="getUvIndex" parent="WeatherControl" startPc="268438365">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438415" name="WeatherControl" parent="WeatherControl" startPc="268438406">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438423" name="getConditions" parent="WeatherControl" startPc="268438416">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438489" name="refreshConditions" parent="WeatherControl" startPc="268438424">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438530" name="getHumidity" parent="WeatherControl" startPc="268438490">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438571" name="getUpdateTime" parent="WeatherControl" startPc="268438531">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438611" name="getCompassHeading" parent="WeatherControl" startPc="268438572">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438641" name="getPressure" parent="WeatherControl" startPc="268438612">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438682" name="getWindBearing" parent="WeatherControl" startPc="268438642">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438709" name="getCondition" parent="WeatherControl" startPc="268438683">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438957" name="getSunEventTime" parent="WeatherControl" startPc="268438710">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="WeatherControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438996" name="getConditionName" parent="WeatherControl" startPc="268438958">
+            <param id="condNum"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439072" name="getTemperature" parent="WeatherControl" startPc="268438997">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439113" name="getVisibility" parent="WeatherControl" startPc="268439073">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SystemStatsControl" parent="SystemStatsControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439131" name="getBattery" parent="SystemStatsControl" startPc="268439114">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439159" name="getBatteryString" parent="SystemStatsControl" startPc="268439132">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439237" name="getDate" parent="SystemStatsControl" startPc="268439160">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SystemStatsControl">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439240" name="onStart" parent="RetroWeatherApp" startPc="268439238">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439268" name="getInitialView" parent="RetroWeatherApp" startPc="268439241">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439283" name="initialize" parent="RetroWeatherApp" startPc="268439269">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439286" name="onStop" parent="RetroWeatherApp" startPc="268439284">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439581" name="drawBarometer" parent="RetroWeatherView" startPc="268439287">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="width"/>
+            <param id="pressure"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439790" name="loadSunEventState" parent="RetroWeatherView" startPc="268439582">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440228" name="drawWind" parent="RetroWeatherView" startPc="268439791">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="speed"/>
+            <param id="dir"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440637" name="drawConsolidatedLabels" parent="RetroWeatherView" startPc="268440229">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="temp"/>
+            <param id="humidity"/>
+            <param id="wind"/>
+            <param id="windDir"/>
+            <param id="pressure"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440750" name="getWindUnitString" parent="RetroWeatherView" startPc="268440638">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441248" name="drawTemperature" parent="RetroWeatherView" startPc="268440751">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="temp"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="RetroWeatherView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441646" name="drawForecastIcon" parent="RetroWeatherView" startPc="268441249">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="cond"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onExitSleep" parent="RetroWeatherView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="RetroWeatherView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441682" name="onLayout" parent="RetroWeatherView" startPc="268441647">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442456" name="drawSunCountdown" parent="RetroWeatherView" startPc="268441683">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="sunEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442780" name="drawHumidity" parent="RetroWeatherView" startPc="268442457">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="humidity"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onEnterSleep" parent="RetroWeatherView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443428" name="loadColorTheme" parent="RetroWeatherView" startPc="268442781">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443513" name="initialize" parent="RetroWeatherView" startPc="268443429">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444616" name="onUpdate" parent="RetroWeatherView" startPc="268443514">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444989" name="drawBlockText" parent="RetroWeatherView" startPc="268444617">
+            <param id="dc"/>
+            <param id="text"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="size"/>
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268445114" name="WatchFace" parent="Layouts" startPc="268444990">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
