@@ -17,7 +17,7 @@ class RetroWeatherView extends WatchUi.WatchFace {
     var _brightGreen = 0x80FF80;
     var _black = 0x000000;
     var _weatherCtrl = null;
-    
+     private var _settingsPollCounter;
 
 
     // Tracks the currently observed sun event so we can compute a stable initial duration
@@ -39,6 +39,10 @@ class RetroWeatherView extends WatchUi.WatchFace {
         loadColorTheme();
         // Restore any persisted sun-event state so visible bars stay consistent
         loadSunEventState();
+
+        // settings poll counter
+        _settingsPollCounter = 0;
+
     }
 
     // Restore persisted sun event id and initial seconds from Storage
@@ -145,7 +149,11 @@ class RetroWeatherView extends WatchUi.WatchFace {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
+        // Restore any persisted sun-event state so visible bars stay consistent
+        loadColorTheme();
+    
     }
+    
 
 
     function getWindUnitString() as String {
@@ -170,6 +178,14 @@ class RetroWeatherView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         // Get and show the current time
         View.onUpdate(dc);
+
+        _settingsPollCounter = (_settingsPollCounter + 1) % 5; // adjust 10 => poll interval
+        if (_settingsPollCounter == 0) {
+            loadColorTheme();
+        }
+
+
+
         _weatherCtrl.refreshConditions();
         var clockTime = System.getClockTime();
         var view = View.findDrawableById("TimeLabel") as Text;
