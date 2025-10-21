@@ -205,6 +205,8 @@ class RetroWeatherView extends WatchUi.WatchFace {
         // Update settings controller periodically for battery optimization
         if (_settingsCtrl != null) {
             _settingsCtrl.updateSettings();
+            // Update color theme when settings change
+            loadColorTheme();
         }
         
         // Update weather data periodically for battery optimization

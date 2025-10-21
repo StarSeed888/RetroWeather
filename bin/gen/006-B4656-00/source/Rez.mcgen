@@ -24,7 +24,6 @@ module Rez {
         (:initialized) var VisibilityUnit_mi as ResourceId;
         (:initialized) var VisibilityUnit_km as ResourceId;
         (:initialized) var RetroPink as ResourceId;
-        (:initialized) var Off as ResourceId;
         (:initialized) var AppName as ResourceId;
         (:initialized) var RetroRed as ResourceId;
         (:initialized) var MatrixGreen as ResourceId;
@@ -34,7 +33,6 @@ module Rez {
         (:initialized) var TemperatureUnitTitle as ResourceId;
         (:initialized) var RetroPurple as ResourceId;
         (:initialized) var RetroCyan as ResourceId;
-        (:initialized) var ShowDataStripTitle as ResourceId;
         (:initialized) var WindUnit_ms as ResourceId;
         (:initialized) var RetroBlue as ResourceId;
         (:initialized) var TempUnit_F as ResourceId;
@@ -45,7 +43,6 @@ module Rez {
         (:initialized) var StandardText as ResourceId;
         (:initialized) var WindUnit_kmh as ResourceId;
         (:initialized) var WindSpeedUnitTitle as ResourceId;
-        (:initialized) var On as ResourceId;
     } // Strings
 
     module Styles {
