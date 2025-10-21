@@ -2,5 +2,6 @@
     <property id="ColorTheme" type="number">0</property>
     <property id="WindSpeedUnit" type="number">3</property>
     <property id="TemperatureUnit" type="number">2</property>
-    <property id="ShowDataStrip" type="number">1</property>
+    <property id="VisibilityUnit" type="number">1</property>
+    <property id="WireframeText" type="number">0</property>
 </properties>

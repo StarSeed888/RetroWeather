@@ -26,10 +26,16 @@
             <listEntry value="2">@Strings.TempUnit_F</listEntry>
         </settingConfig>
     </setting>
-    <setting propertyKey="@Properties.ShowDataStrip" title="@Strings.ShowDataStripTitle">
+    <setting propertyKey="@Properties.VisibilityUnit" title="@Strings.VisibilityUnitTitle">
         <settingConfig type="list">
-            <listEntry value="0">@Strings.Off</listEntry>
-            <listEntry value="1">@Strings.On</listEntry>
+            <listEntry value="1">@Strings.VisibilityUnit_km</listEntry>
+            <listEntry value="2">@Strings.VisibilityUnit_mi</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WireframeText" title="@Strings.WireframeTextTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.StandardText</listEntry>
+            <listEntry value="1">@Strings.WireframeText</listEntry>
         </settingConfig>
     </setting>
 </settings>

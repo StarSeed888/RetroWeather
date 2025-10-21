@@ -19,7 +19,10 @@
     <string id="TemperatureUnitTitle">Temperature Units</string>
     <string id="TempUnit_C">°C</string>
     <string id="TempUnit_F">°F</string>
-    <string id="ShowDataStripTitle">Show Data Strip Below Time</string>
-    <string id="Off">Off</string>
-    <string id="On">On</string>
+    <string id="VisibilityUnitTitle">Visibility Units</string>
+    <string id="VisibilityUnit_km">Kilometers</string>
+    <string id="VisibilityUnit_mi">Miles</string>
+    <string id="WireframeTextTitle">Text Display Style</string>
+    <string id="StandardText">Standard Text</string>
+    <string id="WireframeText">Wireframe Text</string>
 </strings>

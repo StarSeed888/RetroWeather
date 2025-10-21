@@ -13,16 +13,35 @@ class WeatherControl {
 
     var conditions = Weather.getCurrentConditions();
     var lastUpdateTime = 0; // Track when we last updated conditions
-  
+    
+    // Poll counter to avoid checking time on every update
+    private var _pollCounter;
+    private var _pollInterval;
 
 
 
-
- function WeatherControl() {
+ function initialize() {
         // Constructor code here
-        //conditions = Weather.getCurrentConditions();
+        _pollCounter = 0;
+        _pollInterval = 60; // Check for weather refresh every 60 update cycles (~1 minute)
         refreshConditions();
+    }
 
+    // Call this from main update loop - will only refresh periodically
+    function updateConditions() as Void {
+        // Initialize counters if not already done (null safety)
+        if (_pollCounter == null) {
+            _pollCounter = 0;
+        }
+        if (_pollInterval == null) {
+            _pollInterval = 60;
+        }
+        
+        _pollCounter++;
+        if (_pollCounter >= _pollInterval) {
+            _pollCounter = 0;
+            refreshConditions();
+        }
     }
 
      function refreshConditions() as Void {
@@ -57,16 +76,15 @@ class WeatherControl {
 
 
     function getTemperature() as Number or Null {
-      if (conditions != null) {
-    var unit = _getProperty("TemperatureUnit", 1);
-    if (unit == 2) { // 2 = Fahrenheit
-            return conditions.temperature * 9 / 5 + 32;
-        } else { // 1 = Celsius (default)
-            return conditions.temperature;
+        if (conditions != null && conditions.temperature != null) {
+            var unit = _getProperty("TemperatureUnit", 1);
+            if (unit == 2) { // 2 = Fahrenheit
+                return conditions.temperature * 9 / 5 + 32;
+            } else { // 1 = Celsius (default)
+                return conditions.temperature;
+            }
         }
-    }
         return null;
-
     }
 
 function getSunEventTime() as Time.Moment or Null {
@@ -106,14 +124,21 @@ function getHumidity() as Number or Null {
 
 function getVisibility() as Number or Null {
     if (conditions != null && conditions.visibility != null) {
-        return conditions.visibility;
+        var unit = _getProperty("VisibilityUnit", 1);
+        var visibilityKm = conditions.visibility / 1000.0; // Convert meters to kilometers
+        
+        if (unit == 2) { // Miles
+            return visibilityKm * 0.621371; // Convert km to miles
+        } else { // Kilometers (default)
+            return visibilityKm;
+        }
     }
     return null;
 }
 
-function getUpdateTime() as Lang.DateTime or Null {
-    if (conditions != null && conditions.timestamp != null) {
-        return conditions.timestamp;
+function getUpdateTime() as Time.Moment or Null {
+    if (lastUpdateTime > 0) {
+        return new Time.Moment(lastUpdateTime);
     }
     return null;
 }

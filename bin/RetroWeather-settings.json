@@ -90,10 +90,10 @@
     "configMax" : null,
     "configMaxLength" : null
   }, {
-    "key" : "ShowDataStrip",
+    "key" : "VisibilityUnit",
     "valueType" : "number",
     "defaultValue" : 1,
-    "configTitle" : "ShowDataStripTitle",
+    "configTitle" : "VisibilityUnitTitle",
     "configPrompt" : null,
     "configType" : "list",
     "configError" : null,
@@ -101,10 +101,31 @@
     "configReadonly" : false,
     "configRequired" : false,
     "configOptions" : [ {
-      "display" : "Off",
+      "display" : "VisibilityUnit_km",
+      "value" : 1
+    }, {
+      "display" : "VisibilityUnit_mi",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "WireframeText",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "WireframeTextTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "StandardText",
       "value" : 0
     }, {
-      "display" : "On",
+      "display" : "WireframeText",
       "value" : 1
     } ],
     "configMin" : null,
@@ -115,27 +136,30 @@
   "languages" : {
     "valyrian" : {
       "RetroAmber" : "Retro Amber",
+      "WireframeTextTitle" : "Text Display Style",
+      "WireframeText" : "Wireframe Text",
+      "VisibilityUnit_mi" : "Miles",
+      "VisibilityUnit_km" : "Kilometers",
+      "RetroPink" : "Retro Pink",
+      "AppName" : "Abstract Weather",
+      "RetroRed" : "Retro Red",
+      "MatrixGreen" : "Matrix Green",
+      "RetroOrange" : "Retro Orange",
+      "WindUnit_mph" : "mph",
+      "ColorThemeTitle" : "Color Theme",
+      "TemperatureUnitTitle" : "Temperature Units",
+      "RetroPurple" : "Retro Purple",
+      "RetroCyan" : "Retro Cyan",
       "WindUnit_ms" : "m/s",
       "RetroBlue" : "Retro Blue",
       "TempUnit_F" : "°F",
       "TempUnit_C" : "°C",
       "RetroYellow" : "Retro Yellow",
-      "RetroPink" : "Retro Pink",
-      "Off" : "Off",
-      "AppName" : "Abstract Weather",
-      "RetroRed" : "Retro Red",
+      "VisibilityUnitTitle" : "Visibility Units",
       "RetroWhite" : "Retro White",
-      "MatrixGreen" : "Matrix Green",
-      "RetroOrange" : "Retro Orange",
-      "WindUnit_mph" : "mph",
+      "StandardText" : "Standard Text",
       "WindUnit_kmh" : "km/h",
-      "ColorThemeTitle" : "Color Theme",
-      "TemperatureUnitTitle" : "Temperature Units",
-      "RetroPurple" : "Retro Purple",
-      "RetroCyan" : "Retro Cyan",
-      "WindSpeedUnitTitle" : "Wind Speed Units",
-      "ShowDataStripTitle" : "Show Data Strip Below Time",
-      "On" : "On"
+      "WindSpeedUnitTitle" : "Wind Speed Units"
     }
   }
 }
